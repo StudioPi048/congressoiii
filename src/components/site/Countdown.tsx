@@ -15,18 +15,19 @@ function diff() {
 }
 
 export function Countdown() {
-  const [t, setT] = useState(diff());
+  const [t, setT] = useState<ReturnType<typeof diff> | null>(null);
 
   useEffect(() => {
+    setT(diff());
     const id = setInterval(() => setT(diff()), 1000);
     return () => clearInterval(id);
   }, []);
 
   const items = [
-    { label: "Dias", value: t.dias },
-    { label: "Horas", value: t.horas },
-    { label: "Min", value: t.min },
-    { label: "Seg", value: t.seg },
+    { label: "Dias", value: t?.dias ?? 0 },
+    { label: "Horas", value: t?.horas ?? 0 },
+    { label: "Min", value: t?.min ?? 0 },
+    { label: "Seg", value: t?.seg ?? 0 },
   ];
 
   return (
