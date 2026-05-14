@@ -1,26 +1,95 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Calling } from "@/components/site/Calling";
+import { Schedule } from "@/components/site/Schedule";
+import { Venue } from "@/components/site/Venue";
+import { Gallery } from "@/components/site/Gallery";
+import { Experiences } from "@/components/site/Experiences";
+import { Investment } from "@/components/site/Investment";
+import { Countdown } from "@/components/site/Countdown";
+import { FAQ } from "@/components/site/FAQ";
+import { FinalCTA } from "@/components/site/FinalCTA";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      {
+        title:
+          "III Congresso de Psicogenealogia — Raízes da Alma | Florianópolis 2026",
+      },
+      {
+        name: "description",
+        content:
+          "O maior encontro de Psicogenealogia do Brasil. Três dias de imersão em ancestralidade, Cabalá e consciência transgeracional. Florianópolis, 06 a 08 de Novembro de 2026.",
+      },
+      {
+        property: "og:title",
+        content: "Raízes da Alma — III Congresso de Psicogenealogia",
+      },
+      {
+        property: "og:description",
+        content:
+          "Três dias de imersão profunda em ancestralidade, consciência e transformação. Florianópolis · 2026.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "III Congresso de Psicogenealogia — Raízes da Alma",
+          startDate: "2026-11-06T14:00-03:00",
+          endDate: "2026-11-08T13:00-03:00",
+          eventAttendanceMode:
+            "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          location: {
+            "@type": "Place",
+            name: "Hotel Torres da Cachoeira",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Av. Luiz Boiteux Piazza, 3991",
+              addressLocality: "Florianópolis",
+              addressRegion: "SC",
+              postalCode: "88056-000",
+              addressCountry: "BR",
+            },
+          },
+          organizer: { "@type": "Organization", name: "Instituto LIZ" },
+          offers: {
+            "@type": "Offer",
+            price: "1150.00",
+            priceCurrency: "BRL",
+            availability: "https://schema.org/InStock",
+          },
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="relative bg-background text-offwhite">
+      <Header />
+      <Hero />
+      <Calling />
+      <Schedule />
+      <Venue />
+      <Gallery />
+      <Experiences />
+      <Investment />
+      <Countdown />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+      <WhatsAppFloat />
+    </main>
+  );
 }
