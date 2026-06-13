@@ -5,6 +5,8 @@ import { Calling } from "@/components/site/Calling";
 import { Schedule } from "@/components/site/Schedule";
 import { Venue } from "@/components/site/Venue";
 import { Gallery } from "@/components/site/Gallery";
+import { Convidados } from "@/components/site/Convidados";
+
 import { Experiences } from "@/components/site/Experiences";
 import { Investment } from "@/components/site/Investment";
 import { Countdown } from "@/components/site/Countdown";
@@ -80,10 +82,12 @@ function Index() {
       <Header />
       <Hero />
       <Calling />
+      <Convidados />
       <Schedule />
       <Venue />
       <Gallery />
       <Experiences />
+
       <Investment />
       <Countdown />
       <FAQ />
