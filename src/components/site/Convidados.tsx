@@ -1,4 +1,54 @@
 import { Reveal } from "./Reveal";
+import danila from "@/assets/convidados/danila.jpg.asset.json";
+import daniella from "@/assets/convidados/daniella.png.asset.json";
+import sergio from "@/assets/convidados/sergio.png.asset.json";
+import leandro from "@/assets/convidados/leandro.png.asset.json";
+import sol from "@/assets/convidados/sol.png.asset.json";
+
+type Speaker = {
+  name: string;
+  role: string;
+  photo: string;
+  bio: string;
+  themes?: string[];
+};
+
+const speakers: Speaker[] = [
+  {
+    name: "Danila Gabriel Martins de Campos",
+    role: "Fisioterapeuta Integrativa · Saúde Integral e Terapias Transgeracionais",
+    photo: danila.url,
+    bio: "Graduada em Enfermagem (FMR) e Fisioterapia (UNIFSP), atua com abordagem integrativa voltada à identificação da causa primária das disfunções físicas, emocionais e comportamentais. Com formação em Microfisioterapia, Dermoneuromodulação, Leitura Biológica, Cura Prânica e Psicogenealogia, dedica-se à liberação de memórias biológicas e heranças transgeracionais. Pós-graduanda em Neurociência e fundadora da D G M de Campos.",
+    themes: [
+      "O corpo não esquece: raízes ocultas do sintoma",
+      "Entre gerações: o corpo como guardião da história",
+    ],
+  },
+  {
+    name: "Daniella Barreto Ruocco",
+    role: "Cirurgiã-Dentista · Psicogenealogista · Consteladora Familiar",
+    photo: daniella.url,
+    bio: "Cirurgiã-Dentista, Psicogenealogista, Consteladora Familiar, Terapeuta Integrativa e palestrante. Integra clínica, escuta sistêmica e trabalho com sistemas familiares em sua atuação como conferencista.",
+  },
+  {
+    name: "Dr. Sérgio Felipe de Oliveira",
+    role: "Médico · Pesquisador · Neurociência e Consciência",
+    photo: sergio.url,
+    bio: "Médico, pesquisador e palestrante brasileiro reconhecido por integrar neurociência, espiritualidade, filosofia e consciência humana. Formado em Medicina, atuou por muitos anos na neurologia e tornou-se referência em estudos sobre a relação entre cérebro, mente e fenômenos da consciência. Autor de livros, conferencista internacional e fundador de iniciativas interdisciplinares entre ciência, saúde e espiritualidade.",
+  },
+  {
+    name: "Dr. Leandro Barreto",
+    role: "Médico · Medicina Integrativa e Funcional · USP",
+    photo: leandro.url,
+    bio: "Médico, palestrante e diretor do Bio Instituto de Medicina Integrativa e Funcional. Médico Assistente do Hospital das Clínicas da Faculdade de Medicina da USP, com formações em Nutrologia, Psiquiatria, Ciências da Longevidade Humana e Diagnóstico por Imagem. Dedica-se ao estudo da saúde física, mental e emocional sob uma abordagem integrativa voltada ao desenvolvimento humano e à qualidade de vida.",
+  },
+  {
+    name: "Dra. Sol Ayala",
+    role: "Médica · Saúde Integrativa · Terapia Neural",
+    photo: sol.url,
+    bio: "Médica especialista em saúde integrativa, terapia neural e avaliação metabólica e nutricional. Com formação pelo Hospital das Clínicas da USP e ampla experiência clínica, desenvolve uma medicina humanizada que integra corpo, mente e emoções no cuidado à saúde — atuando na prevenção e tratamento de dores crônicas, desequilíbrios metabólicos e na promoção do bem-estar integral.",
+  },
+];
 
 export function Convidados() {
   return (
@@ -11,62 +61,89 @@ export function Convidados() {
         }}
       />
 
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         <Reveal>
-          <div className="text-center mb-16">
-            <p className="label-cinzel text-xs text-gold mb-4">Convidados e Presenças Especiais</p>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="label-cinzel text-xs text-gold mb-4">
+              Convidados e Presenças Especiais
+            </p>
             <h2 className="font-display italic text-5xl md:text-6xl leading-[1.05] mb-6">
-              Nomes que <span className="text-gradient-gold">marcam época</span>, <br className="hidden md:block" />
-              reunidos em um só palco.
+              Vozes que <span className="text-gradient-gold">reescrevem</span> a
+              forma de compreender <br className="hidden md:block" />
+              família, corpo e consciência.
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-              Estão sendo convidadas referências nacionais e internacionais da ciência,
-              da clínica e da espiritualidade — vozes que vêm reescrevendo a forma
-              como compreendemos família, ancestralidade e consciência.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Referências nacionais da medicina, da clínica integrativa e da
+              psicogenealogia reunidas em três dias de imersão. Novos nomes serão
+              anunciados em sequência.
             </p>
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
-          {[
-            {
-              title: "Ciência",
-              desc: "Pesquisadores e médicos que investigam a memória transgeracional sob a ótica clínica e científica.",
-            },
-            {
-              title: "Consciência",
-              desc: "Psicólogos, terapeutas e autores que conduzem o trabalho profundo com sistemas familiares.",
-            },
-            {
-              title: "Espiritualidade",
-              desc: "Mestres e estudiosos das tradições que iluminam a alma — Cabalá, ancestralidade e sabedoria antiga.",
-            },
-          ].map((c, i) => (
-            <Reveal key={c.title} delay={i * 0.08}>
-              <div className="glass-card p-8 h-full text-center">
-                <div className="label-cinzel text-[0.65rem] text-gold mb-4 tracking-[0.3em]">
-                  Eixo
+        <div className="space-y-10 md:space-y-14">
+          {speakers.map((s, i) => (
+            <Reveal key={s.name} delay={i * 0.05}>
+              <article
+                className={`glass-card overflow-hidden grid md:grid-cols-[320px_1fr] gap-0 ${
+                  i % 2 === 1 ? "md:[direction:rtl]" : ""
+                }`}
+              >
+                <div className="relative aspect-[3/4] md:aspect-auto md:h-full overflow-hidden [direction:ltr]">
+                  <img
+                    src={s.photo}
+                    alt={`Retrato de ${s.name}`}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
                 </div>
-                <h3 className="font-display italic text-3xl mb-4">{c.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
-              </div>
+
+                <div className="p-8 md:p-10 [direction:ltr] flex flex-col justify-center">
+                  <div className="label-cinzel text-[0.65rem] text-gold mb-3 tracking-[0.3em]">
+                    Convidado Confirmado
+                  </div>
+                  <h3 className="font-display italic text-3xl md:text-4xl mb-2 leading-tight">
+                    {s.name}
+                  </h3>
+                  <p className="text-gold/90 text-sm mb-5 tracking-wide">
+                    {s.role}
+                  </p>
+                  <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
+                    {s.bio}
+                  </p>
+
+                  {s.themes && (
+                    <div className="mt-6 border-t border-gold/15 pt-5">
+                      <p className="label-cinzel text-[0.6rem] text-gold/80 mb-3 tracking-[0.25em]">
+                        Temas da palestra
+                      </p>
+                      <ul className="space-y-2">
+                        {s.themes.map((t) => (
+                          <li
+                            key={t}
+                            className="text-sm font-display italic text-offwhite/90 before:content-['◆'] before:text-gold before:mr-3 before:text-[0.6rem] before:align-middle"
+                          >
+                            {t}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </article>
             </Reveal>
           ))}
         </div>
 
-        <Reveal delay={0.3}>
+        <Reveal delay={0.2}>
           <div className="mt-16 text-center max-w-2xl mx-auto border-t border-gold/15 pt-12">
             <p className="label-cinzel text-[0.7rem] text-gold mb-4 tracking-[0.3em]">
-              Anúncio oficial em breve
+              Novos nomes em breve
             </p>
             <p className="font-display italic text-2xl md:text-3xl text-offwhite/90 leading-snug">
-              "Os nomes convidados serão revelados em sequência —
-              cada anúncio, um capítulo dessa edição histórica."
+              "Cada confirmação, um novo capítulo dessa edição histórica."
             </p>
-            <p className="mt-6 text-xs text-muted-foreground">
-              Cadastre-se para receber, em primeira mão, cada confirmação.
-            </p>
-            <a href="#investimento" className="btn-ghost mt-6 inline-flex">
+            <a href="#investimento" className="btn-ghost mt-8 inline-flex">
               Garantir presença
             </a>
           </div>
