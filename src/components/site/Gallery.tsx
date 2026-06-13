@@ -4,9 +4,17 @@ import e1 from "@/assets/edicoes/edicao-1.jpg.asset.json";
 import e2 from "@/assets/edicoes/edicao-2.jpg.asset.json";
 import e3 from "@/assets/edicoes/edicao-3.jpg.asset.json";
 import e4 from "@/assets/edicoes/edicao-4.jpg.asset.json";
+import eGrupo from "@/assets/edicoes/edicao-grupo.jpg.asset.json";
+import eDomoInterno from "@/assets/edicoes/edicao-domo-interno.jpg.asset.json";
+import eRitual from "@/assets/edicoes/edicao-ritual.jpg.asset.json";
+import eDomeYoga from "@/assets/edicoes/edicao-dome-yoga.jpg.asset.json";
 
 const photos = [
-  { src: e0.url, alt: "Palestrante no palco diante da Árvore da Vida", span: "md:col-span-2 md:row-span-2" },
+  { src: eDomoInterno.url, alt: "Palestra dentro do domo geodésico com Árvore da Vida", span: "md:col-span-2 md:row-span-2" },
+  { src: eGrupo.url, alt: "Foto oficial dos participantes de edição anterior" },
+  { src: eRitual.url, alt: "Ritual de roda em vivência ao ar livre" },
+  { src: e0.url, alt: "Palestrante no palco diante da Árvore da Vida" },
+  { src: eDomeYoga.url, alt: "Prática corporal em frente ao domo geodésico", span: "md:col-span-2" },
   { src: e1.url, alt: "Momento de fala emocionante em palco" },
   { src: e2.url, alt: "Palestrante conduzindo vivência" },
   { src: e3.url, alt: "Apresentação científica no congresso" },
