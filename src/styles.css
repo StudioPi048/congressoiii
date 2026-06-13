@@ -2,7 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Cinzel:wght@400;500;600&family=Lato:wght@300;400;700&display=swap");
+/* Fonts loaded via <link> in src/routes/__root.tsx */
 
 @custom-variant dark (&:is(.dark *));
 
