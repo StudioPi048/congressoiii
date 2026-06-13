@@ -11,6 +11,7 @@ type Speaker = {
   photo: string;
   bio: string;
   themes?: string[];
+  gender: "female" | "male";
 };
 
 const speakers: Speaker[] = [
@@ -23,30 +24,35 @@ const speakers: Speaker[] = [
       "O corpo não esquece: raízes ocultas do sintoma",
       "Entre gerações: o corpo como guardião da história",
     ],
+    gender: "female",
   },
   {
     name: "Daniella Barreto Ruocco",
     role: "Cirurgiã-Dentista · Psicogenealogista · Consteladora Familiar",
     photo: daniella.url,
     bio: "Cirurgiã-Dentista, Psicogenealogista, Consteladora Familiar, Terapeuta Integrativa e palestrante. Integra clínica, escuta sistêmica e trabalho com sistemas familiares em sua atuação como conferencista.",
+    gender: "female",
   },
   {
     name: "Dr. Sérgio Felipe de Oliveira",
     role: "Médico · Pesquisador · Neurociência e Consciência",
     photo: sergio.url,
     bio: "Médico, pesquisador e palestrante brasileiro reconhecido por integrar neurociência, espiritualidade, filosofia e consciência humana. Formado em Medicina, atuou por muitos anos na neurologia e tornou-se referência em estudos sobre a relação entre cérebro, mente e fenômenos da consciência. Autor de livros, conferencista internacional e fundador de iniciativas interdisciplinares entre ciência, saúde e espiritualidade.",
+    gender: "male",
   },
   {
     name: "Dr. Leandro Barreto",
     role: "Médico · Medicina Integrativa e Funcional · USP",
     photo: leandro.url,
     bio: "Médico, palestrante e diretor do Bio Instituto de Medicina Integrativa e Funcional. Médico Assistente do Hospital das Clínicas da Faculdade de Medicina da USP, com formações em Nutrologia, Psiquiatria, Ciências da Longevidade Humana e Diagnóstico por Imagem. Dedica-se ao estudo da saúde física, mental e emocional sob uma abordagem integrativa voltada ao desenvolvimento humano e à qualidade de vida.",
+    gender: "male",
   },
   {
     name: "Dra. Sol Ayala",
     role: "Médica · Saúde Integrativa · Terapia Neural",
     photo: sol.url,
     bio: "Médica especialista em saúde integrativa, terapia neural e avaliação metabólica e nutricional. Com formação pelo Hospital das Clínicas da USP e ampla experiência clínica, desenvolve uma medicina humanizada que integra corpo, mente e emoções no cuidado à saúde — atuando na prevenção e tratamento de dores crônicas, desequilíbrios metabólicos e na promoção do bem-estar integral.",
+    gender: "female",
   },
 ];
 
@@ -84,7 +90,7 @@ export function Convidados() {
           {speakers.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.05}>
               <article
-                className={`glass-card overflow-hidden grid md:grid-cols-[320px_1fr] gap-0 ${
+                className={`glass-card overflow-hidden grid md:grid-cols-[300px_1fr] md:min-h-[520px] gap-0 ${
                   i % 2 === 1 ? "md:[direction:rtl]" : ""
                 }`}
               >
@@ -100,7 +106,7 @@ export function Convidados() {
 
                 <div className="p-8 md:p-10 [direction:ltr] flex flex-col justify-center">
                   <div className="label-cinzel text-[0.65rem] text-gold mb-3 tracking-[0.3em]">
-                    Convidado Confirmado
+                    {s.gender === "female" ? "Convidada Confirmada" : "Convidado Confirmado"}
                   </div>
                   <h3 className="font-display italic text-3xl md:text-4xl mb-2 leading-tight">
                     {s.name}
