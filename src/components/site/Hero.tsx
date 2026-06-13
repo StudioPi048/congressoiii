@@ -64,21 +64,24 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="font-display italic font-bold text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.95] mb-6"
+          className="font-display italic font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.98] mb-8"
         >
-          Raízes <br />
-          <span className="text-gradient-gold">da Alma</span>
+          Raízes da Alma <br />
+          <span className="text-gradient-gold text-3xl sm:text-4xl md:text-5xl lg:text-6xl not-italic font-normal tracking-wide">
+            Ciência, Consciência e Espiritualidade em diálogo
+          </span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-offwhite/75 text-lg md:text-xl font-light max-w-xl mx-auto leading-relaxed"
+          className="text-offwhite/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
         >
-          Três dias de imersão profunda em ancestralidade,
-          consciência e transformação.
+          Um congresso para investigar as heranças invisíveis que atravessam
+          famílias, corpos, vínculos e destinos.
         </motion.p>
+
 
         <motion.div
           initial={{ opacity: 0 }}
