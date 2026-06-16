@@ -16,6 +16,7 @@ type Speaker = {
   modality?: "presencial" | "online" | "remoto";
   note?: string;
   highlight?: boolean;
+  status?: "confirmed" | "pending";
 };
 
 const speakers: Speaker[] = [
@@ -60,6 +61,7 @@ const speakers: Speaker[] = [
     photo: leandro.url,
     bio: "Médico, palestrante e diretor do Bio Instituto de Medicina Integrativa e Funcional. Médico Assistente do Hospital das Clínicas da Faculdade de Medicina da USP, com formações em Nutrologia, Psiquiatria, Ciências da Longevidade Humana e Diagnóstico por Imagem. Dedica-se ao estudo da saúde física, mental e emocional sob uma abordagem integrativa voltada ao desenvolvimento humano e à qualidade de vida.",
     gender: "male",
+    status: "pending",
   },
   {
     name: "Dra. Sol Ayala",
@@ -67,6 +69,7 @@ const speakers: Speaker[] = [
     photo: sol.url,
     bio: "Médica especialista em saúde integrativa, terapia neural e avaliação metabólica e nutricional. Com formação pelo Hospital das Clínicas da USP e ampla experiência clínica, desenvolve uma medicina humanizada que integra corpo, mente e emoções no cuidado à saúde — atuando na prevenção e tratamento de dores crônicas, desequilíbrios metabólicos e na promoção do bem-estar integral.",
     gender: "female",
+    status: "pending",
   },
   {
     name: "Letícia Kuchockowolec Baccin",
@@ -120,7 +123,9 @@ export function Convidados() {
               <article
                 className={`glass-card overflow-hidden grid md:grid-cols-[300px_1fr] md:min-h-[520px] gap-0 ${
                   i % 2 === 1 ? "md:[direction:rtl]" : ""
-                } ${s.highlight ? "ring-1 ring-gold/40 border-gold/40" : ""}`}
+                } ${s.highlight ? "ring-1 ring-gold/40 border-gold/40" : ""} ${
+                  s.status === "pending" ? "opacity-70" : ""
+                }`}
               >
                 <div className="relative aspect-[3/4] md:aspect-auto md:h-full overflow-hidden [direction:ltr]">
                   <img
@@ -138,8 +143,10 @@ export function Convidados() {
                 </div>
 
                 <div className="p-8 md:p-10 [direction:ltr] flex flex-col justify-center">
-                  <div className="label-cinzel text-[0.65rem] text-gold mb-3 tracking-[0.3em]">
-                    {s.gender === "female" ? "Convidada Confirmada" : "Convidado Confirmado"}
+                  <div className={`label-cinzel text-[0.65rem] mb-3 tracking-[0.3em] ${s.status === "pending" ? "text-muted-foreground" : "text-gold"}`}>
+                    {s.status === "pending"
+                      ? (s.gender === "female" ? "Convidada a Confirmar" : "Convidado a Confirmar")
+                      : (s.gender === "female" ? "Convidada Confirmada" : "Convidado Confirmado")}
                   </div>
                   <h3 className="font-display italic text-3xl md:text-4xl mb-2 leading-tight">
                     {s.name}
