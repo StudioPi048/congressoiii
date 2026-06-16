@@ -4,6 +4,7 @@ import daniella from "@/assets/convidados/daniella.png.asset.json";
 import sergio from "@/assets/convidados/sergio.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
+import placeholder from "@/assets/convidados/placeholder-speaker.jpg.asset.json";
 
 type Speaker = {
   name: string;
@@ -12,9 +13,29 @@ type Speaker = {
   bio: string;
   themes?: string[];
   gender: "female" | "male";
+  modality?: "presencial" | "online" | "remoto";
+  note?: string;
+  highlight?: boolean;
 };
 
 const speakers: Speaker[] = [
+  {
+    name: "Dr. Sérgio Felipe de Oliveira",
+    role: "Médico · Pesquisador · Neurociência e Consciência",
+    photo: sergio.url,
+    bio: "Médico, pesquisador e palestrante brasileiro reconhecido por integrar neurociência, espiritualidade, filosofia e consciência humana. Formado em Medicina, atuou por muitos anos na neurologia e tornou-se referência em estudos sobre a relação entre cérebro, mente e fenômenos da consciência. Autor de livros, conferencista internacional e fundador de iniciativas interdisciplinares entre ciência, saúde e espiritualidade.",
+    gender: "male",
+    modality: "remoto",
+    note: "Participação especial — II Congresso. Não estará presente fisicamente.",
+    highlight: true,
+  },
+  {
+    name: "Dr. Fabián Brotos",
+    role: "Odontologia Integrativa · Decodificação Biológica · Uruguai",
+    photo: placeholder.url,
+    bio: "Iniciou sua jornada na Decodificação Biológica como aluno do professor Enrique Bouron, destacando-se em Biologia Total pela dedicação e aprofundamento clínico. Graduado em Odontologia pela Universidade da República (Montevidéu, 2000), é docente desde 1999 nas áreas de oclusão, prótese dentária e diversas especialidades odontológicas integrativas. Possui formação em Cerâmica Dentária, Facetas e Inlays Cerâmicos, Tratamento de Edentação, sistema Bredent (Alemanha), Fibra de Vidro em Odontologia, Pós-graduação em Ortopedia e Ortodontia, Implantes Osseointegrados, Próteses Implantoassistidas e Implantologia.",
+    gender: "male",
+  },
   {
     name: "Danila Gabriel Martins de Campos",
     role: "Fisioterapeuta Integrativa · Saúde Integral e Terapias Transgeracionais",
@@ -34,13 +55,6 @@ const speakers: Speaker[] = [
     gender: "female",
   },
   {
-    name: "Dr. Sérgio Felipe de Oliveira",
-    role: "Médico · Pesquisador · Neurociência e Consciência",
-    photo: sergio.url,
-    bio: "Médico, pesquisador e palestrante brasileiro reconhecido por integrar neurociência, espiritualidade, filosofia e consciência humana. Formado em Medicina, atuou por muitos anos na neurologia e tornou-se referência em estudos sobre a relação entre cérebro, mente e fenômenos da consciência. Autor de livros, conferencista internacional e fundador de iniciativas interdisciplinares entre ciência, saúde e espiritualidade.",
-    gender: "male",
-  },
-  {
     name: "Dr. Leandro Barreto",
     role: "Médico · Medicina Integrativa e Funcional · USP",
     photo: leandro.url,
@@ -53,6 +67,20 @@ const speakers: Speaker[] = [
     photo: sol.url,
     bio: "Médica especialista em saúde integrativa, terapia neural e avaliação metabólica e nutricional. Com formação pelo Hospital das Clínicas da USP e ampla experiência clínica, desenvolve uma medicina humanizada que integra corpo, mente e emoções no cuidado à saúde — atuando na prevenção e tratamento de dores crônicas, desequilíbrios metabólicos e na promoção do bem-estar integral.",
     gender: "female",
+  },
+  {
+    name: "Letícia Kuchockowolec Baccin",
+    role: "Psicogenealogista · Saúde Mental Corporativa · NR-1",
+    photo: placeholder.url,
+    bio: "Psicogenealogista com atuação voltada à aplicação do método em contextos empresariais e de saúde mental. Trabalha a adequação da Psicogenealogia às novas demandas da NR-1, conectando gestão de pessoas, desenvolvimento humano e cuidado psíquico nas organizações. Bio completa em breve.",
+    gender: "female",
+  },
+  {
+    name: "Pietro Baccin",
+    role: "Psicogenealogia · Desenvolvimento Humano",
+    photo: placeholder.url,
+    bio: "Palestrante confirmado do III Congresso de Psicogenealogia. Atua na intersecção entre psicogenealogia, desenvolvimento humano e novas abordagens integrativas. Currículo completo em breve.",
+    gender: "male",
   },
 ];
 
@@ -79,9 +107,9 @@ export function Convidados() {
               família, corpo e consciência.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Referências nacionais da medicina, da clínica integrativa e da
-              psicogenealogia reunidas em três dias de imersão. Novos nomes serão
-              anunciados em sequência.
+              Referências nacionais e internacionais da medicina, da clínica
+              integrativa, da odontologia e da psicogenealogia reunidas em três
+              dias de imersão. Novos nomes serão anunciados em sequência.
             </p>
           </div>
         </Reveal>
@@ -92,7 +120,7 @@ export function Convidados() {
               <article
                 className={`glass-card overflow-hidden grid md:grid-cols-[300px_1fr] md:min-h-[520px] gap-0 ${
                   i % 2 === 1 ? "md:[direction:rtl]" : ""
-                }`}
+                } ${s.highlight ? "ring-1 ring-gold/40 border-gold/40" : ""}`}
               >
                 <div className="relative aspect-[3/4] md:aspect-auto md:h-full overflow-hidden [direction:ltr]">
                   <img
@@ -102,6 +130,11 @@ export function Convidados() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                  {s.modality === "remoto" && (
+                    <span className="absolute top-4 left-4 label-cinzel text-[0.55rem] px-3 py-1 bg-background/80 backdrop-blur text-gold border border-gold/40 rounded-sm tracking-[0.25em]">
+                      Participação Remota
+                    </span>
+                  )}
                 </div>
 
                 <div className="p-8 md:p-10 [direction:ltr] flex flex-col justify-center">
@@ -114,6 +147,11 @@ export function Convidados() {
                   <p className="text-gold/90 text-sm mb-5 tracking-wide">
                     {s.role}
                   </p>
+                  {s.note && (
+                    <p className="text-xs text-offwhite/70 italic border-l-2 border-gold/40 pl-3 mb-5">
+                      {s.note}
+                    </p>
+                  )}
                   <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
                     {s.bio}
                   </p>
