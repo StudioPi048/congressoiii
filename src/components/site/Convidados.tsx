@@ -22,16 +22,6 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
-    name: "Dr. Sérgio Felipe de Oliveira",
-    role: "Médico · Pesquisador · Neurociência e Consciência",
-    photo: sergio.url,
-    bio: "Médico, pesquisador e palestrante brasileiro reconhecido por integrar neurociência, espiritualidade, filosofia e consciência humana. Formado em Medicina, atuou por muitos anos na neurologia e tornou-se referência em estudos sobre a relação entre cérebro, mente e fenômenos da consciência. Autor de livros, conferencista internacional e fundador de iniciativas interdisciplinares entre ciência, saúde e espiritualidade.",
-    gender: "male",
-    modality: "remoto",
-    note: "Participação especial — II Congresso. Não estará presente fisicamente.",
-    highlight: true,
-  },
-  {
     name: "Dr. Fabián Brotos",
     role: "Odontologia Integrativa · Decodificação Biológica · Uruguai",
     photo: fabian.url,
