@@ -4,8 +4,18 @@ import eGrupo from "@/assets/edicoes/edicao-grupo.jpg.asset.json";
 import eDomoInterno from "@/assets/edicoes/edicao-domo-interno.jpg.asset.json";
 import eRitual from "@/assets/edicoes/edicao-ritual.jpg.asset.json";
 import eDomeYoga from "@/assets/edicoes/edicao-dome-yoga.jpg.asset.json";
+import memoria01 from "@/assets/edicoes/memoria-edicao-01.png.asset.json";
+import memoria02 from "@/assets/edicoes/memoria-edicao-02.png.asset.json";
+import memoria03 from "@/assets/edicoes/memoria-edicao-03.png.asset.json";
+import memoria04 from "@/assets/edicoes/memoria-edicao-04.png.asset.json";
+import memoria05 from "@/assets/edicoes/memoria-edicao-05.png.asset.json";
 
 const images = [
+  { src: memoria01.url, alt: "Participantes posando ao lado do banner do simpósio" },
+  { src: memoria02.url, alt: "Registro ao ar livre com convidados e participantes de edição anterior" },
+  { src: memoria03.url, alt: "Foto de família da organização e apoiadores em edição anterior" },
+  { src: memoria04.url, alt: "Vivência em círculo dentro do domo durante encontro anterior" },
+  { src: memoria05.url, alt: "Foto coletiva dos participantes em uma edição anterior" },
   { src: eDomoInterno.url, alt: "Palestra dentro do domo geodésico" },
   { src: eGrupo.url, alt: "Foto oficial dos participantes" },
   { src: eRitual.url, alt: "Ritual de roda ao ar livre" },
@@ -119,7 +129,7 @@ export function Memorias() {
             <p className="label-cinzel text-[0.7rem] text-gold mb-6 tracking-[0.3em] text-center">
               Registros do Simpósio
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {images.map((p, i) => (
                 <div
                   key={i}
