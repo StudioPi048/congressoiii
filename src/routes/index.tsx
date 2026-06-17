@@ -7,6 +7,7 @@ import { Venue } from "@/components/site/Venue";
 import { Gallery } from "@/components/site/Gallery";
 import { Convidados } from "@/components/site/Convidados";
 import { Integracao } from "@/components/site/Integracao";
+import { Memorias } from "@/components/site/Memorias";
 
 import { Experiences } from "@/components/site/Experiences";
 import { Investment } from "@/components/site/Investment";
@@ -82,6 +83,7 @@ function Index() {
     <main className="relative bg-background text-offwhite">
       <Header />
       <Hero />
+      <Memorias />
       <Calling />
       <Convidados />
       <Integracao />
