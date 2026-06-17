@@ -5,6 +5,8 @@ import sergio from "@/assets/convidados/sergio.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
 import placeholder from "@/assets/convidados/placeholder-speaker.jpg.asset.json";
+import leticia from "@/assets/convidados/leticia.png.asset.json";
+import pietro from "@/assets/convidados/pietro.png.asset.json";
 
 type Speaker = {
   name: string;
@@ -73,16 +75,16 @@ const speakers: Speaker[] = [
   },
   {
     name: "Letícia Kuchockowolec Baccin",
-    role: "Psicogenealogista · Saúde Mental Corporativa · NR-1",
-    photo: placeholder.url,
-    bio: "Psicogenealogista com atuação voltada à aplicação do método em contextos empresariais e de saúde mental. Trabalha a adequação da Psicogenealogia às novas demandas da NR-1, conectando gestão de pessoas, desenvolvimento humano e cuidado psíquico nas organizações. Bio completa em breve.",
+    role: "Docente Internacional de Psicogenealogia · Fundadora Instituto e Escola LIZ",
+    photo: leticia.url,
+    bio: "Formada em Direito, atuou como advogada por 25 anos. Foi sócia e cofundadora do 5º maior escritório de advocacia do Brasil — Martinelli Advogados — com registro em 7 seccionais da OAB. Sócia fundadora do Instituto LIZ e da Escola LIZ, com o propósito de Conciliar a Existência a partir da tomada de consciência das programações inconscientes e da compreensão da totalidade do ser e do continuum da vida. Especialista em Direito da Economia e da Empresa, pós-graduada em Direito e Relações do Trabalho, Parapsicologia Clínica Independente e Neurociências (PUC e Uniespírito). Bioneurogestora, Decodificadora Dental, palestrante TEDx, autora de 12 obras e cursando Diplomado de Cabalá pela Escola de Mário Saban. Docente Internacional de Psicogenealogia pela Escola LIZ e responsável legal pelas formações no Brasil, Portugal e países de língua portuguesa.",
     gender: "female",
   },
   {
-    name: "Pietro Baccin",
-    role: "Psicogenealogia · Desenvolvimento Humano",
-    photo: placeholder.url,
-    bio: "Palestrante confirmado do III Congresso de Psicogenealogia. Atua na intersecção entre psicogenealogia, desenvolvimento humano e novas abordagens integrativas. Currículo completo em breve.",
+    name: "Pietro Vinícius Kuchockowolec Baccin",
+    role: "Designer Gráfico · Fotógrafo · Branding e Direção Criativa",
+    photo: pietro.url,
+    bio: "Designer Gráfico e Fotógrafo com mais de 12 anos de experiência no desenvolvimento de marcas, identidades visuais, campanhas publicitárias e projetos digitais. Atuação sólida em branding, marketing visual, design estratégico e produção de conteúdo para mídias digitais. Integra ferramentas de inteligência artificial aos processos criativos para potencializar resultados e gerar experiências visuais impactantes. Bacharelado em Design pela Pontifícia Universidade Católica do Paraná (cursando) e Tecnólogo em Design Gráfico pela Universidade do Vale do Itajaí.",
     gender: "male",
   },
 ];
