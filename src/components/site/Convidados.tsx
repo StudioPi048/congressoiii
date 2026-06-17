@@ -4,7 +4,7 @@ import daniella from "@/assets/convidados/daniella.png.asset.json";
 import sergio from "@/assets/convidados/sergio.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
-import placeholder from "@/assets/convidados/placeholder-speaker.jpg.asset.json";
+import fabian from "@/assets/convidados/fabian-brotos.png.asset.json";
 import leticia from "@/assets/convidados/leticia.png.asset.json";
 import pietro from "@/assets/convidados/pietro.png.asset.json";
 
@@ -35,7 +35,7 @@ const speakers: Speaker[] = [
   {
     name: "Dr. Fabián Brotos",
     role: "Odontologia Integrativa · Decodificação Biológica · Uruguai",
-    photo: placeholder.url,
+    photo: fabian.url,
     bio: "Iniciou sua jornada na Decodificação Biológica como aluno do professor Enrique Bouron, destacando-se em Biologia Total pela dedicação e aprofundamento clínico. Graduado em Odontologia pela Universidade da República (Montevidéu, 2000), é docente desde 1999 nas áreas de oclusão, prótese dentária e diversas especialidades odontológicas integrativas. Possui formação em Cerâmica Dentária, Facetas e Inlays Cerâmicos, Tratamento de Edentação, sistema Bredent (Alemanha), Fibra de Vidro em Odontologia, Pós-graduação em Ortopedia e Ortodontia, Implantes Osseointegrados, Próteses Implantoassistidas e Implantologia.",
     gender: "male",
   },
