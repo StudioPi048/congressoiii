@@ -5,6 +5,8 @@ import sergio from "@/assets/convidados/sergio.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
 import placeholder from "@/assets/convidados/placeholder-speaker.jpg.asset.json";
+import leticia from "@/assets/convidados/leticia.png.asset.json";
+import pietro from "@/assets/convidados/pietro.png.asset.json";
 
 type Speaker = {
   name: string;
