@@ -129,7 +129,7 @@ export function Memorias() {
             <p className="label-cinzel text-[0.7rem] text-gold mb-6 tracking-[0.3em] text-center">
               Registros do Simpósio
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {images.map((p, i) => (
                 <div
                   key={i}
