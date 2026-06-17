@@ -152,7 +152,7 @@ export function Memorias() {
         <Reveal delay={0.25}>
           <div className="mt-16 text-center max-w-2xl mx-auto">
             <p className="font-display italic text-2xl md:text-3xl text-offwhite/90 leading-snug">
-              "Cada edição deixou uma semente — esta colhe e replanta."
+              "Uma família que trabalha para famílias!"
             </p>
             <a href="#edicoes-anteriores" className="btn-ghost mt-8 inline-flex">
               Ver galeria completa
