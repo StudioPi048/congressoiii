@@ -1,7 +1,6 @@
 import { Reveal } from "./Reveal";
 import danila from "@/assets/convidados/danila.jpg.asset.json";
 import daniella from "@/assets/convidados/daniella.png.asset.json";
-import sergio from "@/assets/convidados/sergio.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
 import fabian from "@/assets/convidados/fabian-brotos.png.asset.json";
