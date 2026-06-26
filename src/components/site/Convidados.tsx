@@ -9,6 +9,7 @@ import pietro from "@/assets/convidados/pietro.png.asset.json";
 import raul from "@/assets/convidados/raul.jpg.asset.json";
 import aline from "@/assets/convidados/aline.jpg.asset.json";
 import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
+import walter from "@/assets/convidados/walter.jpg.asset.json";
 
 type Speaker = {
   name: string;
@@ -96,6 +97,13 @@ const speakers: Speaker[] = [
     role: "Especialista em Comportamento Humano · Gestão Consciente · Desenvolvimento de Líderes",
     photo: jefferson.url,
     bio: "“Sou a expressão de muitas gerações que me antecederam. Em mim vivem histórias, emoções, aprendizados, talentos e desafios herdados daqueles que contribuíram para que eu estivesse aqui hoje. Reconheço-me como um ser em constante evolução, dedicado à busca do autoconhecimento, da consciência e da compreensão da experiência humana. Foi essa jornada que me conduziu ao estudo do comportamento humano, da gestão consciente e do desenvolvimento de líderes. Minha atuação busca integrar propósito, humanidade e lucro, compreendendo que toda estratégia, toda cultura e todo resultado organizacional são reflexos das escolhas, das relações e da consciência das pessoas que compõem uma organização. Antes de qualquer estrutura, processo ou negócio, existem seres humanos. E é por isso que afirmo: ‘Não existem empresas. Existem seres humanos realizando negócios.’”",
+    gender: "male",
+  },
+  {
+    name: "Walter Maisonnett",
+    role: "Acupunturista · Odontologia Sistêmica e Integrativa · Medicina Tradicional Chinesa",
+    photo: walter.url,
+    bio: "Acupunturista formado em Odontologia e responsável pelo canal no YouTube Odonto Sistêmica Educacional. Atua em Medicina Tradicional Chinesa, Disfunção Temporomandibular e Dor Orofacial, e Implantodontia. Pós-graduação lato sensu em Adequação Nutricional e Manutenção da Homeostase, com especialização lato sensu em Terapia Neural. Professor da pós-graduação em Odontologia Sistêmica e Integrativa e da pós-graduação em Biofísica, Tecnologias e Práticas Integrativas em Saúde. Possui formação em Decodificação Dental e em Psicogenealogia pelo Instituto LIZ — entre muitos outros certificados.",
     gender: "male",
   },
 ];
