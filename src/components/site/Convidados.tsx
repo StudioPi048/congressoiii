@@ -8,6 +8,7 @@ import leticia from "@/assets/convidados/leticia.png.asset.json";
 import pietro from "@/assets/convidados/pietro.png.asset.json";
 import raul from "@/assets/convidados/raul.jpg.asset.json";
 import aline from "@/assets/convidados/aline.jpg.asset.json";
+import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
 
 type Speaker = {
   name: string;
@@ -88,6 +89,13 @@ const speakers: Speaker[] = [
     role: "Designer Gráfico · Fotógrafo · Branding e Direção Criativa",
     photo: pietro.url,
     bio: "Designer Gráfico e Fotógrafo com mais de 12 anos de experiência no desenvolvimento de marcas, identidades visuais, campanhas publicitárias e projetos digitais. Atuação sólida em branding, marketing visual, design estratégico e produção de conteúdo para mídias digitais. Integra ferramentas de inteligência artificial aos processos criativos para potencializar resultados e gerar experiências visuais impactantes. Bacharelado em Design pela Pontifícia Universidade Católica do Paraná (cursando) e Tecnólogo em Design Gráfico pela Universidade do Vale do Itajaí.",
+    gender: "male",
+  },
+  {
+    name: "Jefferson Zomignan",
+    role: "Especialista em Comportamento Humano · Gestão Consciente · Desenvolvimento de Líderes",
+    photo: jefferson.url,
+    bio: "“Sou a expressão de muitas gerações que me antecederam. Em mim vivem histórias, emoções, aprendizados, talentos e desafios herdados daqueles que contribuíram para que eu estivesse aqui hoje. Reconheço-me como um ser em constante evolução, dedicado à busca do autoconhecimento, da consciência e da compreensão da experiência humana. Foi essa jornada que me conduziu ao estudo do comportamento humano, da gestão consciente e do desenvolvimento de líderes. Minha atuação busca integrar propósito, humanidade e lucro, compreendendo que toda estratégia, toda cultura e todo resultado organizacional são reflexos das escolhas, das relações e da consciência das pessoas que compõem uma organização. Antes de qualquer estrutura, processo ou negócio, existem seres humanos. E é por isso que afirmo: ‘Não existem empresas. Existem seres humanos realizando negócios.’”",
     gender: "male",
   },
 ];
