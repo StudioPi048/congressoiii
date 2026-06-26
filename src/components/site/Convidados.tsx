@@ -6,6 +6,8 @@ import sol from "@/assets/convidados/sol.png.asset.json";
 import fabian from "@/assets/convidados/fabian-brotos.png.asset.json";
 import leticia from "@/assets/convidados/leticia.png.asset.json";
 import pietro from "@/assets/convidados/pietro.png.asset.json";
+import raul from "@/assets/convidados/raul.jpg.asset.json";
+import aline from "@/assets/convidados/aline.jpg.asset.json";
 
 type Speaker = {
   name: string;
@@ -52,7 +54,6 @@ const speakers: Speaker[] = [
     photo: leandro.url,
     bio: "Médico, palestrante e diretor do Bio Instituto de Medicina Integrativa e Funcional. Médico Assistente do Hospital das Clínicas da Faculdade de Medicina da USP, com formações em Nutrologia, Psiquiatria, Ciências da Longevidade Humana e Diagnóstico por Imagem. Dedica-se ao estudo da saúde física, mental e emocional sob uma abordagem integrativa voltada ao desenvolvimento humano e à qualidade de vida.",
     gender: "male",
-    status: "pending",
   },
   {
     name: "Dra. Sol Ayala",
@@ -60,7 +61,20 @@ const speakers: Speaker[] = [
     photo: sol.url,
     bio: "Médica especialista em saúde integrativa, terapia neural e avaliação metabólica e nutricional. Com formação pelo Hospital das Clínicas da USP e ampla experiência clínica, desenvolve uma medicina humanizada que integra corpo, mente e emoções no cuidado à saúde — atuando na prevenção e tratamento de dores crônicas, desequilíbrios metabólicos e na promoção do bem-estar integral.",
     gender: "female",
-    status: "pending",
+  },
+  {
+    name: "Raul Ferreira Netto",
+    role: "Cineasta · Diretor · Apresentador · Locutor Oficial E! Entertainment TV Brasil",
+    photo: raul.url,
+    bio: "Cineasta, diretor, produtor, apresentador, locutor, ator e dublador brasileiro, com carreira iniciada nos Estados Unidos em 1993, onde trabalhou para grandes emissoras como MTV, HBO, Disney, Discovery, ESPN e Cartoon Network. Atuou em filmes como Mais Velozes e Mais Furiosos e Bad Boys 2, participou da série CSI: Miami e, no Brasil, consolidou-se como diretor de documentários, programas de televisão e produções especiais, além de ser a voz de personagens em séries de sucesso. Atualmente, é locutor oficial do E! Entertainment TV Brasil, dirige produções do canal e é sócio-diretor da produtora 2por1 Comunicação, destacando-se como um dos profissionais mais versáteis do audiovisual brasileiro.",
+    gender: "male",
+  },
+  {
+    name: "Aline Rosa",
+    role: "Terapeuta Integrativa · Pesquisadora da Consciência · Isekhem Kundalini",
+    photo: aline.url,
+    bio: "Terapeuta integrativa, pesquisadora da consciência e facilitadora de jornadas de reconexão com a essência. Seu trabalho nasce do encontro entre ancestralidade, consciência corporal, espiritualidade e autoconhecimento, criando espaços onde cada pessoa pode se reconectar com sua própria verdade. Acredita que o corpo guarda memórias, que a história carrega sabedorias e que a consciência é o caminho que nos conduz de volta ao que realmente somos. Integrando conhecimentos em psicogenealogia, leitura simbólica e Isekhem Kundalini, conduz processos profundos de escuta, presença e transformação, respeitando a singularidade de cada jornada. Sua missão é lembrar às pessoas que a força que procuram não está fora, mas dentro delas. O corpo é o templo. A consciência é o caminho. A essência é o retorno.",
+    gender: "female",
   },
   {
     name: "Letícia Kuchockowolec Baccin",
