@@ -107,6 +107,13 @@ const speakers: Speaker[] = [
     bio: "Acupunturista formado em Odontologia e responsável pelo canal no YouTube Odonto Sistêmica Educacional. Atua em Medicina Tradicional Chinesa, Disfunção Temporomandibular e Dor Orofacial, e Implantodontia. Pós-graduação lato sensu em Adequação Nutricional e Manutenção da Homeostase, com especialização lato sensu em Terapia Neural. Professor da pós-graduação em Odontologia Sistêmica e Integrativa e da pós-graduação em Biofísica, Tecnologias e Práticas Integrativas em Saúde. Possui formação em Decodificação Dental e em Psicogenealogia pelo Instituto LIZ — entre muitos outros certificados.",
     gender: "male",
   },
+  {
+    name: "Maria Inês Dressler",
+    role: "Founder & CEO Grupo DRESSLER · Psicogenealogista · MBA em Liderança e Gestão (PUCRS)",
+    photo: mariaInes.url,
+    bio: "Contadora e Técnica Contábil com especialização em custos industriais, pós-graduada em Finanças e MBA em Liderança, Gestão de Equipes e Produtividade pela PUCRS, com TCC em Metodologias Ágeis. Psicogenealogista formada pelo Instituto LIZ. Atuou como auditora da PWC por 4 anos, professora universitária da Univali/SC por 5 anos e conselheira do CRCSC por 4 anos. Atualmente conduz a gestão do Grupo DRESSLER e o atendimento a clientes, integrando visão contábil, liderança consciente e Psicogenealogia.",
+    gender: "female",
+  },
 ];
 
 export function Convidados() {
