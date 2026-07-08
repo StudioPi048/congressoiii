@@ -3,7 +3,8 @@ import danila from "@/assets/convidados/danila.jpg.asset.json";
 import daniella from "@/assets/convidados/daniella.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
-import fabian from "@/assets/convidados/fabian-brotos.png.asset.json";
+import fabian from "@/assets/convidados/fabian-brotos.jpg.asset.json";
+import mariaInes from "@/assets/convidados/maria-ines.jpg.asset.json";
 import leticia from "@/assets/convidados/leticia.png.asset.json";
 import pietro from "@/assets/convidados/pietro.png.asset.json";
 import raul from "@/assets/convidados/raul.jpg.asset.json";
@@ -105,6 +106,13 @@ const speakers: Speaker[] = [
     photo: walter.url,
     bio: "Acupunturista formado em Odontologia e responsável pelo canal no YouTube Odonto Sistêmica Educacional. Atua em Medicina Tradicional Chinesa, Disfunção Temporomandibular e Dor Orofacial, e Implantodontia. Pós-graduação lato sensu em Adequação Nutricional e Manutenção da Homeostase, com especialização lato sensu em Terapia Neural. Professor da pós-graduação em Odontologia Sistêmica e Integrativa e da pós-graduação em Biofísica, Tecnologias e Práticas Integrativas em Saúde. Possui formação em Decodificação Dental e em Psicogenealogia pelo Instituto LIZ — entre muitos outros certificados.",
     gender: "male",
+  },
+  {
+    name: "Maria Inês Dressler",
+    role: "Founder & CEO Grupo DRESSLER · Psicogenealogista · MBA em Liderança e Gestão (PUCRS)",
+    photo: mariaInes.url,
+    bio: "Contadora e Técnica Contábil com especialização em custos industriais, pós-graduada em Finanças e MBA em Liderança, Gestão de Equipes e Produtividade pela PUCRS, com TCC em Metodologias Ágeis. Psicogenealogista formada pelo Instituto LIZ. Atuou como auditora da PWC por 4 anos, professora universitária da Univali/SC por 5 anos e conselheira do CRCSC por 4 anos. Atualmente conduz a gestão do Grupo DRESSLER e o atendimento a clientes, integrando visão contábil, liderança consciente e Psicogenealogia.",
+    gender: "female",
   },
 ];
 
