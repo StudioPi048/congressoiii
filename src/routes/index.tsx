@@ -85,6 +85,7 @@ function Index() {
       <Header />
       <Hero />
       <Memorias />
+      <Sobre />
       <Calling />
       <Convidados />
       <Integracao />
