@@ -112,6 +112,7 @@ const speakers: Speaker[] = [
     role: "Founder & CEO Grupo DRESSLER · Psicogenealogista · MBA em Liderança e Gestão (PUCRS)",
     photo: mariaInes.url,
     bio: "Contadora e Técnica Contábil com especialização em custos industriais, pós-graduada em Finanças e MBA em Liderança, Gestão de Equipes e Produtividade pela PUCRS, com TCC em Metodologias Ágeis. Psicogenealogista formada pelo Instituto LIZ. Atuou como auditora da PWC por 4 anos, professora universitária da Univali/SC por 5 anos e conselheira do CRCSC por 4 anos. Atualmente conduz a gestão do Grupo DRESSLER e o atendimento a clientes, integrando visão contábil, liderança consciente e Psicogenealogia.",
+    themes: ["Saúde Mental nas Empresas"],
     gender: "female",
   },
 ];
