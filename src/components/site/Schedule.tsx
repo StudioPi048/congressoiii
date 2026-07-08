@@ -19,14 +19,11 @@ const eixoColor: Record<Eixo, string> = {
   "Consciência e Desenvolvimento Humano": "border-indigo-300/40 text-indigo-200/90",
 };
 
-type Slot = {
-  time: string;
+type Panel = {
   title: string;
-  speaker?: string;
-  desc?: string;
-  eixos?: Eixo[];
+  desc: string;
+  eixos: Eixo[];
   highlight?: boolean;
-  type?: "palestra" | "pausa" | "experiencia";
 };
 
 type Day = {
@@ -35,9 +32,8 @@ type Day = {
   badge: string;
   title: string;
   summary: string;
-  preliminary?: boolean;
   exclusive?: boolean;
-  slots: Slot[];
+  panels: Panel[];
 };
 
 const days: Day[] = [
@@ -45,17 +41,14 @@ const days: Day[] = [
     date: "06 · 11",
     weekday: "Sexta-feira",
     badge: "Abertura",
-    title: "Painel de Odontologia Integrativa, Psicogenealogia e Decodificação Dental",
+    title: "Odontologia Integrativa, Psicogenealogia e Decodificação Dental",
     summary:
-      "Aberto ao público geral e psicogenealogistas. Início às 14h.",
-    slots: [
+      "Aberto ao público geral e psicogenealogistas.",
+    panels: [
       {
-        time: "14h00",
         title:
-          "Painel de Odontologia Integrativa, Psicogenealogia e Decodificação Dental",
-        speaker:
-          "Dr. Fabián Brotos e dentistas formadores e difusores da técnica integrativa",
-        desc: "Como a odontologia contemporânea pode dialogar com a Psicogenealogia, a Decodificação Dental e os saberes simbólicos da Cabalá, ampliando o olhar sobre os processos de saúde integral. Um espaço de diálogo, reflexão e aprendizagem onde ciência, experiência clínica e saberes complementares se encontram — um aprofundamento da compreensão da odontologia como porta de acesso à história, à memória familiar e à consciência humana.",
+          "Painel de Abertura · Odontologia Integrativa, Psicogenealogia e Decodificação Dental",
+        desc: "Como a odontologia contemporânea dialoga com a Psicogenealogia, a Decodificação Dental e os saberes simbólicos da Cabalá, ampliando o olhar sobre os processos de saúde integral. Um espaço de diálogo, reflexão e aprendizagem onde ciência, experiência clínica e saberes complementares se encontram — um aprofundamento da compreensão da odontologia como porta de acesso à história, à memória familiar e à consciência humana.",
         eixos: ["Odontologia Integrativa", "Psicogenealogia", "Espiritualidade"],
         highlight: true,
       },
@@ -67,15 +60,12 @@ const days: Day[] = [
     badge: "Dia Integral",
     title: "Raízes da Alma — Ciência, Consciência e Espiritualidade em Diálogo",
     summary:
-      "Programação preliminar — sujeita a alterações. Aberto ao público geral e psicogenealogistas.",
-    preliminary: true,
-    slots: [
+      "Painéis distribuídos ao longo do dia, aberto ao público geral e psicogenealogistas.",
+    panels: [
       {
-        time: "08h30 — 10h00",
         title:
-          "Painel de Abertura · Ciência, Saúde e Espiritualidade: Construindo Pontes para o Futuro",
-        speaker: "Palestrantes convidados de destaque",
-        desc: "Encontro especial reunindo convidados de diferentes áreas do conhecimento para discutir a integração entre ciência, saúde, espiritualidade e desenvolvimento humano.",
+          "Painel · Ciência, Saúde e Espiritualidade — Construindo Pontes para o Futuro",
+        desc: "Encontro reunindo referências de diferentes áreas do conhecimento — entre elas Dr. Leandro Barreto e Dra. Sol Ayala — para discutir a integração entre ciência, saúde, espiritualidade e desenvolvimento humano.",
         eixos: [
           "Ciência",
           "Saúde Integral",
@@ -85,62 +75,32 @@ const days: Day[] = [
         highlight: true,
       },
       {
-        time: "10h00 — 10h30",
-        title: "Coffee Break & Networking",
-        desc: "Momento de integração entre participantes, palestrantes e expositores.",
-        type: "pausa",
-      },
-      {
-        time: "10h30 — 12h30",
         title:
-          "Psicogenealogia como Ferramenta de Saúde Mental nas Empresas: Adequação do Método à NR-1",
-        speaker: "Letícia Kuchockowolec Baccin",
-        desc: "Aplicação da Psicogenealogia no contexto empresarial, alinhada às novas demandas de saúde mental, gestão de pessoas e desenvolvimento humano.",
-        eixos: ["Psicogenealogia", "Saúde Mental"],
+          "Painel · Psicogenealogia, Saúde Mental e o Mundo Corporativo",
+        desc: "A Psicogenealogia como ferramenta de saúde mental nas empresas, alinhada às novas demandas da NR-1, à gestão consciente e ao desenvolvimento humano nas organizações.",
+        eixos: ["Psicogenealogia", "Saúde Mental", "Consciência e Desenvolvimento Humano"],
       },
       {
-        time: "12h30 — 14h00",
-        title: "Intervalo para almoço",
-        type: "pausa",
-      },
-      {
-        time: "14h00 — 15h30",
-        title:
-          "O Corpo Não Esquece: Raízes Ocultas do Sintoma · Entre Gerações: o Corpo como Guardião da História",
-        speaker: "Danila Gabriel Martins de Campos",
-        desc: "Reflexão sobre memórias corporais, sintomas e heranças transgeracionais.",
+        title: "Painel · O Corpo como Guardião da História",
+        desc: "Reflexões sobre memórias corporais, raízes ocultas do sintoma e as heranças transgeracionais que atravessam gerações — do sintoma físico à leitura sistêmica.",
         eixos: ["Saúde Integral", "Psicogenealogia"],
       },
       {
-        time: "15h30 — 16h00",
-        title: "Coffee Break",
-        type: "pausa",
-      },
-      {
-        time: "16h00 — 17h30",
-        title: "Decodificação Dental Aplicada às Constelações",
-        speaker: "Daniella Barreto Ruocco",
-        desc: "Como acessar e ressignificar emoções através dos dentes, integrando odontologia, emoções e sistemas familiares.",
+        title:
+          "Painel · Decodificação Dental, Constelações e Sistemas Familiares",
+        desc: "Como acessar e ressignificar emoções e vínculos familiares a partir da leitura simbólica dos dentes, integrando odontologia, emoções e constelações.",
         eixos: ["Odontologia Integrativa", "Psicogenealogia"],
       },
       {
-        time: "18h00 — 19h30",
-        title: "Saúde Mental nas Empresas: Unindo Gestão e Espiritualidade",
-        speaker: "Inês Dressler",
-        desc: "Abordagem sobre saúde mental corporativa integrando gestão, desenvolvimento humano e espiritualidade.",
-        eixos: ["Saúde Mental", "Espiritualidade", "Consciência e Desenvolvimento Humano"],
+        title:
+          "Painel · Consciência, Ancestralidade e Reconexão com a Essência",
+        desc: "Diálogos sobre autoconhecimento, ancestralidade, espiritualidade e os caminhos de retorno à essência — corpo, consciência e presença como territórios de transformação.",
+        eixos: ["Espiritualidade", "Consciência e Desenvolvimento Humano"],
       },
       {
-        time: "20h00 — 21h00",
-        title: "Jantar Temático — Raízes da Alma",
-        desc: "Experiência de convivência e integração entre participantes e palestrantes.",
-        type: "experiencia",
-      },
-      {
-        time: "21h00",
-        title: "Espetáculo Musical Especial",
-        desc: "Apresentação musical de encerramento do dia.",
-        type: "experiencia",
+        title: "Experiências de Integração — Jantar Temático e Apresentação Musical",
+        desc: "Momento de convivência entre participantes e palestrantes, encerrando o dia com uma experiência sensorial em torno do tema Raízes da Alma.",
+        eixos: ["Espiritualidade"],
       },
     ],
   },
@@ -149,13 +109,12 @@ const days: Day[] = [
     weekday: "Domingo",
     badge: "Encerramento",
     title: "Encerramento — Exclusivo Psicogenealogistas",
-    summary: "Até as 13h. Exclusivo para psicogenealogistas certificados.",
+    summary: "Manhã reservada exclusivamente para psicogenealogistas certificados.",
     exclusive: true,
-    slots: [
+    panels: [
       {
-        time: "Manhã",
-        title: "Imersão final exclusiva",
-        desc: "Encontro reservado para psicogenealogistas certificados, com aprofundamento clínico e encerramento ritualístico do congresso.",
+        title: "Imersão Final Exclusiva",
+        desc: "Encontro reservado para psicogenealogistas certificados, com aprofundamento clínico, integração dos aprendizados e encerramento ritualístico do congresso.",
         eixos: ["Psicogenealogia", "Consciência e Desenvolvimento Humano"],
       },
     ],
@@ -186,9 +145,9 @@ export function Schedule() {
               <span className="text-gradient-gold">Uma travessia.</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Painéis de integração entre ciência e espiritualidade,
-              experiências clínicas e simbólicas — distribuídos ao longo de
-              eixos temáticos que estruturam o congresso.
+              Painéis de integração entre ciência, clínica e espiritualidade,
+              organizados por eixos temáticos. A programação detalhada será
+              anunciada mais próximo da data do evento.
             </p>
           </div>
         </Reveal>
@@ -232,11 +191,6 @@ export function Schedule() {
                         Exclusivo
                       </span>
                     )}
-                    {d.preliminary && (
-                      <span className="label-cinzel text-[0.6rem] px-3 py-1 border border-gold/40 text-gold/90 rounded-sm w-fit">
-                        Programação preliminar
-                      </span>
-                    )}
                     <p className="text-sm text-muted-foreground max-w-xs">
                       {d.summary}
                     </p>
@@ -244,60 +198,36 @@ export function Schedule() {
                 </header>
 
                 <ol className="divide-y divide-gold/10">
-                  {d.slots.map((s, i) => (
+                  {d.panels.map((p, i) => (
                     <li
                       key={i}
-                      className={`grid md:grid-cols-[160px_1fr] gap-4 md:gap-8 p-6 md:p-8 ${
-                        s.highlight ? "bg-gold/[0.04]" : ""
-                      } ${s.type === "pausa" ? "opacity-70" : ""}`}
+                      className={`p-6 md:p-8 ${
+                        p.highlight ? "bg-gold/[0.04]" : ""
+                      }`}
                     >
-                      <div className="md:text-right">
-                        <p className="font-display italic text-xl text-gold whitespace-nowrap">
-                          {s.time}
+                      {p.highlight && (
+                        <p className="label-cinzel text-[0.55rem] text-gold tracking-[0.3em] mb-3">
+                          Painel destaque
                         </p>
-                        {s.type === "pausa" && (
-                          <p className="label-cinzel text-[0.55rem] text-muted-foreground tracking-[0.25em] mt-1">
-                            Intervalo
-                          </p>
-                        )}
-                        {s.type === "experiencia" && (
-                          <p className="label-cinzel text-[0.55rem] text-gold/80 tracking-[0.25em] mt-1">
-                            Experiência
-                          </p>
-                        )}
-                        {s.highlight && (
-                          <p className="label-cinzel text-[0.55rem] text-gold tracking-[0.25em] mt-1">
-                            Painel destaque
-                          </p>
-                        )}
-                      </div>
-                      <div>
-                        <h4 className="font-display italic text-xl md:text-2xl text-offwhite leading-snug mb-1">
-                          {s.title}
-                        </h4>
-                        {s.speaker && (
-                          <p className="text-sm text-gold/90 mb-3 tracking-wide">
-                            {s.speaker}
-                          </p>
-                        )}
-                        {s.desc && (
-                          <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
-                            {s.desc}
-                          </p>
-                        )}
-                        {s.eixos && s.eixos.length > 0 && (
-                          <div className="flex flex-wrap gap-2 mt-4">
-                            {s.eixos.map((e) => (
-                              <span
-                                key={e}
-                                className={`label-cinzel text-[0.55rem] tracking-[0.25em] px-2.5 py-1 rounded-full border ${eixoColor[e]}`}
-                              >
-                                {e}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+                      )}
+                      <h4 className="font-display italic text-xl md:text-2xl text-offwhite leading-snug mb-3">
+                        {p.title}
+                      </h4>
+                      <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
+                        {p.desc}
+                      </p>
+                      {p.eixos.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {p.eixos.map((e) => (
+                            <span
+                              key={e}
+                              className={`label-cinzel text-[0.55rem] tracking-[0.25em] px-2.5 py-1 rounded-full border ${eixoColor[e]}`}
+                            >
+                              {e}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ol>
@@ -308,7 +238,8 @@ export function Schedule() {
 
         <Reveal delay={0.2}>
           <p className="text-center text-xs text-muted-foreground/80 mt-10 italic">
-            * A programação do Dia 07 é preliminar e poderá sofrer alterações.
+            * A programação detalhada por painéis e horários será divulgada mais
+            próximo da data do evento.
           </p>
         </Reveal>
       </div>
