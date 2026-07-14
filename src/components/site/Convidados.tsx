@@ -11,6 +11,7 @@ import raul from "@/assets/convidados/raul.jpg.asset.json";
 import aline from "@/assets/convidados/aline.jpg.asset.json";
 import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
 import walter from "@/assets/convidados/walter.jpg.asset.json";
+import mariaCamila from "@/assets/convidados/maria-camila.png.asset.json";
 
 type Speaker = {
   name: string;
