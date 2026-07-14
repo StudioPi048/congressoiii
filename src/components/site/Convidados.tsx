@@ -124,6 +124,13 @@ const speakers: Speaker[] = [
     bio: "Terapeuta integrativa, Psicogenealogista e facilitadora do desenvolvimento humano. Atua no acompanhamento de pessoas por meio de abordagens voltadas ao autoconhecimento, à saúde emocional e aos relacionamentos, integrando diferentes ferramentas terapêuticas em sua prática clínica. Graduada em Letras, possui formação técnica em Terapia Holística e dedica-se à promoção do bem-estar integral, conciliando conhecimento, acolhimento e uma visão fundamentada em princípios cristãos.",
     gender: "female",
   },
+  {
+    name: "Dra. Vanuce Torres de Oliveira",
+    role: "Cirurgiã-Dentista · Medicina Funcional Integrativa · Psicogenealogia",
+    photo: vanuce.url,
+    bio: "Cirurgiã-dentista graduada pela Universidade de Guarulhos (UNG), com 26 anos de experiência clínica. Pós-graduada em Ortodontia (2000–2002) e em Medicina Funcional Integrativa pela ABMFI – Academia Brasileira de Medicina Funcional Integrativa (2025). Ao longo de sua trajetória, aprofundou seus estudos sistêmicos a partir de formações em Biocibernética Bucal, Terapia Neural, Psiconeurodontologia, Psicogenealogia e Decodificação Biológica, direcionando sua atuação para uma compreensão global da saúde. Acredita que o cuidado em saúde começa pela compreensão integral do ser humano, unindo conhecimento, escuta e respeito à singularidade de cada pessoa.",
+    gender: "female",
+  },
 ];
 
 export function Convidados() {
