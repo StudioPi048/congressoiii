@@ -116,6 +116,13 @@ const speakers: Speaker[] = [
     themes: ["Saúde Mental nas Empresas"],
     gender: "female",
   },
+  {
+    name: "Maria Camila Suzini Francisco",
+    role: "Terapeuta Integrativa · Psicogenealogista · Desenvolvimento Humano",
+    photo: mariaCamila.url,
+    bio: "Terapeuta integrativa, Psicogenealogista e facilitadora do desenvolvimento humano. Atua no acompanhamento de pessoas por meio de abordagens voltadas ao autoconhecimento, à saúde emocional e aos relacionamentos, integrando diferentes ferramentas terapêuticas em sua prática clínica. Graduada em Letras, possui formação técnica em Terapia Holística e dedica-se à promoção do bem-estar integral, conciliando conhecimento, acolhimento e uma visão fundamentada em princípios cristãos.",
+    gender: "female",
+  },
 ];
 
 export function Convidados() {
