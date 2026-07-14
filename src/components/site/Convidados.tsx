@@ -11,6 +11,7 @@ import raul from "@/assets/convidados/raul.jpg.asset.json";
 import aline from "@/assets/convidados/aline.jpg.asset.json";
 import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
 import walter from "@/assets/convidados/walter.jpg.asset.json";
+import mariaCamila from "@/assets/convidados/maria-camila.png.asset.json";
 
 type Speaker = {
   name: string;
@@ -113,6 +114,13 @@ const speakers: Speaker[] = [
     photo: mariaInes.url,
     bio: "Contadora e Técnica Contábil com especialização em custos industriais, pós-graduada em Finanças e MBA em Liderança, Gestão de Equipes e Produtividade pela PUCRS, com TCC em Metodologias Ágeis. Psicogenealogista formada pelo Instituto LIZ. Atuou como auditora da PWC por 4 anos, professora universitária da Univali/SC por 5 anos e conselheira do CRCSC por 4 anos. Atualmente conduz a gestão do Grupo DRESSLER e o atendimento a clientes, integrando visão contábil, liderança consciente e Psicogenealogia.",
     themes: ["Saúde Mental nas Empresas"],
+    gender: "female",
+  },
+  {
+    name: "Maria Camila Suzini Francisco",
+    role: "Terapeuta Integrativa · Psicogenealogista · Desenvolvimento Humano",
+    photo: mariaCamila.url,
+    bio: "Terapeuta integrativa, Psicogenealogista e facilitadora do desenvolvimento humano. Atua no acompanhamento de pessoas por meio de abordagens voltadas ao autoconhecimento, à saúde emocional e aos relacionamentos, integrando diferentes ferramentas terapêuticas em sua prática clínica. Graduada em Letras, possui formação técnica em Terapia Holística e dedica-se à promoção do bem-estar integral, conciliando conhecimento, acolhimento e uma visão fundamentada em princípios cristãos.",
     gender: "female",
   },
 ];
