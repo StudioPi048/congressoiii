@@ -45,15 +45,34 @@ export function Venue() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3 mb-6">
-            <a
-              href="https://maps.google.com/?q=Hotel+Torres+da+Cachoeira+Florianopolis"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-ghost"
-            >
-              Ver no mapa →
-            </a>
+          {/* Reservas — contato direto com o hotel */}
+          <div className="glass-card mb-6 p-6">
+            <p className="label-cinzel mb-2 text-[0.6rem] text-gold">Reservas de hospedagem</p>
+            <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+              Garanta seu quarto falando diretamente com o hotel. Mencione o{" "}
+              <span className="text-offwhite">III Congresso de Psicogenealogia</span> ao reservar.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="tel:+554832319800" className="btn-gold !px-6 !py-3 !text-[0.7rem]">
+                📞 (48) 3231-9800
+              </a>
+              <a
+                href="https://wa.me/554899373889?text=Ol%C3%A1!%20Quero%20reservar%20hospedagem%20para%20o%20III%20Congresso%20de%20Psicogenealogia."
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost"
+              >
+                WhatsApp Reservas
+              </a>
+              <a
+                href="https://maps.google.com/?q=Hotel+Torres+da+Cachoeira+Florianopolis"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost"
+              >
+                Ver no mapa →
+              </a>
+            </div>
           </div>
 
           <p className="text-xs text-muted-foreground italic">

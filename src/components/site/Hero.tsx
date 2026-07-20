@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import tempusLogo from "@/assets/tempus-logo.jpg";
+import tempusLogo from "@/assets/tempus-logo.png";
 import { AncestralBackdrop } from "./AncestralBackdrop";
 
 export function Hero() {
@@ -46,13 +46,13 @@ export function Hero() {
             className="absolute inset-0 -z-10 blur-3xl"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(200,149,31,0.28) 0%, transparent 68%)",
+                "radial-gradient(ellipse at center, rgba(200,149,31,0.22) 0%, rgba(28,119,117,0.12) 45%, transparent 70%)",
             }}
           />
           <img
             src={tempusLogo}
             alt="Tempus — Ciclos Invisíveis das Gerações"
-            className="mx-auto h-auto w-full mix-blend-screen"
+            className="mx-auto h-auto w-full drop-shadow-[0_18px_60px_rgba(0,0,0,0.6)]"
           />
         </motion.div>
 

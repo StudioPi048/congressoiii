@@ -4,6 +4,8 @@
  * linhas genealógicas/constelação, raízes douradas e engrenagem quase invisível.
  * Puro SVG/CSS, sem foto — zero roxo, totalmente na paleta.
  */
+import heroTexture from "@/assets/hero-texture.png";
+
 export function AncestralBackdrop({
   variant = "hero",
   className = "",
@@ -15,6 +17,25 @@ export function AncestralBackdrop({
     <div className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`} aria-hidden>
       {/* Base profunda */}
       <div className="absolute inset-0 bg-background" />
+
+      {/* Render fotográfico (só no hero): engrenagens, esmalte craquelado e raízes douradas */}
+      {variant === "hero" && (
+        <>
+          <img
+            src={heroTexture}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover opacity-60"
+          />
+          {/* Escurecimento para legibilidade do conteúdo central */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(5,8,7,0.55) 0%, rgba(5,8,7,0.86) 78%), linear-gradient(to bottom, rgba(5,8,7,0.5), transparent 30%, transparent 60%, rgba(5,8,7,0.95))",
+            }}
+          />
+        </>
+      )}
 
       {/* Luz dourada difusa (canto superior esquerdo, como na logo) + brilho de petróleo */}
       <div

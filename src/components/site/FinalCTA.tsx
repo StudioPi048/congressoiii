@@ -1,10 +1,19 @@
 import { Reveal } from "./Reveal";
 import { AncestralBackdrop } from "./AncestralBackdrop";
+import tempusIcon from "@/assets/tempus-icon.png";
 
 export function FinalCTA() {
   return (
     <section className="relative overflow-hidden py-32 md:py-48">
       <AncestralBackdrop variant="cta" />
+
+      {/* Ícone do conceito como marca d'água — relógio, engrenagens e raízes */}
+      <img
+        src={tempusIcon}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 w-[520px] max-w-[80%] -translate-x-1/2 -translate-y-1/2 opacity-[0.06] blur-[1px]"
+      />
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal>

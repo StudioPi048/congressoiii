@@ -1,4 +1,4 @@
-import logo from "@/assets/tempus-logo.jpg";
+import logo from "@/assets/tempus-logo.png";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
               <img
                 src={logo}
                 alt="Tempus"
-                className="h-14 w-auto max-w-[260px] object-contain object-left mix-blend-screen"
+                className="h-14 w-auto max-w-[260px] object-contain object-left"
               />
             </div>
             <p className="font-display italic text-lg text-offwhite/70 leading-relaxed">

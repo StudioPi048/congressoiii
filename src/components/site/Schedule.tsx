@@ -1,231 +1,75 @@
 import { Reveal } from "./Reveal";
 
-type Eixo =
-  | "Ciência"
-  | "Saúde Integral"
-  | "Psicogenealogia"
-  | "Espiritualidade"
-  | "Saúde Mental"
-  | "Odontologia Integrativa"
-  | "Consciência e Desenvolvimento Humano";
-
-/* Paleta Tempus — dourado (núcleo/transformação), petróleo (corpo/clínica),
-   ciano mínimo (mente/ciência) e marfim (transcendência). Coerência > arco-íris. */
-const eixoColor: Record<Eixo, string> = {
-  Ciência: "border-cyan/35 text-cyan/90",
-  "Saúde Mental": "border-cyan/30 text-[#9fdfe4]/90",
-  "Saúde Integral": "border-[#1c7775]/55 text-[#8fd6d1]",
-  "Odontologia Integrativa": "border-[#1c7775]/40 text-[#8fd6d1]/90",
-  Psicogenealogia: "border-gold/55 text-gold",
-  "Consciência e Desenvolvimento Humano": "border-gold/35 text-gold-light/90",
-  Espiritualidade: "border-ivory/25 text-ivory/85",
-};
-
-type Panel = {
-  title: string;
-  desc: string;
-  eixos: Eixo[];
-  highlight?: boolean;
-};
-
-type Day = {
-  date: string;
-  weekday: string;
-  badge: string;
-  title: string;
-  summary: string;
-  exclusive?: boolean;
-  panels: Panel[];
-};
-
-const days: Day[] = [
-  {
-    date: "06 · 11",
-    weekday: "Sexta-feira",
-    badge: "Abertura",
-    title: "Odontologia Integrativa, Psicogenealogia e Decodificação Dental",
-    summary: "Aberto ao público geral e psicogenealogistas.",
-    panels: [
-      {
-        title:
-          "Painel de Abertura · Odontologia Integrativa, Psicogenealogia e Decodificação Dental",
-        desc: "Como a odontologia contemporânea dialoga com a Psicogenealogia, a Decodificação Dental e os saberes simbólicos da Cabalá, ampliando o olhar sobre os processos de saúde integral. Um espaço de diálogo, reflexão e aprendizagem onde ciência, experiência clínica e saberes complementares se encontram — um aprofundamento da compreensão da odontologia como porta de acesso à história, à memória familiar e à consciência humana.",
-        eixos: ["Odontologia Integrativa", "Psicogenealogia", "Espiritualidade"],
-        highlight: true,
-      },
-    ],
-  },
-  {
-    date: "07 · 11",
-    weekday: "Sábado",
-    badge: "Dia Integral",
-    title: "Tempus — Ciclos Invisíveis das Gerações",
-    summary: "Painéis distribuídos ao longo do dia, aberto ao público geral e psicogenealogistas.",
-    panels: [
-      {
-        title: "Painel · Ciência, Saúde e Espiritualidade — Construindo Pontes para o Futuro",
-        desc: "Encontro reunindo referências de diferentes áreas do conhecimento — entre elas Dr. Leandro Barreto e Dra. Sol Ayala — para discutir a integração entre ciência, saúde, espiritualidade e desenvolvimento humano.",
-        eixos: [
-          "Ciência",
-          "Saúde Integral",
-          "Espiritualidade",
-          "Consciência e Desenvolvimento Humano",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Painel · Psicogenealogia, Saúde Mental e o Mundo Corporativo",
-        desc: "A Psicogenealogia como ferramenta de saúde mental nas empresas, alinhada às novas demandas da NR-1, à gestão consciente e ao desenvolvimento humano nas organizações.",
-        eixos: ["Psicogenealogia", "Saúde Mental", "Consciência e Desenvolvimento Humano"],
-      },
-      {
-        title: "Painel · O Corpo como Guardião da História",
-        desc: "Reflexões sobre memórias corporais, raízes ocultas do sintoma e as heranças transgeracionais que atravessam gerações — do sintoma físico à leitura sistêmica.",
-        eixos: ["Saúde Integral", "Psicogenealogia"],
-      },
-      {
-        title: "Painel · Decodificação Dental, Constelações e Sistemas Familiares",
-        desc: "Como acessar e ressignificar emoções e vínculos familiares a partir da leitura simbólica dos dentes, integrando odontologia, emoções e constelações.",
-        eixos: ["Odontologia Integrativa", "Psicogenealogia"],
-      },
-      {
-        title: "Painel · Consciência, Ancestralidade e Reconexão com a Essência",
-        desc: "Diálogos sobre autoconhecimento, ancestralidade, espiritualidade e os caminhos de retorno à essência — corpo, consciência e presença como territórios de transformação.",
-        eixos: ["Espiritualidade", "Consciência e Desenvolvimento Humano"],
-      },
-      {
-        title: "Experiências de Integração — Jantar Temático e Apresentação Musical",
-        desc: "Momento de convivência entre participantes e palestrantes, encerrando o dia com uma experiência sensorial em torno dos ciclos invisíveis das gerações.",
-        eixos: ["Espiritualidade"],
-      },
-    ],
-  },
-  {
-    date: "08 · 11",
-    weekday: "Domingo",
-    badge: "Encerramento",
-    title: "Encerramento — Exclusivo Psicogenealogistas",
-    summary: "Manhã reservada exclusivamente para psicogenealogistas certificados.",
-    exclusive: true,
-    panels: [
-      {
-        title: "Imersão Final Exclusiva",
-        desc: "Encontro reservado para psicogenealogistas certificados, com aprofundamento clínico, integração dos aprendizados e encerramento ritualístico do congresso.",
-        eixos: ["Psicogenealogia", "Consciência e Desenvolvimento Humano"],
-      },
-    ],
-  },
-];
-
-const allEixos: Eixo[] = [
-  "Ciência",
-  "Saúde Integral",
-  "Psicogenealogia",
-  "Espiritualidade",
-  "Saúde Mental",
-  "Odontologia Integrativa",
-  "Consciência e Desenvolvimento Humano",
+const days = [
+  { date: "06", weekday: "Sexta-feira", badge: "Abertura" },
+  { date: "07", weekday: "Sábado", badge: "Dia Integral" },
+  { date: "08", weekday: "Domingo", badge: "Encerramento" },
 ];
 
 export function Schedule() {
   return (
-    <section id="programacao" className="section-pad relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="programacao" className="section-pad relative overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-50"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 0%, rgba(200,149,31,0.10) 0%, transparent 55%), radial-gradient(ellipse at 50% 100%, rgba(28,119,117,0.16) 0%, transparent 55%)",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-5xl">
         <Reveal>
-          <div className="text-center mb-12 max-w-3xl mx-auto">
-            <p className="label-cinzel text-xs text-gold mb-4 tracking-[0.3em]">Programação</p>
-            <h2 className="font-display italic text-5xl md:text-6xl mb-6">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <div className="mb-6 flex justify-center">
+              <span className="eyebrow eyebrow--center">Programação</span>
+            </div>
+            <h2 className="mb-6 font-display text-5xl italic leading-[1.05] md:text-6xl">
               Três dias. <span className="text-gradient-gold">Uma travessia.</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Painéis de integração entre ciência, clínica e espiritualidade, organizados por eixos
-              temáticos. A programação detalhada será anunciada mais próximo da data do evento.
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              A programação completa — painéis, horários e a ordem dos encontros — está sendo
+              selada com cuidado. Em breve, revelaremos cada capítulo desta travessia.
             </p>
           </div>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="flex flex-wrap justify-center gap-2 mb-16">
-            {allEixos.map((e) => (
-              <span
-                key={e}
-                className={`label-cinzel text-[0.55rem] tracking-[0.25em] px-3 py-1.5 rounded-full border bg-background/40 ${eixoColor[e]}`}
-              >
-                {e}
-              </span>
-            ))}
-          </div>
-        </Reveal>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {days.map((d, i) => (
+            <Reveal key={d.date} delay={i * 0.1}>
+              <div className="glass-card group relative flex flex-col items-center overflow-hidden px-6 py-12 text-center">
+                <p className="label-cinzel mb-6 text-[0.6rem] text-gold">{d.badge}</p>
+                <p className="font-display text-7xl leading-none text-offwhite">{d.date}</p>
+                <p className="label-cinzel mt-3 text-[0.6rem] text-muted-foreground">
+                  Novembro · {d.weekday}
+                </p>
 
-        <div className="space-y-16">
-          {days.map((d, di) => (
-            <Reveal key={d.date} delay={di * 0.05}>
-              <div
-                className={`glass-card overflow-hidden ${
-                  d.exclusive ? "!border-gold/50 ring-1 ring-gold/20" : ""
-                }`}
-              >
-                <header className="relative p-8 md:p-10 border-b border-gold/15 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-                  <div>
-                    <p className="label-cinzel text-[0.65rem] text-gold mb-2 tracking-[0.3em]">
-                      {d.weekday} · {d.badge}
-                    </p>
-                    <p className="font-display text-6xl md:text-7xl text-offwhite leading-none mb-4">
-                      {d.date}
-                    </p>
-                    <h3 className="font-display italic text-2xl md:text-3xl text-offwhite max-w-2xl leading-snug">
-                      {d.title}
-                    </h3>
-                  </div>
-                  <div className="md:text-right flex flex-col gap-2 md:items-end">
-                    {d.exclusive && (
-                      <span className="label-cinzel text-[0.6rem] px-3 py-1 bg-gradient-to-r from-gold to-gold-light text-background rounded-sm w-fit">
-                        Exclusivo
-                      </span>
-                    )}
-                    <p className="text-sm text-muted-foreground max-w-xs">{d.summary}</p>
-                  </div>
-                </header>
+                <div className="my-8 h-px w-16 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
 
-                <ol className="divide-y divide-gold/10">
-                  {d.panels.map((p, i) => (
-                    <li key={i} className={`p-6 md:p-8 ${p.highlight ? "bg-gold/[0.04]" : ""}`}>
-                      {p.highlight && (
-                        <p className="label-cinzel text-[0.55rem] text-gold tracking-[0.3em] mb-3">
-                          Painel destaque
-                        </p>
-                      )}
-                      <h4 className="font-display italic text-xl md:text-2xl text-offwhite leading-snug mb-3">
-                        {p.title}
-                      </h4>
-                      <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
-                        {p.desc}
-                      </p>
-                      {p.eixos.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-4">
-                          {p.eixos.map((e) => (
-                            <span
-                              key={e}
-                              className={`label-cinzel text-[0.55rem] tracking-[0.25em] px-2.5 py-1 rounded-full border ${eixoColor[e]}`}
-                            >
-                              {e}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </li>
-                  ))}
-                </ol>
+                {/* Selo de mistério — relógio parado, a ser revelado */}
+                <div className="mb-4 text-gold/70 transition-transform duration-700 group-hover:rotate-[30deg]">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <p className="label-cinzel text-[0.6rem] tracking-[0.3em] text-gold/80">
+                  A ser revelado
+                </p>
               </div>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={0.2}>
-          <p className="text-center text-xs text-muted-foreground/80 mt-10 italic">
-            * A programação detalhada por painéis e horários será divulgada mais próximo da data do
-            evento.
-          </p>
+          <div className="mx-auto mt-16 max-w-2xl border-t border-gold/15 pt-12 text-center">
+            <p className="font-display text-2xl italic leading-snug text-offwhite/90 md:text-3xl">
+              Enquanto o tempo não se revela,{" "}
+              <span className="text-gradient-gold">conheça quem conduzirá a travessia.</span>
+            </p>
+            <a href="#convidados" className="btn-ghost mt-8 inline-flex">
+              Ver palestrantes confirmados ↓
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>
