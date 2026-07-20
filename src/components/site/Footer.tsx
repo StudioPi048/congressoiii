@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-liz.png";
+import logo from "@/assets/tempus-logo.jpg";
 
 export function Footer() {
   return (
@@ -7,21 +7,20 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <img src={logo} alt="Instituto LIZ" className="h-12 w-12" />
-              <span className="label-cinzel text-sm text-offwhite">
-                Instituto <span className="text-gold">LIZ</span>
-              </span>
+              <img
+                src={logo}
+                alt="Tempus"
+                className="h-14 w-auto max-w-[260px] object-contain object-left"
+              />
             </div>
             <p className="font-display italic text-lg text-offwhite/70 leading-relaxed">
-              "Raízes da Alma" <br />
+              "Ciclos Invisíveis das Gerações" <br />
               III Congresso de Psicogenealogia
             </p>
           </div>
 
           <div>
-            <p className="label-cinzel text-[0.65rem] text-gold mb-5">
-              Navegação
-            </p>
+            <p className="label-cinzel text-[0.65rem] text-gold mb-5">Navegação</p>
             <ul className="space-y-3 text-sm">
               {[
                 ["#hero", "Início"],
@@ -52,10 +51,14 @@ export function Footer() {
         <div className="gold-divider !w-full" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 text-xs text-muted-foreground">
-          <p>© 2026 Instituto LIZ · Todos os direitos reservados</p>
+          <p>© 2026 Instituto LIZ · Tempus · Todos os direitos reservados</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold">Política de Privacidade</a>
-            <a href="#" className="hover:text-gold">Termos de Uso</a>
+            <a href="#" className="hover:text-gold">
+              Política de Privacidade
+            </a>
+            <a href="#" className="hover:text-gold">
+              Termos de Uso
+            </a>
           </div>
         </div>
       </div>

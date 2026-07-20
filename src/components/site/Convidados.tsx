@@ -140,25 +140,23 @@ export function Convidados() {
         className="absolute inset-0 opacity-40 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 20% 30%, rgba(107,63,160,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 70%, rgba(201,168,76,0.10) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 20% 30%, rgba(28,119,117,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 70%, rgba(214,154,23,0.10) 0%, transparent 60%)",
         }}
       />
 
       <div className="relative max-w-6xl mx-auto">
         <Reveal>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <p className="label-cinzel text-xs text-gold mb-4">
-              Convidados e Presenças Especiais
-            </p>
+            <p className="label-cinzel text-xs text-gold mb-4">Convidados e Presenças Especiais</p>
             <h2 className="font-display italic text-5xl md:text-6xl leading-[1.05] mb-6">
-              Vozes que <span className="text-gradient-gold">reescrevem</span> a
-              forma de compreender <br className="hidden md:block" />
+              Vozes que <span className="text-gradient-gold">reescrevem</span> a forma de
+              compreender <br className="hidden md:block" />
               família, corpo e consciência.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Referências nacionais e internacionais da medicina, da clínica
-              integrativa, da odontologia e da psicogenealogia reunidas em três
-              dias de imersão. Novos nomes serão anunciados em sequência.
+              Referências nacionais e internacionais da medicina, da clínica integrativa, da
+              odontologia e da psicogenealogia reunidas em três dias de imersão. Novos nomes serão
+              anunciados em sequência.
             </p>
           </div>
         </Reveal>
@@ -189,17 +187,21 @@ export function Convidados() {
                 </div>
 
                 <div className="p-8 md:p-10 [direction:ltr] flex flex-col justify-center">
-                  <div className={`label-cinzel text-[0.65rem] mb-3 tracking-[0.3em] ${s.status === "pending" ? "text-muted-foreground" : "text-gold"}`}>
+                  <div
+                    className={`label-cinzel text-[0.65rem] mb-3 tracking-[0.3em] ${s.status === "pending" ? "text-muted-foreground" : "text-gold"}`}
+                  >
                     {s.status === "pending"
-                      ? (s.gender === "female" ? "Convidada a Confirmar" : "Convidado a Confirmar")
-                      : (s.gender === "female" ? "Convidada Confirmada" : "Convidado Confirmado")}
+                      ? s.gender === "female"
+                        ? "Convidada a Confirmar"
+                        : "Convidado a Confirmar"
+                      : s.gender === "female"
+                        ? "Convidada Confirmada"
+                        : "Convidado Confirmado"}
                   </div>
                   <h3 className="font-display italic text-3xl md:text-4xl mb-2 leading-tight">
                     {s.name}
                   </h3>
-                  <p className="text-gold/90 text-sm mb-5 tracking-wide">
-                    {s.role}
-                  </p>
+                  <p className="text-gold/90 text-sm mb-5 tracking-wide">{s.role}</p>
                   {s.note && (
                     <p className="text-xs text-offwhite/70 italic border-l-2 border-gold/40 pl-3 mb-5">
                       {s.note}

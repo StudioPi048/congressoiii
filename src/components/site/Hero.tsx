@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-roots.jpg";
-import logo from "@/assets/logo-liz.png";
+import tempusLogo from "@/assets/tempus-logo.jpg";
 
 export function Hero() {
   return (
@@ -16,7 +16,12 @@ export function Hero() {
           className="absolute inset-0 w-full h-full object-cover scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/65 to-background" />
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 0%, rgba(13,10,26,0.7) 80%)" }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse at center, transparent 0%, rgba(5,7,6,0.7) 80%)",
+          }}
+        />
       </div>
 
       {/* Floating particles */}
@@ -43,9 +48,9 @@ export function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.img
-          src={logo}
-          alt="Instituto LIZ"
-          className="w-20 h-20 mx-auto mb-8 opacity-90"
+          src={tempusLogo}
+          alt="Tempus — Ciclos Invisíveis das Gerações"
+          className="w-full max-w-4xl h-auto mx-auto mb-9 mix-blend-screen"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 0.95, y: 0 }}
           transition={{ duration: 1 }}
@@ -57,7 +62,7 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="label-cinzel text-xs text-gold mb-6"
         >
-          III Congresso de Psicogenealogia
+          06 · 07 · 08 NOVEMBRO 2026 · FLORIANÓPOLIS
         </motion.div>
 
         <motion.h1
@@ -66,9 +71,9 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 1 }}
           className="font-display italic font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.98] mb-8"
         >
-          Raízes da Alma <br />
+          O tempo que herdamos. <br />
           <span className="text-gradient-gold text-3xl sm:text-4xl md:text-5xl lg:text-6xl not-italic font-normal tracking-wide">
-            Ciência, Consciência e Espiritualidade em diálogo
+            A consciência que transforma o legado.
           </span>
         </motion.h1>
 
@@ -78,10 +83,9 @@ export function Hero() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="text-offwhite/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
         >
-          Um congresso para investigar as heranças invisíveis que atravessam
-          famílias, corpos, vínculos e destinos.
+          Um encontro para investigar as heranças invisíveis que atravessam famílias, corpos,
+          vínculos e destinos — e abrir novos ciclos.
         </motion.p>
-
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -108,7 +112,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a href="#investimento" className="btn-gold">
-            Quero Participar
+            Quero viver este ciclo
           </a>
           <a href="#programacao" className="btn-ghost">
             Ver programação ↓
@@ -122,7 +126,14 @@ export function Hero() {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+        >
           <path d="M12 5v14M5 12l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </motion.div>

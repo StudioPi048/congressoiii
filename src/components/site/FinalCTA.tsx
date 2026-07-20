@@ -13,22 +13,21 @@ export function FinalCTA() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
       <div
         className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse at center, rgba(107,63,160,0.35) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(28,119,117,0.35) 0%, transparent 70%)",
+        }}
       />
 
       <div className="relative max-w-3xl mx-auto px-6 text-center">
         <Reveal>
-          <p className="label-cinzel text-xs text-gold mb-6">
-            É um chamado. Não uma coincidência.
-          </p>
+          <p className="label-cinzel text-xs text-gold mb-6">O próximo ciclo começa aqui.</p>
         </Reveal>
 
         <Reveal delay={0.1}>
           <h2 className="font-display italic text-5xl md:text-7xl leading-[1.05] mb-8">
-            Sua árvore guarda histórias. <br />
-            <span className="text-gradient-gold">
-              Talvez seja hora de escutá-las.
-            </span>
+            O que você herdou <br />
+            <span className="text-gradient-gold">pode se transformar.</span>
           </h2>
         </Reveal>
 

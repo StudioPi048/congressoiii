@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo-liz.png";
+import logo from "@/assets/tempus-logo.jpg";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -22,17 +22,16 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/70 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+        scrolled ? "bg-background/70 backdrop-blur-xl border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-3">
-          <img src={logo} alt="Instituto LIZ" className="h-10 w-10 object-contain" />
-          <span className="label-cinzel text-[0.7rem] text-offwhite hidden sm:block">
-            Instituto <span className="text-gold">LIZ</span>
-          </span>
+        <a href="#hero" className="flex items-center gap-3 min-w-0">
+          <img
+            src={logo}
+            alt="Tempus — Congresso III de Psicogenealogia"
+            className="h-11 w-auto max-w-[210px] object-contain object-left"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">
@@ -47,8 +46,11 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="#investimento" className="btn-gold hidden md:inline-flex !py-3 !px-6 !text-[0.7rem]">
-          Inscrever-se
+        <a
+          href="#investimento"
+          className="btn-gold hidden md:inline-flex !py-3 !px-6 !text-[0.7rem]"
+        >
+          Participar
         </a>
 
         <button
@@ -56,7 +58,14 @@ export function Header() {
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          >
             {open ? (
               <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
             ) : (

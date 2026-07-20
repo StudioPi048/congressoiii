@@ -12,7 +12,10 @@ import memoria05 from "@/assets/edicoes/memoria-edicao-05.png.asset.json";
 
 const images = [
   { src: memoria01.url, alt: "Participantes posando ao lado do banner do simpósio" },
-  { src: memoria02.url, alt: "Registro ao ar livre com convidados e participantes de edição anterior" },
+  {
+    src: memoria02.url,
+    alt: "Registro ao ar livre com convidados e participantes de edição anterior",
+  },
   { src: memoria03.url, alt: "Foto de família da organização e apoiadores em edição anterior" },
   { src: memoria04.url, alt: "Vivência em círculo dentro do domo durante encontro anterior" },
   { src: memoria05.url, alt: "Foto coletiva dos participantes em uma edição anterior" },
@@ -31,32 +34,25 @@ const videos = [
 
 export function Memorias() {
   return (
-    <section
-      id="memorias"
-      className="section-pad relative overflow-hidden"
-    >
+    <section id="memorias" className="section-pad relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-30 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 70% 20%, rgba(201,168,76,0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(107,63,160,0.18) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 70% 20%, rgba(214,154,23,0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(28,119,117,0.18) 0%, transparent 60%)",
         }}
       />
 
       <div className="relative max-w-6xl mx-auto">
         <Reveal>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <p className="label-cinzel text-xs text-gold mb-4">
-              Arquivo Vivo · 2024 — 2025
-            </p>
+            <p className="label-cinzel text-xs text-gold mb-4">Arquivo Vivo · 2024 — 2025</p>
             <h2 className="font-display italic text-5xl md:text-6xl leading-[1.05] mb-6">
-              Memórias dos{" "}
-              <span className="text-gradient-gold">Congressos Anteriores</span>
+              Memórias dos <span className="text-gradient-gold">Congressos Anteriores</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Um retorno aos encontros que abriram caminho para esta terceira
-              edição. Imagens, falas e presenças que continuam reverberando
-              entre quem viveu cada momento.
+              Um retorno aos encontros que abriram caminho para esta terceira edição. Imagens, falas
+              e presenças que continuam reverberando entre quem viveu cada momento.
             </p>
           </div>
         </Reveal>
@@ -87,11 +83,9 @@ export function Memorias() {
                 Médico · Pesquisador · Neurociência e Consciência
               </p>
               <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
-                Uma das vozes mais marcantes das edições anteriores do
-                Congresso. Suas conferências sobre a interface entre cérebro,
-                mente e consciência abriram portas para o diálogo entre ciência
-                e espiritualidade que segue como um dos eixos centrais deste
-                encontro.
+                Uma das vozes mais marcantes das edições anteriores do Congresso. Suas conferências
+                sobre a interface entre cérebro, mente e consciência abriram portas para o diálogo
+                entre ciência e espiritualidade que segue como um dos eixos centrais deste encontro.
               </p>
             </div>
           </article>
@@ -131,10 +125,7 @@ export function Memorias() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {images.map((p, i) => (
-                <div
-                  key={i}
-                  className="relative aspect-[3/4] overflow-hidden group rounded-sm"
-                >
+                <div key={i} className="relative aspect-[3/4] overflow-hidden group rounded-sm">
                   <img
                     src={p.src}
                     alt={p.alt}

@@ -22,8 +22,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "III Congresso de Psicogenealogia — Raízes da Alma | Florianópolis 2026",
+        title: "Tempus — Ciclos Invisíveis das Gerações | Florianópolis 2026",
       },
       {
         name: "description",
@@ -32,7 +31,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Raízes da Alma — III Congresso de Psicogenealogia",
+        content: "Tempus — III Congresso de Psicogenealogia",
       },
       {
         property: "og:description",
@@ -47,11 +46,10 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Event",
-          name: "III Congresso de Psicogenealogia — Raízes da Alma",
+          name: "Tempus — III Congresso de Psicogenealogia",
           startDate: "2026-11-06T14:00-03:00",
           endDate: "2026-11-08T13:00-03:00",
-          eventAttendanceMode:
-            "https://schema.org/OfflineEventAttendanceMode",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           location: {
             "@type": "Place",

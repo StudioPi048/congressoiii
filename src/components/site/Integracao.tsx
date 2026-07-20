@@ -29,7 +29,7 @@ export function Integracao() {
         className="absolute inset-0 pointer-events-none opacity-60"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 55%), radial-gradient(ellipse at 50% 100%, rgba(107,63,160,0.18) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(214,154,23,0.12) 0%, transparent 55%), radial-gradient(ellipse at 50% 100%, rgba(28,119,117,0.18) 0%, transparent 55%)",
         }}
       />
 
@@ -40,14 +40,12 @@ export function Integracao() {
               Diferencial do Congresso
             </p>
             <h2 className="font-display italic text-5xl md:text-6xl leading-[1.05] mb-6">
-              Integração de{" "}
-              <span className="text-gradient-gold">Ciência e Espiritualidade</span>
+              Integração de <span className="text-gradient-gold">Ciência e Espiritualidade</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              O III Congresso de Psicogenealogia propõe um diálogo legítimo
-              entre ciência, saúde, espiritualidade, desenvolvimento humano e
-              consciência — territórios que, juntos, ampliam a compreensão do
-              ser humano em sua totalidade.
+              O III Congresso de Psicogenealogia propõe um diálogo legítimo entre ciência, saúde,
+              espiritualidade, desenvolvimento humano e consciência — territórios que, juntos,
+              ampliam a compreensão do ser humano em sua totalidade.
             </p>
           </div>
         </Reveal>
@@ -59,12 +57,8 @@ export function Integracao() {
                 <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-gold text-xs font-display italic mb-5">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="font-display italic text-2xl text-offwhite mb-3">
-                  {p.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {p.desc}
-                </p>
+                <h3 className="font-display italic text-2xl text-offwhite mb-3">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -74,10 +68,7 @@ export function Integracao() {
           <div className="mt-16 max-w-3xl mx-auto text-center">
             <p className="font-display italic text-2xl md:text-3xl text-offwhite/90 leading-snug border-t border-gold/15 pt-10">
               "Quando ciência e espiritualidade se escutam,{" "}
-              <span className="text-gradient-gold">
-                a saúde encontra outra profundidade.
-              </span>
-              "
+              <span className="text-gradient-gold">a saúde encontra outra profundidade.</span>"
             </p>
           </div>
         </Reveal>

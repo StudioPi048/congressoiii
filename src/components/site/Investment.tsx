@@ -12,7 +12,10 @@ export function Investment() {
     <section id="investimento" className="section-pad relative">
       <div
         className="absolute inset-0 pointer-events-none opacity-50"
-        style={{ background: "radial-gradient(ellipse at center, rgba(107,63,160,0.25) 0%, transparent 60%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(28,119,117,0.25) 0%, transparent 60%)",
+        }}
       />
       <div className="max-w-3xl mx-auto relative">
         <Reveal>
@@ -28,7 +31,10 @@ export function Investment() {
           <div className="glass-card p-10 md:p-14 relative overflow-hidden">
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: "radial-gradient(circle at top right, rgba(201,168,76,0.15) 0%, transparent 60%)" }}
+              style={{
+                background:
+                  "radial-gradient(circle at top right, rgba(201,168,76,0.15) 0%, transparent 60%)",
+              }}
             />
             <div className="relative">
               <div className="text-center mb-10">
