@@ -1,118 +1,109 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-roots.jpg";
 import tempusLogo from "@/assets/tempus-logo.jpg";
+import { AncestralBackdrop } from "./AncestralBackdrop";
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Raízes ancestrais sob neblina dourada"
-          className="absolute inset-0 w-full h-full object-cover scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/65 to-background" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "radial-gradient(ellipse at center, transparent 0%, rgba(5,7,6,0.7) 80%)",
-          }}
-        />
-      </div>
+      <AncestralBackdrop variant="hero" />
 
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 18 }).map((_, i) => (
+      {/* Poeira do tempo — partículas douradas lentas */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {Array.from({ length: 22 }).map((_, i) => (
           <motion.span
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-gold/60"
+            className="absolute rounded-full bg-gold/50"
             style={{
               left: `${(i * 53) % 100}%`,
               top: `${(i * 37) % 100}%`,
-              boxShadow: "0 0 8px rgba(232, 201, 122, 0.8)",
+              width: i % 4 === 0 ? 2 : 1,
+              height: i % 4 === 0 ? 2 : 1,
+              boxShadow: "0 0 8px rgba(240,200,90,0.7)",
             }}
-            animate={{ y: [0, -30, 0], opacity: [0.2, 0.9, 0.2] }}
+            animate={{ y: [0, -34, 0], opacity: [0.15, 0.85, 0.15] }}
             transition={{
-              duration: 6 + (i % 5),
+              duration: 9 + (i % 6),
               repeat: Infinity,
-              delay: i * 0.4,
+              delay: i * 0.5,
               ease: "easeInOut",
             }}
           />
         ))}
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <motion.img
-          src={tempusLogo}
-          alt="Tempus — Ciclos Invisíveis das Gerações"
-          className="w-full max-w-4xl h-auto mx-auto mb-9 mix-blend-screen"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 0.95, y: 0 }}
-          transition={{ duration: 1 }}
-        />
-
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        {/* Logo protagonista, integrada por luz dourada */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="label-cinzel text-xs text-gold mb-6"
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mx-auto mb-10 w-full max-w-3xl"
         >
-          06 · 07 · 08 NOVEMBRO 2026 · FLORIANÓPOLIS
+          <div
+            className="absolute inset-0 -z-10 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(200,149,31,0.28) 0%, transparent 68%)",
+            }}
+          />
+          <img
+            src={tempusLogo}
+            alt="Tempus — Ciclos Invisíveis das Gerações"
+            className="mx-auto h-auto w-full mix-blend-screen"
+          />
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="font-display italic font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.98] mb-8"
+          transition={{ delay: 0.5, duration: 0.9 }}
+          className="mb-8 flex items-center justify-center"
         >
-          O tempo que herdamos. <br />
-          <span className="text-gradient-gold text-3xl sm:text-4xl md:text-5xl lg:text-6xl not-italic font-normal tracking-wide">
-            A consciência que transforma o legado.
+          <span className="eyebrow eyebrow--center text-gold">
+            06 · 07 · 08 Novembro 2026 · Florianópolis
           </span>
-        </motion.h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-offwhite/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
+          transition={{ delay: 0.7, duration: 0.9 }}
+          className="mx-auto max-w-2xl font-display text-2xl italic leading-snug text-ivory/90 md:text-3xl"
         >
-          Um encontro para investigar as heranças invisíveis que atravessam famílias, corpos,
-          vínculos e destinos — e abrir novos ciclos.
+          O tempo que herdamos.{" "}
+          <span className="text-gradient-gold not-italic">A consciência que transforma o legado.</span>
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.8 }}
-          className="gold-divider"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="label-cinzel text-[0.7rem] text-offwhite/80 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-12"
+          transition={{ delay: 0.9, duration: 0.9 }}
+          className="tempus-divider"
         >
-          <span>Florianópolis · SC</span>
-          <span className="text-gold">◆</span>
-          <span>06, 07 e 08 de Novembro · 2026</span>
+          <span className="tempus-divider__mark" />
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.9 }}
+          className="mx-auto max-w-2xl text-lg font-light leading-relaxed text-offwhite/75 md:text-xl"
+        >
+          Um congresso para investigar as heranças invisíveis que atravessam famílias, corpos,
+          vínculos e destinos — e abrir novos ciclos de consciência.
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4, duration: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ delay: 1.25, duration: 0.9 }}
+          className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a href="#investimento" className="btn-gold">
-            Quero viver este ciclo
+            Quero participar
           </a>
           <a href="#programacao" className="btn-ghost">
             Ver programação ↓
@@ -120,20 +111,13 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Indicador de scroll */}
       <motion.div
-        animate={{ y: [0, 10, 0], opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        animate={{ y: [0, 10, 0], opacity: [0.35, 1, 0.35] }}
+        transition={{ duration: 2.4, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold"
       >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-        >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
           <path d="M12 5v14M5 12l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </motion.div>

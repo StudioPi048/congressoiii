@@ -9,14 +9,16 @@ type Eixo =
   | "Odontologia Integrativa"
   | "Consciência e Desenvolvimento Humano";
 
+/* Paleta Tempus — dourado (núcleo/transformação), petróleo (corpo/clínica),
+   ciano mínimo (mente/ciência) e marfim (transcendência). Coerência > arco-íris. */
 const eixoColor: Record<Eixo, string> = {
-  Ciência: "border-sky-400/40 text-sky-200/90",
-  "Saúde Integral": "border-emerald-400/40 text-emerald-200/90",
-  Psicogenealogia: "border-gold/50 text-gold",
-  Espiritualidade: "border-violet-400/40 text-violet-200/90",
-  "Saúde Mental": "border-rose-300/40 text-rose-200/90",
-  "Odontologia Integrativa": "border-amber-300/40 text-amber-200/90",
-  "Consciência e Desenvolvimento Humano": "border-indigo-300/40 text-indigo-200/90",
+  Ciência: "border-cyan/35 text-cyan/90",
+  "Saúde Mental": "border-cyan/30 text-[#9fdfe4]/90",
+  "Saúde Integral": "border-[#1c7775]/55 text-[#8fd6d1]",
+  "Odontologia Integrativa": "border-[#1c7775]/40 text-[#8fd6d1]/90",
+  Psicogenealogia: "border-gold/55 text-gold",
+  "Consciência e Desenvolvimento Humano": "border-gold/35 text-gold-light/90",
+  Espiritualidade: "border-ivory/25 text-ivory/85",
 };
 
 type Panel = {

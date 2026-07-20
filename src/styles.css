@@ -19,11 +19,17 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-deep: var(--deep);
-  --color-amethyst: var(--amethyst);
-  --color-violet: var(--violet);
+  --color-petrol: var(--petrol);
+  --color-petrol-light: var(--petrol-light);
+  /* legacy aliases kept so existing utilities keep resolving */
+  --color-amethyst: var(--petrol);
+  --color-violet: var(--petrol-light);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
+  --color-gold-deep: var(--gold-deep);
+  --color-cyan: var(--cyan);
   --color-offwhite: var(--offwhite);
+  --color-ivory: var(--ivory);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-card: var(--card);
@@ -46,38 +52,61 @@
 :root {
   --radius: 0.5rem;
 
-  --background: #050706;
-  --foreground: #f4f1e8;
-  --deep: #092a2b;
-  --amethyst: #0c4a4b;
-  --violet: #1c7775;
-  --gold: #d69a17;
-  --gold-light: #f3c451;
-  --offwhite: #f4f1e8;
-  --muted: #0b2020;
-  --muted-foreground: #a7b5ac;
+  /* Base — preto profundo, não neutro: um grafite com fundo de petróleo */
+  --background: #050807;
+  --ink: #020403;
+  --foreground: #f2ecdd;
 
-  --card: rgba(9, 42, 43, 0.48);
-  --card-foreground: #f5f0e8;
-  --popover: #092a2b;
-  --popover-foreground: #f5f0e8;
-  --primary: #d69a17;
-  --primary-foreground: #050706;
-  --secondary: #092a2b;
-  --secondary-foreground: #f5f0e8;
-  --accent: #0c4a4b;
-  --accent-foreground: #f5f0e8;
+  /* Verde-petróleo (ancestralidade, profundidade) */
+  --deep: #07211f;
+  --petrol: #0b3a39;
+  --petrol-light: #1c7775;
+
+  /* Ouro envelhecido (tempo, prestígio, relógio) */
+  --gold-deep: #8a5a12;
+  --gold: #c8951f;
+  --gold-light: #f0c85a;
+
+  /* Ciano da logo — acento, uso mínimo */
+  --cyan: #57d6e0;
+
+  /* Marfim envelhecido (textos longos, respiros) */
+  --ivory: #f2ecdd;
+  --offwhite: #ece4d2;
+  --muted: #0a1a19;
+  --muted-foreground: #9aa8a0;
+
+  --card: rgba(9, 40, 39, 0.42);
+  --card-foreground: #f2ecdd;
+  --popover: #07211f;
+  --popover-foreground: #f2ecdd;
+  --primary: #c8951f;
+  --primary-foreground: #050807;
+  --secondary: #07211f;
+  --secondary-foreground: #f2ecdd;
+  --accent: #0b3a39;
+  --accent-foreground: #f2ecdd;
   --destructive: #b54848;
-  --destructive-foreground: #f5f0e8;
-  --border: rgba(214, 154, 23, 0.22);
-  --input: rgba(245, 240, 232, 0.08);
-  --ring: #d69a17;
+  --destructive-foreground: #f2ecdd;
+  --border: rgba(200, 149, 31, 0.18);
+  --input: rgba(242, 236, 221, 0.08);
+  --ring: #c8951f;
 
-  --gradient-deep: radial-gradient(ellipse at top, #092a2b 0%, #050706 60%, #020303 100%);
-  --gradient-gold: linear-gradient(135deg, #f3c451 0%, #d69a17 52%, #8f5b08 100%);
-  --gradient-amethyst: linear-gradient(135deg, #1c7775 0%, #0c4a4b 100%);
-  --shadow-gold: 0 10px 40px -10px rgba(214, 154, 23, 0.45);
-  --shadow-glow: 0 0 80px rgba(28, 119, 117, 0.35);
+  --gradient-deep: radial-gradient(ellipse at top, #0b3a39 0%, #050807 58%, #020403 100%);
+  --gradient-gold: linear-gradient(135deg, #f0c85a 0%, #d6a52a 46%, #c8951f 66%, #8a5a12 100%);
+  --gradient-gold-metal: linear-gradient(
+    120deg,
+    #7a4d10 0%,
+    #d6a52a 24%,
+    #f6dd8f 42%,
+    #c8951f 60%,
+    #8a5a12 82%,
+    #e7bf5c 100%
+  );
+  --gradient-petrol: linear-gradient(135deg, #1c7775 0%, #0b3a39 100%);
+  --shadow-gold: 0 14px 44px -14px rgba(200, 149, 31, 0.5);
+  --shadow-deep: 0 30px 80px -30px rgba(0, 0, 0, 0.9);
+  --shadow-glow: 0 0 90px rgba(28, 119, 117, 0.3);
 }
 
 @layer base {
@@ -95,19 +124,29 @@
     font-family: var(--font-body);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
-  /* Subtle grain overlay */
+  /* Vinheta fixa — aprofunda as bordas, dá sensação de câmara escura */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: radial-gradient(ellipse at center, transparent 42%, rgba(2, 4, 3, 0.55) 100%);
+  }
+
+  /* Grão sutil — poeira do tempo sobre papel antigo */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.05;
+    opacity: 0.06;
     mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
   }
 
   h1,
@@ -121,7 +160,7 @@
 
   ::selection {
     background: var(--gold);
-    color: var(--background);
+    color: var(--ink);
   }
 }
 
@@ -129,33 +168,63 @@
   .label-cinzel {
     font-family: var(--font-label);
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.28em;
     font-weight: 500;
   }
 
   .text-gradient-gold {
-    background: var(--gradient-gold);
+    background: var(--gradient-gold-metal);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* Rótulo de capítulo: acento ciano mínimo + traço dourado, como na logo */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-label);
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-weight: 500;
+    font-size: 0.68rem;
+    color: var(--gold);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+  .eyebrow--center::after {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
   }
 
   .btn-gold {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: var(--gradient-gold);
-    color: #0d0a1a;
+    gap: 0.6rem;
+    padding: 1.05rem 2.1rem;
+    background: var(--gradient-gold-metal);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    color: #241703;
     font-family: var(--font-label);
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: var(--shadow-gold);
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition:
+      transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+      background-position 0.7s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -163,23 +232,24 @@
 
   .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 50px -8px rgba(232, 201, 122, 0.6);
+    background-position: 100% 0%;
+    box-shadow: 0 18px 56px -12px rgba(240, 200, 90, 0.55);
   }
 
   .btn-ghost {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.85rem 1.5rem;
-    color: var(--offwhite);
+    padding: 0.95rem 1.6rem;
+    color: var(--ivory);
     font-family: var(--font-label);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    border: 1px solid rgba(245, 240, 232, 0.2);
+    border: 1px solid rgba(242, 236, 221, 0.16);
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
     background: transparent;
   }
@@ -187,22 +257,46 @@
   .btn-ghost:hover {
     border-color: var(--gold);
     color: var(--gold-light);
+    box-shadow: inset 0 0 24px -12px rgba(200, 149, 31, 0.5);
   }
 
+  /* Card escuro com borda fina de ouro envelhecido / petróleo */
   .glass-card {
-    background: linear-gradient(135deg, rgba(28, 119, 117, 0.12), rgba(9, 42, 43, 0.42));
-    border: 1px solid rgba(245, 240, 232, 0.06);
+    position: relative;
+    background: linear-gradient(150deg, rgba(28, 119, 117, 0.09), rgba(7, 33, 31, 0.44));
+    border: 1px solid rgba(242, 236, 221, 0.06);
     backdrop-filter: blur(12px);
-    border-radius: 4px;
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: 3px;
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  /* Fio dourado no topo — acabamento de peça antiga */
+  .glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(150deg, rgba(200, 149, 31, 0.35), transparent 40%, transparent 70%, rgba(28, 119, 117, 0.28));
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.7;
+    transition: opacity 0.6s ease;
   }
 
   .glass-card:hover {
-    border-color: rgba(201, 168, 76, 0.4);
+    border-color: rgba(200, 149, 31, 0.28);
     transform: translateY(-4px);
-    box-shadow: 0 20px 50px -20px rgba(201, 168, 76, 0.25);
+    box-shadow: 0 26px 60px -26px rgba(200, 149, 31, 0.28), var(--shadow-deep);
+  }
+  .glass-card:hover::before {
+    opacity: 1;
   }
 
+  /* Divisória dourada simples */
   .gold-divider {
     width: 80px;
     height: 1px;
@@ -210,19 +304,56 @@
     margin: 1.5rem auto;
   }
 
-  .gold-divider::before,
-  .gold-divider::after {
+  /* Divisória com marca circular — evoca o mostrador do relógio */
+  .tempus-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.75rem auto;
+    color: var(--gold);
+  }
+  .tempus-divider::before,
+  .tempus-divider::after {
     content: "";
-    display: inline-block;
+    height: 1px;
+    width: 90px;
+    background: linear-gradient(90deg, transparent, rgba(200, 149, 31, 0.7));
+  }
+  .tempus-divider::after {
+    background: linear-gradient(90deg, rgba(200, 149, 31, 0.7), transparent);
+  }
+  .tempus-divider__mark {
+    width: 9px;
+    height: 9px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+    position: relative;
+  }
+  .tempus-divider__mark::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: var(--gold);
+    opacity: 0.5;
   }
 
   .section-pad {
-    padding: 8rem 1.5rem;
+    padding: 9rem 1.5rem;
   }
 
   @media (max-width: 768px) {
     .section-pad {
-      padding: 5rem 1.25rem;
+      padding: 5.5rem 1.25rem;
     }
+  }
+
+  /* Índice de capítulo — reforça a leitura editorial em "capítulos" */
+  .chapter-index {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(200, 149, 31, 0.55);
+    letter-spacing: 0.1em;
   }
 }

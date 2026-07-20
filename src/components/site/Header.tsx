@@ -30,7 +30,7 @@ export function Header() {
           <img
             src={logo}
             alt="Tempus — Congresso III de Psicogenealogia"
-            className="h-11 w-auto max-w-[210px] object-contain object-left"
+            className="h-12 w-auto max-w-[220px] object-contain object-left mix-blend-screen"
           />
         </a>
 

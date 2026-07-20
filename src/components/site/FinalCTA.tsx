@@ -1,44 +1,33 @@
 import { Reveal } from "./Reveal";
-import heroImg from "@/assets/hero-roots.jpg";
+import { AncestralBackdrop } from "./AncestralBackdrop";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden py-32 md:py-44">
-      <img
-        src={heroImg}
-        alt=""
-        loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(28,119,117,0.35) 0%, transparent 70%)",
-        }}
-      />
+    <section className="relative overflow-hidden py-32 md:py-48">
+      <AncestralBackdrop variant="cta" />
 
-      <div className="relative max-w-3xl mx-auto px-6 text-center">
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal>
-          <p className="label-cinzel text-xs text-gold mb-6">O próximo ciclo começa aqui.</p>
+          <div className="mb-8 flex justify-center">
+            <span className="eyebrow eyebrow--center">O próximo ciclo começa aqui</span>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h2 className="font-display italic text-5xl md:text-7xl leading-[1.05] mb-8">
+          <h2 className="mb-8 font-display text-5xl italic leading-[1.05] md:text-7xl">
             O que você herdou <br />
             <span className="text-gradient-gold">pode se transformar.</span>
           </h2>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="label-cinzel text-[0.7rem] text-offwhite/80 mb-10">
+          <p className="label-cinzel mb-10 text-[0.7rem] text-offwhite/80">
             Florianópolis · 06, 07 e 08 de Novembro · 2026
           </p>
         </Reveal>
 
         <Reveal delay={0.3}>
-          <a href="#investimento" className="btn-gold !text-sm !px-10 !py-5">
+          <a href="#investimento" className="btn-gold !px-10 !py-5 !text-sm">
             Participar do Congresso
           </a>
           <p className="mt-6 text-xs text-muted-foreground">
