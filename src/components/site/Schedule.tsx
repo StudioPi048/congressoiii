@@ -1,9 +1,9 @@
 import { Reveal } from "./Reveal";
 
 const days = [
-  { date: "06", weekday: "Sexta-feira", badge: "Abertura" },
-  { date: "07", weekday: "Sábado", badge: "Dia Integral" },
-  { date: "08", weekday: "Domingo", badge: "Encerramento" },
+  { date: "06", weekday: "Sexta-feira", badge: "Abertura", hours: "Início às 14h" },
+  { date: "07", weekday: "Sábado", badge: "Dia Integral", hours: "09h às 22h" },
+  { date: "08", weekday: "Domingo", badge: "Encerramento", hours: "Encerramento às 13h" },
 ];
 
 export function Schedule() {
