@@ -1,9 +1,9 @@
 import { Reveal } from "./Reveal";
 
 const days = [
-  { date: "06", weekday: "Sexta-feira", badge: "Abertura" },
-  { date: "07", weekday: "Sábado", badge: "Dia Integral" },
-  { date: "08", weekday: "Domingo", badge: "Encerramento" },
+  { date: "06", weekday: "Sexta-feira", badge: "Abertura", hours: "Início às 14h" },
+  { date: "07", weekday: "Sábado", badge: "Dia Integral", hours: "09h às 22h" },
+  { date: "08", weekday: "Domingo", badge: "Encerramento", hours: "Encerramento às 13h" },
 ];
 
 export function Schedule() {
@@ -45,6 +45,10 @@ export function Schedule() {
 
                 <div className="my-8 h-px w-16 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
 
+                <p className="label-cinzel mb-6 text-[0.7rem] tracking-[0.25em] text-gold">
+                  {d.hours}
+                </p>
+
                 {/* Selo de mistério — relógio parado, a ser revelado */}
                 <div className="mb-4 text-gold/70 transition-transform duration-700 group-hover:rotate-[30deg]">
                   <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
@@ -53,7 +57,7 @@ export function Schedule() {
                   </svg>
                 </div>
                 <p className="label-cinzel text-[0.6rem] tracking-[0.3em] text-gold/80">
-                  A ser revelado
+                  Programação completa a ser revelada
                 </p>
               </div>
             </Reveal>
