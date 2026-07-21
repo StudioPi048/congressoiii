@@ -57,7 +57,7 @@ export function Venue() {
                 📞 (48) 99123-2043
               </a>
               <a
-                href="https://wa.me/554899373889?text=Ol%C3%A1!%20Quero%20reservar%20hospedagem%20para%20o%20III%20Congresso%20de%20Psicogenealogia."
+                href="https://wa.me/5548991232043?text=Ol%C3%A1!%20Quero%20reservar%20hospedagem%20para%20o%20III%20Congresso%20de%20Psicogenealogia."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-ghost"
