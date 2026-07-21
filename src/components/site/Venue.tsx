@@ -53,8 +53,8 @@ export function Venue() {
               <span className="text-offwhite">III Congresso de Psicogenealogia</span> ao reservar.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="tel:+554832319800" className="btn-gold !px-6 !py-3 !text-[0.7rem]">
-                📞 (48) 3231-9800
+              <a href="tel:+5548991232043" className="btn-gold !px-6 !py-3 !text-[0.7rem]">
+                📞 (48) 99123-2043
               </a>
               <a
                 href="https://wa.me/554899373889?text=Ol%C3%A1!%20Quero%20reservar%20hospedagem%20para%20o%20III%20Congresso%20de%20Psicogenealogia."
