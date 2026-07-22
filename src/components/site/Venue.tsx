@@ -52,27 +52,20 @@ export function Venue() {
               Garanta seu quarto falando diretamente com o hotel. Mencione o{" "}
               <span className="text-offwhite">III Congresso de Psicogenealogia</span> ao reservar.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="tel:+5548991232043" className="btn-gold !px-6 !py-3 !text-[0.7rem]">
-                📞 (48) 99123-2043
-              </a>
+            <div className="flex justify-center">
               <a
                 href="https://wa.me/5548991232043?text=Ol%C3%A1!%20Quero%20reservar%20hospedagem%20para%20o%20III%20Congresso%20de%20Psicogenealogia."
                 target="_blank"
                 rel="noreferrer"
-                className="btn-ghost"
+                className="btn-gold !px-8 !py-4 !text-sm inline-flex items-center gap-3 shadow-[0_10px_40px_-10px_rgba(201,168,76,0.6)] hover:shadow-[0_15px_50px_-10px_rgba(201,168,76,0.9)] transition-all duration-500 hover:-translate-y-1"
               >
-                WhatsApp Reservas
-              </a>
-              <a
-                href="https://maps.google.com/?q=Hotel+Torres+da+Cachoeira+Florianopolis"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-ghost"
-              >
-                Ver no mapa →
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1.1 2.8 1.2 3 .1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
+                </svg>
+                Reservar pelo WhatsApp
               </a>
             </div>
+
           </div>
 
           <p className="text-xs text-muted-foreground italic">
