@@ -7,7 +7,7 @@ import fabian from "@/assets/convidados/fabian-brotos.jpg.asset.json";
 import mariaInes from "@/assets/convidados/maria-ines.jpg.asset.json";
 import leticia from "@/assets/convidados/leticia.png.asset.json";
 import pietro from "@/assets/convidados/pietro.png.asset.json";
-import raul from "@/assets/convidados/raul.jpg.asset.json";
+import raul from "@/assets/convidados/raul-new.jpg";
 import aline from "@/assets/convidados/aline.jpg.asset.json";
 import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
 import walter from "@/assets/convidados/walter.jpg.asset.json";
@@ -76,7 +76,7 @@ const speakers: Speaker[] = [
   {
     name: "Raul Ferreira Netto",
     role: "Cineasta · Diretor · Apresentador · Locutor Oficial E! Entertainment TV Brasil",
-    photo: raul.url,
+    photo: raul,
     bio: "Cineasta, diretor, produtor, apresentador, locutor, ator e dublador brasileiro, com carreira iniciada nos Estados Unidos em 1993, onde trabalhou para grandes emissoras como MTV, HBO, Disney, Discovery, ESPN e Cartoon Network. Atuou em filmes como Mais Velozes e Mais Furiosos e Bad Boys 2, participou da série CSI: Miami e, no Brasil, consolidou-se como diretor de documentários, programas de televisão e produções especiais, além de ser a voz de personagens em séries de sucesso. Atualmente, é locutor oficial do E! Entertainment TV Brasil, dirige produções do canal e é sócio-diretor da produtora 2por1 Comunicação, destacando-se como um dos profissionais mais versáteis do audiovisual brasileiro.",
     gender: "male",
   },
