@@ -34,7 +34,7 @@ const speakers: Speaker[] = [
     name: "Dr. Luis Fabián Brotos",
     role: "Odontologia Integrativa · Decodificação Dental® · Uruguai",
     photo: fabian.url,
-    bio: "Terceira geração de sua família a escolher a odontologia como profissão. Cirurgião-dentista, professor universitário e pesquisador uruguaio, reconhecido internacionalmente por seu trabalho em Decodificação Dental. Graduado em Odontologia pela Universidade da República do Uruguai, atua como docente da Cátedra de Oclusão e Prótese desde 1999. Possui especializações em Implantes e Ortodontia e uma sólida formação complementar em Neurociência, Psicologia das Relações Afetivas, Simbolismo, Filosofia, Neurociência Aplicada e Interpretação e Análise de Sonhos. Desde 2007 dedica-se ao estudo da Decodificação Biológica e, em 2012, iniciou as pesquisas e estudos ao desenvolvimento da Decodificação Dental, investigando a profunda relação entre dentes, cérebro, emoções e história de vida. Sua trajetória integra conhecimentos em Filosofia, Simbologia, Constelações Familiares, Cabala, Atos Simbólicos e Psico-Neuro-Imuno-Endocrinologia, consolidando uma abordagem inovadora e integrativa da saúde. Desde 2014 ministra cursos e forma profissionais em diversos países. Foi palestrante e convidado em universidades, congressos e encontros científicos internacionais realizados no Uruguai, Argentina, Portugal, Brasil, México e Estados Unidos, compartilhando sua metodologia com profissionais da saúde de diferentes áreas. É coautor do best-seller \"A Nova Visão Integrativa e Sistêmica sobre a Saúde e o Bem-Estar\" (2024), autor de publicações técnicas sobre Decodificação Dental® e diretor do Curso de Extensão Universitária em Decodificação Dental® da UNIFATEC, no Brasil. Atualmente, dedica-se à pesquisa, ao ensino e à formação de profissionais, contribuindo para a expansão da Decodificação Dental® em diferentes países e consolidando-se como uma das principais referências internacionais na área.",
+    bio: "Terceira geração de sua família a escolher a odontologia como profissão. Cirurgião-dentista, professor universitário e pesquisador uruguaio, reconhecido internacionalmente por seu trabalho em Decodificação Dental.\n\nGraduado em Odontologia pela Universidade da República do Uruguai, atua como docente da Cátedra de Oclusão e Prótese desde 1999. Possui especializações em Implantes e Ortodontia e uma sólida formação complementar em Neurociência, Psicologia das Relações Afetivas, Simbolismo, Filosofia, Neurociência Aplicada e Interpretação e Análise de Sonhos.\n\nDesde 2007 dedica-se ao estudo da Decodificação Biológica e, em 2012, iniciou as pesquisas e estudos ao desenvolvimento da Decodificação Dental, investigando a profunda relação entre dentes, cérebro, emoções e história de vida.\n\nSua trajetória integra conhecimentos em Filosofia, Simbologia, Constelações Familiares, Cabala, Atos Simbólicos e Psico-Neuro-Imuno-Endocrinologia, consolidando uma abordagem inovadora e integrativa da saúde.\n\nDesde 2014 ministra cursos e forma profissionais em diversos países. Foi palestrante e convidado em universidades, congressos e encontros científicos internacionais realizados no Uruguai, Argentina, Portugal, Brasil, México e Estados Unidos, compartilhando sua metodologia com profissionais da saúde de diferentes áreas.\n\nÉ coautor do best-seller \"A Nova Visão Integrativa e Sistêmica sobre a Saúde e o Bem-Estar\" (2024), autor de publicações técnicas sobre Decodificação Dental® e diretor do Curso de Extensão Universitária em Decodificação Dental® da UNIFATEC, no Brasil.\n\nAtualmente, dedica-se à pesquisa, ao ensino e à formação de profissionais, contribuindo para a expansão da Decodificação Dental® em diferentes países e consolidando-se como uma das principais referências internacionais na área.",
     gender: "male",
     highlight: true,
   },
@@ -239,9 +239,11 @@ export function Convidados() {
                       {s.note}
                     </p>
                   )}
-                  <p className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed">
-                    {s.bio}
-                  </p>
+                  <div className="text-sm md:text-[0.95rem] text-muted-foreground leading-relaxed space-y-4">
+                    {s.bio.split("\n\n").map((paragraph, idx) => (
+                      <p key={idx}>{paragraph}</p>
+                    ))}
+                  </div>
 
                   {s.themes && (
                     <div className="mt-6 border-t border-gold/15 pt-5">
