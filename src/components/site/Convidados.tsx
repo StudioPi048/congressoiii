@@ -14,6 +14,7 @@ import walter from "@/assets/convidados/walter.jpg.asset.json";
 import mariaCamila from "@/assets/convidados/maria-camila.png.asset.json";
 import vanuce from "@/assets/convidados/vanuce.png.asset.json";
 import marianna from "@/assets/convidados/marianna.png";
+import lennon from "@/assets/convidados/lennon.jpg";
 
 type Speaker = {
   name: string;
@@ -30,11 +31,12 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
-    name: "Dr. Fabián Brotos",
-    role: "Odontologia Integrativa · Decodificação Biológica · Uruguai",
+    name: "Dr. Luis Fabián Brotos",
+    role: "Odontologia Integrativa · Decodificação Dental® · Uruguai",
     photo: fabian.url,
-    bio: "Iniciou sua jornada na Decodificação Biológica como aluno do professor Enrique Bouron, destacando-se em Biologia Total pela dedicação e aprofundamento clínico. Graduado em Odontologia pela Universidade da República (Montevidéu, 2000), é docente desde 1999 nas áreas de oclusão, prótese dentária e diversas especialidades odontológicas integrativas. Possui formação em Cerâmica Dentária, Facetas e Inlays Cerâmicos, Tratamento de Edentação, sistema Bredent (Alemanha), Fibra de Vidro em Odontologia, Pós-graduação em Ortopedia e Ortodontia, Implantes Osseointegrados, Próteses Implantoassistidas e Implantologia.",
+    bio: "Terceira geração de sua família a escolher a odontologia como profissão. Cirurgião-dentista, professor universitário e pesquisador uruguaio, reconhecido internacionalmente por seu trabalho em Decodificação Dental. Graduado em Odontologia pela Universidade da República do Uruguai, atua como docente da Cátedra de Oclusão e Prótese desde 1999. Possui especializações em Implantes e Ortodontia e uma sólida formação complementar em Neurociência, Psicologia das Relações Afetivas, Simbolismo, Filosofia, Neurociência Aplicada e Interpretação e Análise de Sonhos. Desde 2007 dedica-se ao estudo da Decodificação Biológica e, em 2012, iniciou as pesquisas e estudos ao desenvolvimento da Decodificação Dental, investigando a profunda relação entre dentes, cérebro, emoções e história de vida. Sua trajetória integra conhecimentos em Filosofia, Simbologia, Constelações Familiares, Cabala, Atos Simbólicos e Psico-Neuro-Imuno-Endocrinologia, consolidando uma abordagem inovadora e integrativa da saúde. Desde 2014 ministra cursos e forma profissionais em diversos países. Foi palestrante e convidado em universidades, congressos e encontros científicos internacionais realizados no Uruguai, Argentina, Portugal, Brasil, México e Estados Unidos, compartilhando sua metodologia com profissionais da saúde de diferentes áreas. É coautor do best-seller \"A Nova Visão Integrativa e Sistêmica sobre a Saúde e o Bem-Estar\" (2024), autor de publicações técnicas sobre Decodificação Dental® e diretor do Curso de Extensão Universitária em Decodificação Dental® da UNIFATEC, no Brasil. Atualmente, dedica-se à pesquisa, ao ensino e à formação de profissionais, contribuindo para a expansão da Decodificação Dental® em diferentes países e consolidando-se como uma das principais referências internacionais na área.",
     gender: "male",
+    highlight: true,
   },
   {
     name: "Danila Gabriel Martins de Campos",
@@ -140,6 +142,13 @@ const speakers: Speaker[] = [
     gender: "female",
     modality: "online",
   },
+  {
+    name: "Lennon",
+    role: "Artista Visual · Marketing e Tecnologia · Estratégia Criativa",
+    photo: lennon,
+    bio: "Iniciou sua caminhada no silêncio do desenho, aprendendo a observar aquilo que muitas vezes passa despercebido: emoções, detalhes, histórias e a beleza presente em cada pessoa. A arte moldou seu olhar muito antes de moldar sua profissão — depois, junto com ela, vieram o marketing, a tecnologia e a visão estratégica aplicada ao crescimento de empresas, marcas e projetos. Transita naturalmente entre esses universos, pois nunca os enxergou como caminhos separados: a arte ensina a sentir, a tecnologia amplia possibilidades e a estratégia transforma visão em realidade. É nesse encontro entre criatividade, tecnologia, estratégia e humanidade que constrói sua trajetória, criando conexões com o poder de transformar pessoas, organizações e realidades.",
+    gender: "male",
+  },
 ];
 
 export function Convidados() {
@@ -176,9 +185,11 @@ export function Convidados() {
               <article
                 className={`glass-card overflow-hidden grid md:grid-cols-[300px_1fr] md:min-h-[520px] gap-0 ${
                   i % 2 === 1 ? "md:[direction:rtl]" : ""
-                } ${s.highlight ? "ring-1 ring-gold/40 border-gold/40" : ""} ${
-                  s.status === "pending" ? "opacity-70" : ""
-                }`}
+                } ${
+                  s.highlight
+                    ? "ring-2 ring-gold shadow-[var(--shadow-gold)] border-gold/70 md:min-h-[560px]"
+                    : ""
+                } ${s.status === "pending" ? "opacity-70" : ""}`}
               >
                 <div className="relative aspect-[3/4] md:aspect-auto md:h-full overflow-hidden [direction:ltr]">
                   <img
@@ -193,6 +204,14 @@ export function Convidados() {
                       {s.modality === "online" ? "Participação Online" : "Participação Remota"}
                     </span>
                   )}
+                  {s.highlight && (
+                    <span
+                      className="label-cinzel text-[0.6rem] px-4 py-1.5 rounded-sm tracking-[0.25em] absolute top-4 right-4 text-background font-semibold"
+                      style={{ background: "var(--gradient-gold-metal)" }}
+                    >
+                      ★ Palestrante Destaque
+                    </span>
+                  )}
                 </div>
 
                 <div className="p-8 md:p-10 [direction:ltr] flex flex-col justify-center">
@@ -203,11 +222,15 @@ export function Convidados() {
                       ? s.gender === "female"
                         ? "Convidada a Confirmar"
                         : "Convidado a Confirmar"
-                      : s.gender === "female"
-                        ? "Convidada Confirmada"
-                        : "Convidado Confirmado"}
+                      : s.highlight
+                        ? "Destaque do Painel · Convidado Confirmado"
+                        : s.gender === "female"
+                          ? "Convidada Confirmada"
+                          : "Convidado Confirmado"}
                   </div>
-                  <h3 className="font-display italic text-3xl md:text-4xl mb-2 leading-tight">
+                  <h3
+                    className={`font-display italic mb-2 leading-tight ${s.highlight ? "text-4xl md:text-5xl text-gradient-gold" : "text-3xl md:text-4xl"}`}
+                  >
                     {s.name}
                   </h3>
                   <p className="text-gold/90 text-sm mb-5 tracking-wide">{s.role}</p>
