@@ -16,6 +16,7 @@ import vanuce from "@/assets/convidados/vanuce.png.asset.json";
 import marianna from "@/assets/convidados/marianna.png";
 import lennon from "@/assets/convidados/lennon.jpg";
 import katiucia from "@/assets/convidados/katiucia.jpg";
+import talita from "@/assets/convidados/talita.jpg";
 
 type Speaker = {
   name: string;
@@ -155,6 +156,13 @@ const speakers: Speaker[] = [
     role: "Fundadora Escola Ser InComum · Instituto Kalel · Pesquisadora da Consciência",
     photo: katiucia,
     bio: "Katiucia Garcia Vilela é fundadora da Escola Ser InComum, do Espaço Arcturus – Terapias Quânticas Integrativas e do Instituto Kalel, um hospital do espírito dedicado ao cuidado integral do ser humano.\n\nPesquisadora da consciência encarnada, idealizadora da AutoMedicina da IntroVisão e da TransMediunidade, dedica sua vida à investigação da consciência como princípio organizador da biologia, das relações e da espiritualidade.\n\nSua missão é recordar ao ser humano sua natureza essencial, conduzindo-o ao acesso consciente ao inconsciente biológico, para que possa transcender os condicionamentos inscritos no corpo e espiritualizar a própria existência. Seu trabalho revela que a verdadeira cura nasce quando consciência, biologia e espírito voltam a caminhar em unidade.\n\nPor meio de uma pedagogia espiritual que integra ciência, filosofia e experiência contemplativa, Katiucia convida cada pessoa a reorganizar o Coração Celestial — o centro vivo da consciência — e a reconhecer o corpo como um templo onde o espírito se manifesta.\n\nSua obra está a serviço de uma nova humanidade: uma humanidade capaz de viver a transcendência biológica, desenvolver a TransMediunidade como expressão natural da consciência ampliada e recordar que o destino de todo ser é reunir novamente aquilo que um dia se percebeu separado.\n\nSua missão é abrir caminhos de recordação, para que a espiritualidade deixe de ser uma ideia e se torne uma presença viva no corpo, nas relações e na consciência, revelando que o ser humano é a própria manifestação do divino em evolução.",
+    gender: "female",
+  },
+  {
+    name: "Talita Auler",
+    role: "Fonoaudióloga · Especialista em Espiritualidade e Saúde (UCS) · Fundadora Clínica Adit",
+    photo: talita,
+    bio: "Fonoaudióloga, especialista em Espiritualidade e Saúde pela UCS. Fundadora da Clínica Adit, a primeira clínica do RS a integrar saúde, espiritualidade e comunicação. Integra conhecimentos das neurociências, da tanatologia e da espiritualidade em movimentos que promovem uma compreensão ampliada do ser humano.",
     gender: "female",
   },
 ];
