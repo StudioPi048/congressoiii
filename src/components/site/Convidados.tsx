@@ -13,6 +13,7 @@ import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
 import walter from "@/assets/convidados/walter.jpg.asset.json";
 import mariaCamila from "@/assets/convidados/maria-camila.png.asset.json";
 import vanuce from "@/assets/convidados/vanuce.png.asset.json";
+import marianna from "@/assets/convidados/marianna.png";
 
 type Speaker = {
   name: string;
@@ -131,6 +132,14 @@ const speakers: Speaker[] = [
     bio: "Cirurgiã-dentista graduada pela Universidade de Guarulhos (UNG), com 26 anos de experiência clínica. Pós-graduada em Ortodontia (2000–2002) e em Medicina Funcional Integrativa pela ABMFI – Academia Brasileira de Medicina Funcional Integrativa (2025). Ao longo de sua trajetória, aprofundou seus estudos sistêmicos a partir de formações em Biocibernética Bucal, Terapia Neural, Psiconeurodontologia, Psicogenealogia e Decodificação Biológica, direcionando sua atuação para uma compreensão global da saúde. Acredita que o cuidado em saúde começa pela compreensão integral do ser humano, unindo conhecimento, escuta e respeito à singularidade de cada pessoa.",
     gender: "female",
   },
+  {
+    name: "Dra. Marianna de Abreu Costa",
+    role: "Médica Psiquiatra · Pesquisadora em Psiquiatria e Espiritualidade · UFRGS",
+    photo: marianna,
+    bio: "Médica formada pela Universidade Federal do Rio Grande do Sul (UFRGS) e especializada em Psiquiatria pelo Hospital de Clínicas de Porto Alegre (HCPA), Doutora pelo Programa de Pós-Graduação em Psiquiatria e Ciência do Comportamento da Faculdade de Medicina da UFRGS. Pós-doutoramento no Núcleo de Pesquisas em Espiritualidade e Saúde da Universidade Federal de Juiz de Fora (UFJF). Membro atuante do Departamento de Psiquiatria e Espiritualidade da Associação de Psiquiatria do Rio Grande do Sul (DPE-APRS) e da Comissão de Estudos e Pesquisa em Espiritualidade e Saúde da Associação Brasileira de Psiquiatria, contribuindo para a integração desses campos na prática psiquiátrica, divulgando o tema através da organização e participação em eventos científicos.",
+    gender: "female",
+    modality: "online",
+  },
 ];
 
 export function Convidados() {
@@ -179,9 +188,9 @@ export function Convidados() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-                  {s.modality === "remoto" && (
+                  {(s.modality === "remoto" || s.modality === "online") && (
                     <span className="absolute top-4 left-4 label-cinzel text-[0.55rem] px-3 py-1 bg-background/80 backdrop-blur text-gold border border-gold/40 rounded-sm tracking-[0.25em]">
-                      Participação Remota
+                      {s.modality === "online" ? "Participação Online" : "Participação Remota"}
                     </span>
                   )}
                 </div>
