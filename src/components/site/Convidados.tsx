@@ -17,6 +17,7 @@ import marianna from "@/assets/convidados/marianna.png";
 import lennon from "@/assets/convidados/lennon.jpg";
 import katiucia from "@/assets/convidados/katiucia.jpg";
 import talita from "@/assets/convidados/talita.jpg";
+import marina from "@/assets/convidados/marina.jpg";
 
 type Speaker = {
   name: string;
@@ -163,6 +164,13 @@ const speakers: Speaker[] = [
     role: "Fonoaudióloga · Especialista em Espiritualidade e Saúde (UCS) · Fundadora Clínica Adit",
     photo: talita,
     bio: "Fonoaudióloga, especialista em Espiritualidade e Saúde pela UCS. Fundadora da Clínica Adit, a primeira clínica do RS a integrar saúde, espiritualidade e comunicação. Integra conhecimentos das neurociências, da tanatologia e da espiritualidade em movimentos que promovem uma compreensão ampliada do ser humano.",
+    gender: "female",
+  },
+  {
+    name: "Marina Renault",
+    role: "Facilitadora de Processos de Reconexão Interior · Códigos de Luz",
+    photo: marina,
+    bio: "Marina Renault é facilitadora de processos de reconexão interior, com atuação voltada ao desenvolvimento espiritual, emocional e energético do ser humano.\n\nSua abordagem une práticas intuitivas, meditações guiadas e Códigos de Luz, criando espaços de cura e expansão da consciência. Com uma trajetória dedicada ao serviço do autoconhecimento, Marina conduz experiências que integram sensibilidade, presença e alinhamento com o coração. Seu trabalho não se baseia em dogmas, nomes de guias ou tradições específicas, mas em despertar a autonomia espiritual e a força interior de cada indivíduo.\n\nMais do que transmitir técnicas, Marina sustenta vivências que convidam à transmutação das dores, à libertação de condicionamentos antigos e à construção de um novo olhar sobre si e sobre a vida. Atua em grupos, projetos especiais, jornadas online e presenciais, sempre com a proposta de que o Verdadeiro Mestre habita em cada um de nós.",
     gender: "female",
   },
 ];
