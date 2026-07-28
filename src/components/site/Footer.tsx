@@ -1,4 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/tempus-logo.png";
+
 
 export function Footer() {
   return (
