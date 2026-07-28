@@ -17,8 +17,9 @@ const faqs = [
   },
   {
     q: "Posso parcelar?",
-    a: "Sim. Em até 5x de R$ 230,00, sem juros.",
+    a: "Sim, em até 3x sem juros. O valor da parcela depende do lote: Lote 1 (3x de R$ 330), Lote 2 (3x de R$ 380) e Lote 3 (3x de R$ 400). Alunos e Psicogenealogistas Liz têm condição exclusiva a partir de 3x de R$ 290.",
   },
+
   {
     q: "Como posso tirar dúvidas antes de me inscrever?",
     a: "Fale diretamente com nossa equipe pelo WhatsApp clicando no botão flutuante na tela.",
