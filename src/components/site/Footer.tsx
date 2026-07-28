@@ -1,4 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/tempus-logo.png";
+
 
 export function Footer() {
   return (
@@ -41,7 +43,16 @@ export function Footer() {
           <div>
             <p className="label-cinzel text-[0.65rem] text-gold mb-5">Contato</p>
             <ul className="space-y-3 text-sm text-offwhite/70">
-              <li>💬 WhatsApp: (48) 0000-0000</li>
+              <li>
+                <a
+                  href="https://wa.me/554491318081"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  💬 WhatsApp: +55 44 9131-8081
+                </a>
+              </li>
               <li>📧 contato@institutoliz.com</li>
               <li>📷 @institutoliz</li>
             </ul>
@@ -53,12 +64,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 text-xs text-muted-foreground">
           <p>© 2026 Instituto LIZ · Tempus · Todos os direitos reservados</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold">
+            <Link to="/privacidade" className="hover:text-gold">
               Política de Privacidade
-            </a>
-            <a href="#" className="hover:text-gold">
+            </Link>
+            <Link to="/termos" className="hover:text-gold">
               Termos de Uso
-            </a>
+            </Link>
+
           </div>
         </div>
       </div>

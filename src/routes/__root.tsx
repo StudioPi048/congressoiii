@@ -72,37 +72,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "III Congresso de Psicogenealogia" },
+      { title: "Tempus — Ciclos Invisíveis das Gerações" },
       {
         name: "description",
         content:
           "Tempus — Ciclos Invisíveis das Gerações. III Congresso de Psicogenealogia em Florianópolis, 06 a 08 de novembro de 2026.",
       },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "III Congresso de Psicogenealogia" },
+      { name: "author", content: "Instituto LIZ" },
+      { property: "og:site_name", content: "Tempus — Ciclos Invisíveis das Gerações" },
+      { property: "og:title", content: "Tempus — Ciclos Invisíveis das Gerações" },
       {
         property: "og:description",
         content:
           "Tempus — Ciclos Invisíveis das Gerações. III Congresso de Psicogenealogia em Florianópolis, 06 a 08 de novembro de 2026.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "III Congresso de Psicogenealogia" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tempus — Ciclos Invisíveis das Gerações" },
       {
         name: "twitter:description",
         content:
           "Tempus — Ciclos Invisíveis das Gerações. III Congresso de Psicogenealogia em Florianópolis, 06 a 08 de novembro de 2026.",
-      },
-      {
-        property: "og:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/93b2d9b8-795a-41ee-9163-1233ea5d4f05/id-preview-d51b1c1b--efa37d20-fbbe-4406-aac4-b803aa99e015.lovable.app-1778780402155.png",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/93b2d9b8-795a-41ee-9163-1233ea5d4f05/id-preview-d51b1c1b--efa37d20-fbbe-4406-aac4-b803aa99e015.lovable.app-1778780402155.png",
       },
     ],
     links: [

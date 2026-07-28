@@ -5,7 +5,7 @@ const MSG = encodeURIComponent(
 export function WhatsAppFloat() {
   return (
     <a
-      href={`https://wa.me/5548000000000?text=${MSG}`}
+      href={`https://wa.me/554491318081?text=${MSG}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Falar no WhatsApp"
