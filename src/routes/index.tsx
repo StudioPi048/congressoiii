@@ -39,6 +39,9 @@ export const Route = createFileRoute("/")({
           "Três dias de imersão profunda em ancestralidade, consciência e transformação. Florianópolis · 2026.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://congressoiii.lovable.app/" },
+      { name: "twitter:card", content: "summary_large_image" },
+
     ],
     scripts: [
       {
