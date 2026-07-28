@@ -49,11 +49,17 @@ export function Hero() {
                 "radial-gradient(ellipse at center, rgba(200,149,31,0.22) 0%, rgba(28,119,117,0.12) 45%, transparent 70%)",
             }}
           />
-          <img
-            src={tempusLogo}
-            alt="Tempus — Ciclos Invisíveis das Gerações"
-            className="mx-auto h-auto w-full drop-shadow-[0_18px_60px_rgba(0,0,0,0.6)]"
-          />
+          <h1 className="m-0">
+            <span className="sr-only">
+              Tempus — Ciclos Invisíveis das Gerações · III Congresso de Psicogenealogia
+            </span>
+            <img
+              src={tempusLogo}
+              alt="Tempus — Ciclos Invisíveis das Gerações"
+              className="mx-auto h-auto w-full drop-shadow-[0_18px_60px_rgba(0,0,0,0.6)]"
+            />
+          </h1>
+
         </motion.div>
 
         <motion.div
