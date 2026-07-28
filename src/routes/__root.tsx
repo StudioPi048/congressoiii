@@ -94,8 +94,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Tempus — Ciclos Invisíveis das Gerações. III Congresso de Psicogenealogia em Florianópolis, 06 a 08 de novembro de 2026.",
       },
-
-      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
