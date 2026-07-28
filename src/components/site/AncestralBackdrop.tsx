@@ -74,10 +74,11 @@ export function AncestralBackdrop({
             return (
               <line
                 key={i}
-                x1={300 + r1 * Math.sin(a)}
-                y1={300 - r1 * Math.cos(a)}
-                x2={300 + r2 * Math.sin(a)}
-                y2={300 - r2 * Math.cos(a)}
+                x1={Number((300 + r1 * Math.sin(a)).toFixed(3))}
+                y1={Number((300 - r1 * Math.cos(a)).toFixed(3))}
+                x2={Number((300 + r2 * Math.sin(a)).toFixed(3))}
+                y2={Number((300 - r2 * Math.cos(a)).toFixed(3))}
+
                 strokeWidth={major ? 1.6 : 0.6}
               />
             );
