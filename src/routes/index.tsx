@@ -69,9 +69,10 @@ export const Route = createFileRoute("/")({
           organizer: { "@type": "Organization", name: "Instituto LIZ" },
           offers: {
             "@type": "Offer",
-            price: "1150.00",
+            price: "990.00",
             priceCurrency: "BRL",
             availability: "https://schema.org/InStock",
+
           },
         }),
       },
