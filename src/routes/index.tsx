@@ -41,8 +41,9 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://congressoiii.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
-
     ],
+    links: [{ rel: "canonical", href: "https://congressoiii.lovable.app/" }],
+
     scripts: [
       {
         type: "application/ld+json",
