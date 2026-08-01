@@ -145,7 +145,7 @@ export function Investment() {
               </div>
               <div className="text-center md:border-l md:border-gold/15 md:pl-10">
                 <a
-                  href="https://wa.me/554491318081?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20no%20III%20Congresso%20de%20Psicogenealogia%20%E2%80%94%20Tempus."
+                  href="https://pay.hotmart.com/Q106809712U?off=x5lp3hlr&bid=1785593466344"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-gold !text-sm"
