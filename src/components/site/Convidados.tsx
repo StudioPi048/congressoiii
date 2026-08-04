@@ -244,11 +244,9 @@ export function Convidados() {
                     className={`label-cinzel text-[0.65rem] mb-3 tracking-[0.3em] ${s.status === "pending" ? "text-muted-foreground" : "text-gold"}`}
                   >
                     {s.status === "pending"
-                      ? s.gender === "female"
-                        ? "Palestrante a Confirmar"
-                        : "Palestrante a Confirmar"
+                      ? "Palestrante a Confirmar"
                       : s.highlight
-                        ? "Destaque do Painel · Palestrante Confirmado"
+                        ? `Destaque do Painel · Palestrante ${s.gender === "female" ? "Confirmada" : "Confirmado"}`
                         : s.gender === "female"
                           ? "Palestrante Confirmada"
                           : "Palestrante Confirmado"}
