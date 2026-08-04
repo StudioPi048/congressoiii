@@ -144,6 +144,7 @@ const speakers: Speaker[] = [
     bio: "Médica formada pela Universidade Federal do Rio Grande do Sul (UFRGS) e especializada em Psiquiatria pelo Hospital de Clínicas de Porto Alegre (HCPA), Doutora pelo Programa de Pós-Graduação em Psiquiatria e Ciência do Comportamento da Faculdade de Medicina da UFRGS. Pós-doutoramento no Núcleo de Pesquisas em Espiritualidade e Saúde da Universidade Federal de Juiz de Fora (UFJF). Membro atuante do Departamento de Psiquiatria e Espiritualidade da Associação de Psiquiatria do Rio Grande do Sul (DPE-APRS) e da Comissão de Estudos e Pesquisa em Espiritualidade e Saúde da Associação Brasileira de Psiquiatria, contribuindo para a integração desses campos na prática psiquiátrica, divulgando o tema através da organização e participação em eventos científicos.",
     gender: "female",
     modality: "online",
+    highlight: true,
   },
   {
     name: "Lennon",
@@ -244,13 +245,13 @@ export function Convidados() {
                   >
                     {s.status === "pending"
                       ? s.gender === "female"
-                        ? "Convidada a Confirmar"
-                        : "Convidado a Confirmar"
+                        ? "Palestrante a Confirmar"
+                        : "Palestrante a Confirmar"
                       : s.highlight
-                        ? "Destaque do Painel · Convidado Confirmado"
+                        ? "Destaque do Painel · Palestrante Confirmado"
                         : s.gender === "female"
-                          ? "Convidada Confirmada"
-                          : "Convidado Confirmado"}
+                          ? "Palestrante Confirmada"
+                          : "Palestrante Confirmado"}
                   </div>
                   <h3
                     className={`font-display italic mb-2 leading-tight ${s.highlight ? "text-4xl md:text-5xl text-gradient-gold" : "text-3xl md:text-4xl"}`}
