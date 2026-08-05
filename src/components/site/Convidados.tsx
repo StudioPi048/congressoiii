@@ -18,7 +18,7 @@ import lennon from "@/assets/convidados/lennon.jpg";
 import katiucia from "@/assets/convidados/katiucia.jpg";
 import talita from "@/assets/convidados/talita.jpg";
 import marina from "@/assets/convidados/marina.jpg";
-import cintiaAlban from "@/assets/convidados/cintia-alban.jpeg";
+import cintiaAlban from "@/assets/convidados/cintia.png";
 
 type Speaker = {
   name: string;
