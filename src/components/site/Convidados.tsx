@@ -18,6 +18,7 @@ import lennon from "@/assets/convidados/lennon.jpg";
 import katiucia from "@/assets/convidados/katiucia.jpg";
 import talita from "@/assets/convidados/talita.jpg";
 import marina from "@/assets/convidados/marina.jpg";
+import cintiaAlban from "@/assets/convidados/cintia-alban.jpeg";
 
 type Speaker = {
   name: string;
@@ -85,6 +86,17 @@ const speakers: Speaker[] = [
     role: "Terapeuta Integrativa · Pesquisadora da Consciência · Isekhem Kundalini",
     photo: aline.url,
     bio: "Terapeuta integrativa, pesquisadora da consciência e facilitadora de jornadas de reconexão com a essência. Seu trabalho nasce do encontro entre ancestralidade, consciência corporal, espiritualidade e autoconhecimento, criando espaços onde cada pessoa pode se reconectar com sua própria verdade. Acredita que o corpo guarda memórias, que a história carrega sabedorias e que a consciência é o caminho que nos conduz de volta ao que realmente somos. Integrando conhecimentos em psicogenealogia, leitura simbólica e Isekhem Kundalini, conduz processos profundos de escuta, presença e transformação, respeitando a singularidade de cada jornada. Sua missão é lembrar às pessoas que a força que procuram não está fora, mas dentro delas. O corpo é o templo. A consciência é o caminho. A essência é o retorno.",
+    gender: "female",
+  },
+  {
+    name: "Cintia Maria Nobre Lucas Alban",
+    role: "Empresária · Mentora · Voluntária · Embaixadora de Impacto Social",
+    photo: cintiaAlban,
+    bio: "Cintia Maria Nobre Lucas Alban tem 56 anos, é casada e mãe de três filhos. Empresária com experiência no varejo de produtos nacionais e importados, ao longo de sua trajetória uniu sua visão de negócios a um profundo propósito humano, atuando como mentora, voluntária e embaixadora em diversas iniciativas de impacto social.\n\nLinha do tempo e projetos: em 1990, graduou-se em Engenharia Agrícola pela Ulbra-RS; em 1996, iniciou sua atuação como mentora na Associação Santa Rita, lar de idosos no interior do Rio Grande do Sul; em 2011, concluiu o bacharelado em Gastronomia pela Faculdade Assesc-SC; em 2015, ao lado da Família Alban, realizou o Projeto Origens do Saber, uma viagem pela América do Sul que entrevistou inúmeros idosos em busca de sabedoria; em 2017, tornou-se embaixadora da ACIC, Associação Catarinense para Integração do Cego; em 2018, foi cofundadora do Nonno, plataforma que conecta famílias com cuidadores de pessoas; em 2020, cofundou o Instituto AlKE, dedicado à reabilitação em prol da amputação; em 2021, tornou-se embaixadora do RAMP, Reabilitação Multidisciplinar em Amputados; e, em 2026, retoma o Projeto Oriens, de volta ao mundo a bordo de um caminhão 4x4.\n\nSua atuação comunitária e social inclui 18 anos de dedicação como catequista em comunidades vulneráveis nos estados do Rio Grande do Sul e Santa Catarina. Em 2009, foi ordenada Ministra na Paróquia Santa Teresinha do Menino Jesus, em Florianópolis-SC, atuando ativamente como voluntária nos projetos sociais liderados pelo Padre Valmir Silvano.",
+    themes: [
+      "Sabedoria ancestral e propósito humano",
+      "Projetos sociais, cuidado e reabilitação",
+    ],
     gender: "female",
   },
   {
