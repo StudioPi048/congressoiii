@@ -71,8 +71,8 @@ function Termos() {
           <section>
             <h2 className="font-display text-2xl italic text-offwhite">4. O que está incluso</h2>
             <p className="mt-3">
-              O ingresso inclui o acesso à programação dos dias contratados, o jantar de sexta-feira
-              (06/11), o almoço de sábado (07/11) e o material do evento.{" "}
+              O ingresso inclui o acesso à programação dos dias contratados, o almoço de sábado
+              (07/11) e o material do evento.{" "}
               <span className="text-offwhite">A hospedagem não está inclusa</span> e deve ser
               contratada diretamente com o hotel.
             </p>

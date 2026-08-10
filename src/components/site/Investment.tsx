@@ -2,7 +2,6 @@ import { Reveal } from "./Reveal";
 
 const included = [
   "Acesso aos 3 dias do congresso",
-  "Jantar de sexta-feira (06/11)",
   "Almoço de sábado (07/11)",
   "Material do evento",
 ];
@@ -10,13 +9,13 @@ const included = [
 const lotes = [
   {
     lote: "Lote 1",
-    period: "01 a 15 de Agosto",
+    period: "Até 20 de Agosto",
     price: "990",
     parcela: "3x de R$ 330",
   },
   {
     lote: "Lote 2",
-    period: "16 a 31 de Agosto",
+    period: "21 a 31 de Agosto",
     price: "1.140",
     parcela: "3x de R$ 380",
   },
@@ -81,7 +80,7 @@ export function Investment() {
               </div>
               <div className="flex flex-col gap-5 md:items-end md:text-right">
                 <div className="rounded-sm border border-gold/25 bg-background/40 px-6 py-4">
-                  <p className="label-cinzel text-[0.55rem] text-gold">Até 31 de Julho</p>
+                  <p className="label-cinzel text-[0.55rem] text-gold">Até 20 de Agosto</p>
                   <p className="font-display text-5xl text-gradient-gold leading-none">R$ 870</p>
                   <p className="mt-1 text-xs text-muted-foreground">
                     3x de R$ 290 · parcelas a partir de 10/08
@@ -89,7 +88,7 @@ export function Investment() {
                 </div>
                 <div className="px-6">
                   <p className="label-cinzel text-[0.55rem] text-muted-foreground">
-                    A partir de 01 de Agosto
+                    A partir de 21 de Agosto
                   </p>
                   <p className="font-display text-2xl text-offwhite/90">
                     R$ 900{" "}

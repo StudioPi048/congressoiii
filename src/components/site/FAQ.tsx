@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "O que está incluso no meu ingresso?",
-    a: "Jantar de sexta-feira (06/11), almoço de sábado (07/11) e acesso completo à programação dos dias contratados.",
+    a: "Almoço de sábado (07/11) e acesso completo à programação dos dias contratados.",
   },
   {
     q: "Posso parcelar?",
