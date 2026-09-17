@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 const faqs = [
   {
     q: "O evento é apenas para profissionais?",
-    a: "Não. Os dias 06 e 07/11 são abertos ao público geral. O dia 08/11 é exclusivo para psicogenealogistas certificados.",
+    a: "Não. Os dias 06 e 07/11 são abertos ao público em geral. O dia 08/11 é exclusivo para psicogenealogistas certificados.",
   },
   {
     q: "O ingresso inclui hospedagem?",
