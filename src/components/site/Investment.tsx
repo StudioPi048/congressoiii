@@ -28,6 +28,12 @@ const lotes = [
   },
 ];
 
+const dias = [
+  { dia: "Sexta-feira", data: "06/11", price: "75" },
+  { dia: "Sábado", data: "07/11", price: "150" },
+  { dia: "Domingo", data: "08/11", price: "75" },
+];
+
 export function Investment() {
   return (
     <section id="investimento" className="section-pad relative overflow-hidden">
@@ -97,6 +103,33 @@ export function Investment() {
                 </div>
               </div>
             </div>
+          </div>
+        </Reveal>
+
+        {/* Ingresso por dia */}
+        <Reveal delay={0.12}>
+          <div className="glass-card mb-12 p-8 md:p-10">
+            <div className="text-center">
+              <p className="label-cinzel text-[0.65rem] text-gold">Ingresso por dia</p>
+              <p className="mt-2 text-sm text-muted-foreground">Escolha o dia do congresso</p>
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {dias.map((d) => (
+                <div
+                  key={d.dia}
+                  className="rounded-sm border border-gold/20 bg-background/40 px-5 py-6 text-center"
+                >
+                  <p className="text-sm text-offwhite/90">{d.dia}</p>
+                  <p className="text-[0.7rem] text-muted-foreground">{d.data}</p>
+                  <p className="mt-3 font-display text-4xl leading-none text-gradient-gold">
+                    R$ {d.price}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-center text-xs italic text-muted-foreground">
+              Sem almoço incluído.
+            </p>
           </div>
         </Reveal>
 
