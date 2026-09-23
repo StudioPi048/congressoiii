@@ -19,6 +19,7 @@ import katiucia from "@/assets/convidados/katiucia.jpg";
 import talita from "@/assets/convidados/talita.jpg";
 import marina from "@/assets/convidados/marina.jpg";
 import cintiaAlban from "@/assets/convidados/cintia.png";
+import mariaInesGarcia from "@/assets/convidados/maria-ines-garcia.png.asset.json";
 
 type Speaker = {
   name: string;
@@ -133,6 +134,13 @@ const speakers: Speaker[] = [
     photo: mariaInes.url,
     bio: "Contadora e Técnica Contábil com especialização em custos industriais, pós-graduada em Finanças e MBA em Liderança, Gestão de Equipes e Produtividade pela PUCRS, com TCC em Metodologias Ágeis. Psicogenealogista formada pelo Instituto LIZ. Atuou como auditora da PWC por 4 anos, professora universitária da Univali/SC por 5 anos e conselheira do CRCSC por 4 anos. Atualmente conduz a gestão do Grupo DRESSLER e o atendimento a clientes, integrando visão contábil, liderança consciente e Psicogenealogia.",
     themes: ["Saúde Mental nas Empresas"],
+    gender: "female",
+  },
+  {
+    name: "Maria Inês Araújo Garcia Silva",
+    role: "Psicóloga Clínica · Constelação Familiar · Fundadora do Instituto Origens",
+    photo: mariaInesGarcia.url,
+    bio: "Psicóloga clínica há mais de 40 anos e uma das principais referências em Constelação Familiar no Brasil. Conheceu as constelações diretamente com Bert Hellinger, Peter e Tsuyuko Spelter, e é fundadora do Instituto Origens. Autora do livro Transbordo da Riqueza, dedica-se a liberar pessoas para viverem seu próprio destino, e organizações e empresas a prosperarem com base na visão sistêmica.",
     gender: "female",
   },
   {
