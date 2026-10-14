@@ -1,6 +1,5 @@
 import { Reveal } from "./Reveal";
 import danila from "@/assets/convidados/danila.jpg.asset.json";
-import daniella from "@/assets/convidados/daniella.png.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
 import sol from "@/assets/convidados/sol.png.asset.json";
 import fabian from "@/assets/convidados/fabian-brotos.jpg.asset.json";
@@ -9,9 +8,7 @@ import leticia from "@/assets/convidados/leticia.png.asset.json";
 import pietro from "@/assets/convidados/pietro.png.asset.json";
 import raul from "@/assets/convidados/raul-new.jpg";
 import aline from "@/assets/convidados/aline.png.asset.json";
-import jefferson from "@/assets/convidados/jefferson.jpg.asset.json";
 import walter from "@/assets/convidados/walter.jpg.asset.json";
-import mariaCamila from "@/assets/convidados/maria-camila.png.asset.json";
 import vanuce from "@/assets/convidados/vanuce.png.asset.json";
 import marianna from "@/assets/convidados/marianna.png";
 import lennon from "@/assets/convidados/lennon.jpg";
@@ -52,13 +49,6 @@ const speakers: Speaker[] = [
       "O corpo não esquece: raízes ocultas do sintoma",
       "Entre gerações: o corpo como guardião da história",
     ],
-    gender: "female",
-  },
-  {
-    name: "Daniella Barreto Ruocco",
-    role: "Cirurgiã-Dentista · Psicogenealogista · Consteladora Familiar",
-    photo: daniella.url,
-    bio: "Cirurgiã-Dentista, Psicogenealogista, Consteladora Familiar, Terapeuta Integrativa e palestrante. Integra clínica, escuta sistêmica e trabalho com sistemas familiares em sua atuação como conferencista.",
     gender: "female",
   },
   {
@@ -115,13 +105,6 @@ const speakers: Speaker[] = [
     gender: "male",
   },
   {
-    name: "Jefferson Zomignan",
-    role: "Especialista em Comportamento Humano · Gestão Consciente · Desenvolvimento de Líderes",
-    photo: jefferson.url,
-    bio: "“Sou a expressão de muitas gerações que me antecederam. Em mim vivem histórias, emoções, aprendizados, talentos e desafios herdados daqueles que contribuíram para que eu estivesse aqui hoje. Reconheço-me como um ser em constante evolução, dedicado à busca do autoconhecimento, da consciência e da compreensão da experiência humana. Foi essa jornada que me conduziu ao estudo do comportamento humano, da gestão consciente e do desenvolvimento de líderes. Minha atuação busca integrar propósito, humanidade e lucro, compreendendo que toda estratégia, toda cultura e todo resultado organizacional são reflexos das escolhas, das relações e da consciência das pessoas que compõem uma organização. Antes de qualquer estrutura, processo ou negócio, existem seres humanos. E é por isso que afirmo: ‘Não existem empresas. Existem seres humanos realizando negócios.’”",
-    gender: "male",
-  },
-  {
     name: "Walter Maisonnett",
     role: "Acupunturista · Odontologia Sistêmica e Integrativa · Medicina Tradicional Chinesa",
     photo: walter.url,
@@ -141,13 +124,6 @@ const speakers: Speaker[] = [
     role: "Psicóloga Clínica · Constelação Familiar · Fundadora do Instituto Origens",
     photo: mariaInesGarcia.url,
     bio: "Psicóloga clínica há mais de 40 anos e uma das principais referências em Constelação Familiar no Brasil. Conheceu as constelações diretamente com Bert Hellinger, Peter e Tsuyuko Spelter, e é fundadora do Instituto Origens. Autora do livro Transbordo da Riqueza, dedica-se a liberar pessoas para viverem seu próprio destino, e organizações e empresas a prosperarem com base na visão sistêmica.",
-    gender: "female",
-  },
-  {
-    name: "Maria Camila Suzini Francisco",
-    role: "Terapeuta Integrativa · Psicogenealogista · Desenvolvimento Humano",
-    photo: mariaCamila.url,
-    bio: "Terapeuta integrativa, Psicogenealogista e facilitadora do desenvolvimento humano. Atua no acompanhamento de pessoas por meio de abordagens voltadas ao autoconhecimento, à saúde emocional e aos relacionamentos, integrando diferentes ferramentas terapêuticas em sua prática clínica. Graduada em Letras, possui formação técnica em Terapia Holística e dedica-se à promoção do bem-estar integral, conciliando conhecimento, acolhimento e uma visão fundamentada em princípios cristãos.",
     gender: "female",
   },
   {
