@@ -107,11 +107,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
     ],
-    scripts: [
-      {
-        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1553835602838508');fbq('track','PageView');`,
-      },
-    ],
+    scripts:
+      import.meta.env.VITE_TEMPUS_PREVIEW === "true"
+        ? []
+        : [
+            {
+              children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1553835602838508');fbq('track','PageView');`,
+            },
+          ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -126,6 +129,19 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <template
+          id="tempus-design-contract"
+          dangerouslySetInnerHTML={{
+            __html: `<!--
+THESIS: Encontro Tempus com seis blocos e profundidade opcional.
+OWN-WORLD: Preto profundo original, ouro metálico, logo completo, relógio e raízes.
+STORY: Compreender o convite, consultar a agenda, escolher ingresso.
+FIRST VIEWPORT: Logo oficial central, manifesto original, datas e ação sobre textura ancestral.
+FORM: V4 completa aprovada por Pietro; tempus-atmosphere-v4-20261019.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->`,
+          }}
+        />
         {children}
         <Scripts />
       </body>

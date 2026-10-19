@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" fill="none">
+  <!-- Genealogical geometry inherited from the original AncestralBackdrop. -->
+  <g stroke="#c8951f" stroke-width="1" stroke-linecap="round">
+    <path d="M600 500V300M600 300C600 250 420 250 420 200M600 300C600 250 780 250 780 200M420 200C420 160 320 160 320 120M420 200C420 160 520 160 520 120M780 200C780 160 680 160 680 120M780 200C780 160 880 160 880 120M320 120C320 92 268 92 268 66M320 120C320 92 372 92 372 66M880 120C880 92 828 92 828 66M880 120C880 92 932 92 932 66"/>
+  </g>
+  <g fill="#f0c85a">
+    <circle cx="600" cy="300" r="3"/><circle cx="420" cy="200" r="3"/><circle cx="780" cy="200" r="3"/>
+    <circle cx="320" cy="120" r="3"/><circle cx="520" cy="120" r="3"/><circle cx="680" cy="120" r="3"/><circle cx="880" cy="120" r="3"/>
+  </g>
+</svg>

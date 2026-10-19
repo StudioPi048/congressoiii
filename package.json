@@ -9,7 +9,8 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "preview:local": "wrangler dev --config .output/server/wrangler.json --local --ip 127.0.0.1 --port 8088"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",

@@ -1,0 +1,282 @@
+/* V4: the same ancestral world through six compact scenes.
+   All scenery is painted inside existing bounds; no added scroll scenes. */
+.tempus-redesign .t-section {
+  isolation: isolate;
+}
+.tempus-redesign .t-section > .t-container {
+  position: relative;
+}
+.t-origins {
+  background: radial-gradient(ellipse at 12% 35%, #102b25 0%, #07110e 36%, #050807 72%);
+}
+.t-origins:after,
+.t-program:after,
+.t-tickets:after,
+.t-faq-section:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.t-origins:after {
+  background:
+    url("/event-assets/tempus-lineage.svg") left -140px top -40px / 900px auto no-repeat,
+    url("/event-assets/tempus-texture.webp") left bottom / cover no-repeat;
+  opacity: .2;
+  mask-image: linear-gradient(90deg, #000, transparent 75%);
+}
+.t-origins h2,
+.t-section-heading h2,
+.t-faq-grid h2 {
+  text-shadow: 0 3px 18px #050807;
+}
+.t-about-copy {
+  color: #c6d0c4;
+}
+.t-benefits {
+  position: relative;
+  border-top-color: rgba(233,196,108,.42);
+}
+.t-benefits article {
+  position: relative;
+}
+.t-benefits article:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: -32px;
+  left: 0;
+  background: #e9c46c;
+  transform: rotate(45deg);
+}
+.t-early-offer {
+  border-bottom: 1px solid rgba(200,149,31,.18);
+}
+.t-program {
+  background: linear-gradient(180deg, #050807, #0b2420 52%, #050807);
+}
+.t-program:after {
+  background: url("/event-assets/tempus-texture.webp") right top / 1500px auto no-repeat;
+  opacity: .32;
+  mask-image: linear-gradient(180deg, #000, transparent 540px);
+}
+.t-agenda {
+  position: relative;
+  isolation: isolate;
+  background: #081310;
+  border-color: rgba(233,196,108,.52);
+}
+.t-agenda:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #081310 30%, rgba(8,19,16,.88) 70%, rgba(8,19,16,.56)),
+    url("/event-assets/tempus-texture.webp") right center / cover;
+}
+.t-day-tabs button {
+  position: relative;
+  background: rgba(7,20,16,.65);
+}
+.t-day-tabs button[aria-selected="true"] {
+  background:
+    linear-gradient(110deg, transparent 48%, rgba(255,243,189,.4) 49%, transparent 51%),
+    var(--gradient-gold-metal);
+}
+.t-day-tabs button:hover:not([aria-selected="true"]) {
+  background: #17382e;
+  color: #f4d998;
+}
+.t-agenda-meta {
+  background: rgba(5,12,9,.65);
+}
+.t-sessions li {
+  position: relative;
+}
+.t-sessions li:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #c8951f;
+  bottom: -2px;
+  left: 0;
+  transform: rotate(45deg);
+}
+.t-sessions li:last-child:before {
+  display: none;
+}
+.t-speakers-block {
+  position: relative;
+}
+.t-speakers-block:before {
+  content: "";
+  position: absolute;
+  inset: 0 -40px auto;
+  height: 360px;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/event-assets/tempus-lineage.svg") center top / 100% auto no-repeat;
+  opacity: .24;
+}
+.t-speaker-portrait {
+  border-color: rgba(233,196,108,.48);
+}
+.t-speaker-portrait:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 62%, rgba(5,16,11,.54));
+  box-shadow: inset 0 -1px #e9c46c;
+}
+.t-speaker-portrait img {
+  filter: saturate(.88) contrast(1.05);
+}
+.t-online {
+  z-index: 1;
+}
+.t-speaker h4 {
+  color: #f1d697;
+}
+.t-meeting {
+  background:
+    radial-gradient(ellipse at 55% 15%, #163e33 0%, transparent 60%),
+    linear-gradient(180deg, #050807, #071a15 55%, #050807);
+}
+.t-memory-grid figure {
+  isolation: isolate;
+}
+.t-memory-grid figure > img {
+  border-color: rgba(233,196,108,.52);
+  filter: saturate(.87) contrast(1.06);
+}
+.t-memory-grid figcaption {
+  position: absolute;
+  inset: auto 1px 1px;
+  margin: 0;
+  padding: 34px 14px 12px;
+  color: #f2ecdd;
+  background: linear-gradient(transparent, rgba(3,12,8,.96));
+  line-height: 1.4;
+}
+.t-venue-photo {
+  position: relative;
+  isolation: isolate;
+}
+.t-venue-photo:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 62%, rgba(5,16,11,.38));
+  border: 1px solid rgba(233,196,108,.4);
+}
+.t-venue-copy {
+  background: radial-gradient(ellipse at 0% 50%, rgba(16,59,45,.35), transparent 75%);
+}
+.t-tickets {
+  background: radial-gradient(ellipse at 20% 35%, #14382c, #07150f 46%, #050807 85%);
+}
+.t-tickets:after {
+  background: url("/event-assets/tempus-texture.webp") center 25% / cover no-repeat;
+  opacity: .34;
+  mask-image: linear-gradient(180deg, #000, transparent 80%);
+}
+.t-main-offer {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, #183c2e, #0a1b13 35%, #08100c 80%);
+  border-color: #b68a35;
+}
+.t-main-offer:before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  pointer-events: none;
+  border: 1px solid rgba(233,196,108,.72);
+  clip-path: polygon(0 0, 34px 0, 34px 1px, calc(100% - 34px) 1px, calc(100% - 34px) 0, 100% 0, 100% 34px, calc(100% - 1px) 34px, calc(100% - 1px) calc(100% - 34px), 100% calc(100% - 34px), 100% 100%, calc(100% - 34px) 100%, calc(100% - 34px) calc(100% - 1px), 34px calc(100% - 1px), 34px 100%, 0 100%, 0 calc(100% - 34px), 1px calc(100% - 34px), 1px 34px, 0 34px);
+}
+.t-main-offer:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/event-assets/tempus-clock.webp") right -22px top -50px / 220px auto no-repeat;
+  opacity: .16;
+  mask-image: linear-gradient(90deg, transparent 35%, #000);
+}
+.t-other-offers article > a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.t-faq-section {
+  background: linear-gradient(180deg, #050807, #081611 60%, #050807);
+}
+.t-faq-section:after {
+  background: url("/event-assets/tempus-lineage.svg") left -160px top -30px / 900px auto no-repeat;
+  opacity: .22;
+  mask-image: linear-gradient(90deg, #000, transparent 55%);
+}
+.t-faq-list {
+  background: rgba(5,12,9,.72);
+}
+.t-faq-list details[open] summary {
+  color: #f1d697;
+}
+.t-faq-list summary:hover {
+  color: #f1d697;
+}
+.t-close:before {
+  opacity: .92;
+  background:
+    linear-gradient(90deg, rgba(5,8,7,.82) 5%, rgba(5,8,7,.3) 70%, #050807),
+    url("/event-assets/tempus-texture.webp") center 40% / cover;
+}
+.t-footer {
+  background:
+    linear-gradient(90deg, #040605 10%, rgba(4,6,5,.9), #040605),
+    url("/event-assets/tempus-lineage.svg") center bottom / 1000px auto;
+}
+@media (max-width: 720px) {
+  .t-origins:after {
+    background-position: left -260px top, left top;
+    opacity: .22;
+  }
+  .t-benefits article:before {
+    top: -3px;
+    width: 5px;
+    height: 5px;
+  }
+  .t-program:after {
+    background-size: 1050px auto;
+    opacity: .27;
+  }
+  .t-speakers-block:before {
+    inset-inline: -20px;
+    background-size: 700px auto;
+    opacity: .19;
+  }
+  .t-memory-grid figcaption {
+    font-size: 12px;
+    padding: 30px 9px 9px;
+  }
+  .t-tickets:after {
+    background-size: auto 600px;
+    opacity: .22;
+  }
+  .t-main-offer:after {
+    background-size: 180px auto;
+    background-position: right -20px top -40px;
+    opacity: .13;
+  }
+  .t-faq-section:after {
+    background-position: left -300px top;
+    opacity: .15;
+  }
+}

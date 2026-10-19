@@ -9,12 +9,19 @@ import heroTexture from "@/assets/hero-texture.png";
 export function AncestralBackdrop({
   variant = "hero",
   className = "",
+  textureSrc = heroTexture,
+  atmosphere = "original",
 }: {
   variant?: "hero" | "cta";
   className?: string;
+  textureSrc?: string;
+  atmosphere?: "original" | "immersive";
 }) {
   return (
-    <div className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`} aria-hidden>
+    <div
+      className={`pointer-events-none absolute inset-0 overflow-hidden ${atmosphere === "immersive" ? "ab-immersive" : ""} ${className}`}
+      aria-hidden
+    >
       {/* Base profunda */}
       <div className="absolute inset-0 bg-background" />
 
@@ -22,13 +29,13 @@ export function AncestralBackdrop({
       {variant === "hero" && (
         <>
           <img
-            src={heroTexture}
+            src={textureSrc}
             alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-60"
+            className="ab-texture absolute inset-0 h-full w-full object-cover opacity-60"
           />
           {/* Escurecimento para legibilidade do conteúdo central */}
           <div
-            className="absolute inset-0"
+            className="ab-veil absolute inset-0"
             style={{
               background:
                 "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(5,8,7,0.55) 0%, rgba(5,8,7,0.86) 78%), linear-gradient(to bottom, rgba(5,8,7,0.5), transparent 30%, transparent 60%, rgba(5,8,7,0.95))",
@@ -50,7 +57,7 @@ export function AncestralBackdrop({
 
       {/* Mostrador de relógio + engrenagens quase invisíveis */}
       <svg
-        className="absolute -right-[14%] top-1/2 h-[135%] w-auto -translate-y-1/2 opacity-[0.16] md:-right-[6%]"
+        className="ab-clock absolute -right-[14%] top-1/2 h-[135%] w-auto -translate-y-1/2 opacity-[0.16] md:-right-[6%]"
         viewBox="0 0 600 600"
         fill="none"
         preserveAspectRatio="xMidYMid meet"
@@ -90,11 +97,19 @@ export function AncestralBackdrop({
           <line x1="300" y1="300" x2="404" y2="356" strokeWidth="1.4" />
         </g>
         <circle cx="300" cy="300" r="6" fill="#c8951f" opacity="0.7" />
+        {atmosphere === "immersive" && (
+          <g fill="#e9c46c" fontFamily="Cinzel, serif" fontSize="17" textAnchor="middle" opacity="0.8">
+            <text x="300" y="89">XII</text>
+            <text x="519" y="306">III</text>
+            <text x="300" y="527">VI</text>
+            <text x="81" y="306">IX</text>
+          </g>
+        )}
       </svg>
 
       {/* Linhas genealógicas — parentesco descendo em ramos */}
       <svg
-        className="absolute inset-x-0 bottom-0 h-[62%] w-full opacity-[0.14]"
+        className="ab-genealogy absolute inset-x-0 bottom-0 h-[62%] w-full opacity-[0.14]"
         viewBox="0 0 1200 500"
         fill="none"
         preserveAspectRatio="xMidYMax slice"
@@ -125,7 +140,7 @@ export function AncestralBackdrop({
 
       {/* Raízes douradas subindo do rodapé */}
       <svg
-        className="absolute inset-x-0 bottom-0 h-[36%] w-full opacity-[0.20]"
+        className="ab-roots absolute inset-x-0 bottom-0 h-[36%] w-full opacity-[0.20]"
         viewBox="0 0 1200 320"
         fill="none"
         preserveAspectRatio="xMidYMax slice"

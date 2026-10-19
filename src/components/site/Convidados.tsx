@@ -18,7 +18,7 @@ import marina from "@/assets/convidados/marina.jpg";
 import cintiaAlban from "@/assets/convidados/cintia.png";
 import mariaInesGarcia from "@/assets/convidados/maria-ines-garcia.png.asset.json";
 
-type Speaker = {
+export type Speaker = {
   name: string;
   role: string;
   photo: string;
@@ -31,12 +31,12 @@ type Speaker = {
   status?: "confirmed" | "pending";
 };
 
-const speakers: Speaker[] = [
+export const speakers: Speaker[] = [
   {
     name: "Dr. Luis Fabián Brotos",
     role: "Odontologia Integrativa · Decodificação Dental® · Uruguai",
     photo: fabian.url,
-    bio: "Terceira geração de sua família a escolher a odontologia como profissão. Cirurgião-dentista, professor universitário e pesquisador uruguaio, reconhecido internacionalmente por seu trabalho em Decodificação Dental.\n\nGraduado em Odontologia pela Universidade da República do Uruguai, atua como docente da Cátedra de Oclusão e Prótese desde 1999. Possui especializações em Implantes e Ortodontia e uma sólida formação complementar em Neurociência, Psicologia das Relações Afetivas, Simbolismo, Filosofia, Neurociência Aplicada e Interpretação e Análise de Sonhos.\n\nDesde 2007 dedica-se ao estudo da Decodificação Biológica e, em 2012, iniciou as pesquisas e estudos ao desenvolvimento da Decodificação Dental, investigando a profunda relação entre dentes, cérebro, emoções e história de vida.\n\nSua trajetória integra conhecimentos em Filosofia, Simbologia, Constelações Familiares, Cabala, Atos Simbólicos e Psico-Neuro-Imuno-Endocrinologia, consolidando uma abordagem inovadora e integrativa da saúde.\n\nDesde 2014 ministra cursos e forma profissionais em diversos países. Foi palestrante e convidado em universidades, congressos e encontros científicos internacionais realizados no Uruguai, Argentina, Portugal, Brasil, México e Estados Unidos, compartilhando sua metodologia com profissionais da saúde de diferentes áreas.\n\nÉ coautor do best-seller \"A Nova Visão Integrativa e Sistêmica sobre a Saúde e o Bem-Estar\" (2024), autor de publicações técnicas sobre Decodificação Dental® e diretor do Curso de Extensão Universitária em Decodificação Dental® da UNIFATEC, no Brasil.\n\nAtualmente, dedica-se à pesquisa, ao ensino e à formação de profissionais, contribuindo para a expansão da Decodificação Dental® em diferentes países e consolidando-se como uma das principais referências internacionais na área.",
+    bio: 'Terceira geração de sua família a escolher a odontologia como profissão. Cirurgião-dentista, professor universitário e pesquisador uruguaio, reconhecido internacionalmente por seu trabalho em Decodificação Dental.\n\nGraduado em Odontologia pela Universidade da República do Uruguai, atua como docente da Cátedra de Oclusão e Prótese desde 1999. Possui especializações em Implantes e Ortodontia e uma sólida formação complementar em Neurociência, Psicologia das Relações Afetivas, Simbolismo, Filosofia, Neurociência Aplicada e Interpretação e Análise de Sonhos.\n\nDesde 2007 dedica-se ao estudo da Decodificação Biológica e, em 2012, iniciou as pesquisas e estudos ao desenvolvimento da Decodificação Dental, investigando a profunda relação entre dentes, cérebro, emoções e história de vida.\n\nSua trajetória integra conhecimentos em Filosofia, Simbologia, Constelações Familiares, Cabala, Atos Simbólicos e Psico-Neuro-Imuno-Endocrinologia, consolidando uma abordagem inovadora e integrativa da saúde.\n\nDesde 2014 ministra cursos e forma profissionais em diversos países. Foi palestrante e convidado em universidades, congressos e encontros científicos internacionais realizados no Uruguai, Argentina, Portugal, Brasil, México e Estados Unidos, compartilhando sua metodologia com profissionais da saúde de diferentes áreas.\n\nÉ coautor do best-seller "A Nova Visão Integrativa e Sistêmica sobre a Saúde e o Bem-Estar" (2024), autor de publicações técnicas sobre Decodificação Dental® e diretor do Curso de Extensão Universitária em Decodificação Dental® da UNIFATEC, no Brasil.\n\nAtualmente, dedica-se à pesquisa, ao ensino e à formação de profissionais, contribuindo para a expansão da Decodificação Dental® em diferentes países e consolidando-se como uma das principais referências internacionais na área.',
     gender: "male",
     highlight: true,
   },
@@ -84,10 +84,7 @@ const speakers: Speaker[] = [
     role: "Empresária · Mentora · Voluntária · Embaixadora de Impacto Social",
     photo: cintiaAlban,
     bio: "Tem 56 anos, é casada e mãe de três filhos. Empresária com experiência no varejo de produtos nacionais e importados. Ao longo de sua trajetória, uniu sua visão de negócios a um profundo propósito humano, atuando como mentora, voluntária e embaixadora em diversas iniciativas de impacto social.\n\nLinha do Tempo e Projetos:\n\n1990: Graduação em Engenharia Agrícola (Ulbra-RS)\n\n1996: Mentora na Associação Santa Rita (Lar de Idosos no interior do Rio Grande do Sul)\n\n2011: Bacharelado em Gastronomia (Faculdade Assesc-SC)\n\n2015: Família Alban – Projeto Origens do Saber (Viagem pela América do Sul que entrevistou inúmeros idosos, em busca de sabedoria)\n\n2017: Embaixadora na ACIC (Associação Catarinense para Integração do Cego)\n\n2018: Cofundadora do Nonno – Plataforma que conecta famílias com cuidadores de pessoas\n\n2020: Cofundadora Instituto AlKE - Reabilitação em prol da amputação\n\n2021: Embaixadora do RAMP (Reabilitação Multidisciplinar em Amputados)\n\n2026: Retomada do Projeto Origens: De volta ao mundo a bordo de um caminhão 4x4.\n\nAtuação Comunitária e Social:\n\n• 18 anos de dedicação como catequista em comunidades vulneráveis nos estados do Rio Grande do Sul e Santa Catarina.\n\n• Ordenada Ministra em 2009 na Paróquia Santa Teresinha do Menino Jesus (Florianópolis/SC), atuando ativamente como voluntária nos projetos sociais liderados pelo Padre Valmir Silvano.",
-    themes: [
-      "Sabedoria ancestral e propósito humano",
-      "Projetos sociais, cuidado e reabilitação",
-    ],
+    themes: ["Sabedoria ancestral e propósito humano", "Projetos sociais, cuidado e reabilitação"],
     gender: "female",
   },
   {
