@@ -7,7 +7,7 @@ export const agenda = [
     items: [
       ["14:30", "Abertura do Congresso Tempus", "Letícia Baccin"],
       ["15:30", "Saúde Mental nas Empresas", "Inês Dressler · Painel"],
-      ["17:00", "Divisão Desigual de Heranças", "Inês Origens"],
+      ["17:00", "No meu tempo...", "Inês Origens"],
       ["18:00", "Identidade manifestada", "Dr. Walter"],
       ["21:00", "Há um tempo para todo propósito debaixo do céu", "Cintia Alban"],
     ],
