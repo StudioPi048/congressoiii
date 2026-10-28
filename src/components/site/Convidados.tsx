@@ -1,3 +1,4 @@
+import susanaSeldo from "@/assets/convidados/susana-seldo.webp";
 import { Reveal } from "./Reveal";
 import danila from "@/assets/convidados/danila.jpg.asset.json";
 import leandro from "@/assets/convidados/leandro.png.asset.json";
@@ -15,7 +16,7 @@ import lennon from "@/assets/convidados/lennon.jpg";
 import katiucia from "@/assets/convidados/katiucia.jpg";
 import talita from "@/assets/convidados/talita.jpg";
 import marina from "@/assets/convidados/marina.jpg";
-import cintiaAlban from "@/assets/convidados/cintia.png";
+import cintiaAlban from "@/assets/convidados/cintia-individual.webp";
 import mariaInesGarcia from "@/assets/convidados/maria-ines-garcia.png.asset.json";
 
 export type Speaker = {
@@ -27,18 +28,18 @@ export type Speaker = {
   gender: "female" | "male";
   modality?: "presencial" | "online" | "remoto";
   note?: string;
-  highlight?: boolean;
+  specialPresence?: boolean;
+  photoCrop?: "left" | "right";
   status?: "confirmed" | "pending";
 };
 
 export const speakers: Speaker[] = [
   {
-    name: "Dr. Luis Fabián Brotos",
+    name: "Luis Fabián Brotos",
     role: "Odontologia Integrativa · Decodificação Dental® · Uruguai",
     photo: fabian.url,
     bio: 'Terceira geração de sua família a escolher a odontologia como profissão. Cirurgião-dentista, professor universitário e pesquisador uruguaio, reconhecido internacionalmente por seu trabalho em Decodificação Dental.\n\nGraduado em Odontologia pela Universidade da República do Uruguai, atua como docente da Cátedra de Oclusão e Prótese desde 1999. Possui especializações em Implantes e Ortodontia e uma sólida formação complementar em Neurociência, Psicologia das Relações Afetivas, Simbolismo, Filosofia, Neurociência Aplicada e Interpretação e Análise de Sonhos.\n\nDesde 2007 dedica-se ao estudo da Decodificação Biológica e, em 2012, iniciou as pesquisas e estudos ao desenvolvimento da Decodificação Dental, investigando a profunda relação entre dentes, cérebro, emoções e história de vida.\n\nSua trajetória integra conhecimentos em Filosofia, Simbologia, Constelações Familiares, Cabala, Atos Simbólicos e Psico-Neuro-Imuno-Endocrinologia, consolidando uma abordagem inovadora e integrativa da saúde.\n\nDesde 2014 ministra cursos e forma profissionais em diversos países. Foi palestrante e convidado em universidades, congressos e encontros científicos internacionais realizados no Uruguai, Argentina, Portugal, Brasil, México e Estados Unidos, compartilhando sua metodologia com profissionais da saúde de diferentes áreas.\n\nÉ coautor do best-seller "A Nova Visão Integrativa e Sistêmica sobre a Saúde e o Bem-Estar" (2024), autor de publicações técnicas sobre Decodificação Dental® e diretor do Curso de Extensão Universitária em Decodificação Dental® da UNIFATEC, no Brasil.\n\nAtualmente, dedica-se à pesquisa, ao ensino e à formação de profissionais, contribuindo para a expansão da Decodificação Dental® em diferentes países e consolidando-se como uma das principais referências internacionais na área.',
     gender: "male",
-    highlight: true,
   },
   {
     name: "Danila Gabriel Martins de Campos",
@@ -52,14 +53,14 @@ export const speakers: Speaker[] = [
     gender: "female",
   },
   {
-    name: "Dr. Leandro Barreto",
+    name: "Leandro Barreto",
     role: "Médico · Medicina Integrativa e Funcional · USP",
     photo: leandro.url,
     bio: "Médico, palestrante e diretor do Bio Instituto de Medicina Integrativa e Funcional. Médico Assistente do Hospital das Clínicas da Faculdade de Medicina da USP, com formações em Nutrologia, Psiquiatria, Ciências da Longevidade Humana e Diagnóstico por Imagem. Dedica-se ao estudo da saúde física, mental e emocional sob uma abordagem integrativa voltada ao desenvolvimento humano e à qualidade de vida.",
     gender: "male",
   },
   {
-    name: "Dra. Sol Ayala",
+    name: "Sol Ayala",
     role: "Médica · Saúde Integrativa · Terapia Neural",
     photo: sol.url,
     bio: "Médica especialista em saúde integrativa, terapia neural e avaliação metabólica e nutricional. Com formação pelo Hospital das Clínicas da USP e ampla experiência clínica, desenvolve uma medicina humanizada que integra corpo, mente e emoções no cuidado à saúde — atuando na prevenção e tratamento de dores crônicas, desequilíbrios metabólicos e na promoção do bem-estar integral.",
@@ -89,6 +90,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: "Letícia Kuchockowolec Baccin",
+    specialPresence: true,
     role: "Docente Internacional de Psicogenealogia · Fundadora Instituto e Escola LIZ",
     photo: leticia.url,
     bio: "Formada em Direito, atuou como advogada por 25 anos. Foi sócia e cofundadora do 5º maior escritório de advocacia do Brasil — Martinelli Advogados — com registro em 7 seccionais da OAB. Sócia fundadora do Instituto LIZ e da Escola LIZ, com o propósito de Conciliar a Existência a partir da tomada de consciência das programações inconscientes e da compreensão da totalidade do ser e do continuum da vida. Especialista em Direito da Economia e da Empresa, pós-graduada em Direito e Relações do Trabalho, Parapsicologia Clínica Independente e Neurociências (PUC e Uniespírito). Bioneurogestora, Decodificadora Dental, palestrante TEDx, autora de 12 obras e cursando Diplomado de Cabalá pela Escola de Mário Saban. Docente Internacional de Psicogenealogia pela Escola LIZ e responsável legal pelas formações no Brasil, Portugal e países de língua portuguesa.",
@@ -124,23 +126,22 @@ export const speakers: Speaker[] = [
     gender: "female",
   },
   {
-    name: "Dra. Vanuce Torres de Oliveira",
+    name: "Vanuce Torres de Oliveira",
     role: "Cirurgiã-Dentista · Medicina Funcional Integrativa · Psicogenealogia",
     photo: vanuce.url,
     bio: "Cirurgiã-dentista graduada pela Universidade de Guarulhos (UNG), com 26 anos de experiência clínica. Pós-graduada em Ortodontia (2000–2002) e em Medicina Funcional Integrativa pela ABMFI – Academia Brasileira de Medicina Funcional Integrativa (2025). Ao longo de sua trajetória, aprofundou seus estudos sistêmicos a partir de formações em Biocibernética Bucal, Terapia Neural, Psiconeurodontologia, Psicogenealogia e Decodificação Biológica, direcionando sua atuação para uma compreensão global da saúde. Acredita que o cuidado em saúde começa pela compreensão integral do ser humano, unindo conhecimento, escuta e respeito à singularidade de cada pessoa.",
     gender: "female",
   },
   {
-    name: "Dra. Marianna de Abreu Costa",
+    name: "Marianna de Abreu Costa",
     role: "Médica Psiquiatra · Pesquisadora em Psiquiatria e Espiritualidade · UFRGS",
     photo: marianna,
     bio: "Médica formada pela Universidade Federal do Rio Grande do Sul (UFRGS) e especializada em Psiquiatria pelo Hospital de Clínicas de Porto Alegre (HCPA), Doutora pelo Programa de Pós-Graduação em Psiquiatria e Ciência do Comportamento da Faculdade de Medicina da UFRGS. Pós-doutoramento no Núcleo de Pesquisas em Espiritualidade e Saúde da Universidade Federal de Juiz de Fora (UFJF). Membro atuante do Departamento de Psiquiatria e Espiritualidade da Associação de Psiquiatria do Rio Grande do Sul (DPE-APRS) e da Comissão de Estudos e Pesquisa em Espiritualidade e Saúde da Associação Brasileira de Psiquiatria, contribuindo para a integração desses campos na prática psiquiátrica, divulgando o tema através da organização e participação em eventos científicos.",
     gender: "female",
     modality: "online",
-    highlight: true,
   },
   {
-    name: "Lennon",
+    name: "Lennon Monfort",
     role: "Artista Visual · Marketing e Tecnologia · Estratégia Criativa",
     photo: lennon,
     bio: "Iniciou sua caminhada no silêncio do desenho, aprendendo a observar aquilo que muitas vezes passa despercebido: emoções, detalhes, histórias e a beleza presente em cada pessoa. A arte moldou seu olhar muito antes de moldar sua profissão — depois, junto com ela, vieram o marketing, a tecnologia e a visão estratégica aplicada ao crescimento de empresas, marcas e projetos. Transita naturalmente entre esses universos, pois nunca os enxergou como caminhos separados: a arte ensina a sentir, a tecnologia amplia possibilidades e a estratégia transforma visão em realidade. É nesse encontro entre criatividade, tecnologia, estratégia e humanidade que constrói sua trajetória, criando conexões com o poder de transformar pessoas, organizações e realidades.",
@@ -166,6 +167,22 @@ export const speakers: Speaker[] = [
     photo: marina,
     bio: "Marina Renault é facilitadora de processos de reconexão interior, com atuação voltada ao desenvolvimento espiritual, emocional e energético do ser humano.\n\nSua abordagem une práticas intuitivas, meditações guiadas e Códigos de Luz, criando espaços de cura e expansão da consciência. Com uma trajetória dedicada ao serviço do autoconhecimento, Marina conduz experiências que integram sensibilidade, presença e alinhamento com o coração. Seu trabalho não se baseia em dogmas, nomes de guias ou tradições específicas, mas em despertar a autonomia espiritual e a força interior de cada indivíduo.\n\nMais do que transmitir técnicas, Marina sustenta vivências que convidam à transmutação das dores, à libertação de condicionamentos antigos e à construção de um novo olhar sobre si e sobre a vida. Atua em grupos, projetos especiais, jornadas online e presenciais, sempre com a proposta de que o Verdadeiro Mestre habita em cada um de nós.",
     gender: "female",
+  },
+  {
+    name: "Susana Regina Sidegum Müller",
+    role: "Psicogenealogista",
+    photo: susanaSeldo,
+    photoCrop: "left",
+    bio: "Com quase 20 anos de trajetória na decoração de interiores, encontrou na Psicogenealogia um caminho para compreender as mudanças e os acontecimentos que marcaram sua história.\n\nA partir dessa busca pessoal, passou a se dedicar ao estudo e a atendimentos sobre as histórias familiares, os vínculos afetivos e as heranças que atravessam gerações.\n\nNesta palestra, compartilha também uma experiência pessoal de luto na família, trazendo um olhar sensível sobre as memórias, o amor e os vínculos que continuam fazendo parte de nós, mesmo diante da ausência física de quem amamos.",
+    gender: "female",
+  },
+  {
+    name: "Seldo Alédio Müller",
+    role: "Músico",
+    photo: susanaSeldo,
+    photoCrop: "right",
+    bio: "Vindo de uma família de músicos, tanto pelo lado paterno quanto materno, iniciou sua trajetória artística aos 11 anos, em 1982, tocando trompete ao lado de seus irmãos.\n\nApós o falecimento precoce de seu pai, em 1983, começou a trabalhar profissionalmente com música para contribuir com o sustento da família.\n\nEm 1991, formou sua própria banda com os irmãos, na qual atuava como baterista. Ao longo dos anos, também integrou outras bandas da região Sul do Brasil.\n\nEm 1996, prestou concurso e ingressou no Corpo de Bombeiros em Maravilha, Santa Catarina.\n\nEm 2017, fixou residência em Nova Petrópolis, no Rio Grande do Sul. Atualmente, trabalha como guia turístico em uma cervejaria artesanal e integra a Orquestra de Sopros de Nova Petrópolis, onde toca trompete.\n\nDa herança musical recebida dos dois lados da família nasceu um novo projeto, desafiador e cheio de significado, que será apresentado pela primeira vez no Congresso Tempus de Psicogenealogia.",
+    gender: "male",
   },
 ];
 
@@ -204,7 +221,7 @@ export function Convidados() {
                 className={`glass-card overflow-hidden grid md:grid-cols-[300px_1fr] md:min-h-[520px] gap-0 ${
                   i % 2 === 1 ? "md:[direction:rtl]" : ""
                 } ${
-                  s.highlight
+                  s.specialPresence
                     ? "ring-2 ring-gold shadow-[var(--shadow-gold)] border-gold/70 md:min-h-[560px]"
                     : ""
                 } ${s.status === "pending" ? "opacity-70" : ""}`}
@@ -222,12 +239,12 @@ export function Convidados() {
                       {s.modality === "online" ? "Participação Online" : "Participação Remota"}
                     </span>
                   )}
-                  {s.highlight && (
+                  {s.specialPresence && (
                     <span
                       className="label-cinzel text-[0.6rem] px-4 py-1.5 rounded-sm tracking-[0.25em] absolute top-4 right-4 text-background font-semibold"
                       style={{ background: "var(--gradient-gold-metal)" }}
                     >
-                      ★ Palestrante Destaque
+                      Presença especial
                     </span>
                   )}
                 </div>
@@ -238,14 +255,14 @@ export function Convidados() {
                   >
                     {s.status === "pending"
                       ? "Palestrante a Confirmar"
-                      : s.highlight
-                        ? `Destaque do Painel · Palestrante ${s.gender === "female" ? "Confirmada" : "Confirmado"}`
+                      : s.specialPresence
+                        ? `Criadora do evento · Palestrante ${s.gender === "female" ? "Confirmada" : "Confirmado"}`
                         : s.gender === "female"
                           ? "Palestrante Confirmada"
                           : "Palestrante Confirmado"}
                   </div>
                   <h3
-                    className={`font-display italic mb-2 leading-tight ${s.highlight ? "text-4xl md:text-5xl text-gradient-gold" : "text-3xl md:text-4xl"}`}
+                    className={`font-display italic mb-2 leading-tight ${s.specialPresence ? "text-4xl md:text-5xl text-gradient-gold" : "text-3xl md:text-4xl"}`}
                   >
                     {s.name}
                   </h3>

@@ -1,43 +1,31 @@
-// Transcrição das três artes públicas de 16/10/2026. Não usar a planilha interna antiga.
+// Temas da agenda pública, sem dias/horários: cronograma em revisão desde 28/10/2026.
+// Nomes completos conferidos com o cadastro e correções fornecidas por Pietro.
 export const agenda = [
   {
-    date: "06",
-    day: "Sexta-feira",
+    id: "publico",
     audience: "Aberto ao público",
     items: [
-      ["14:30", "Abertura do Congresso Tempus", "Letícia Baccin"],
-      ["15:30", "Saúde Mental nas Empresas", "Inês Dressler · Painel"],
-      ["17:00", "No meu tempo...", "Inês Origens"],
-      ["18:00", "Identidade manifestada", "Dr. Walter"],
-      ["21:00", "Há um tempo para todo propósito debaixo do céu", "Cintia Alban"],
+      ["Abertura do Congresso TEMPUS", "Letícia Kuchockowolec Baccin"],
+      ["Saúde Mental nas Empresas", "Maria Inês Dressler · Painel"],
+      ["No meu tempo...", "Maria Inês Araújo Garcia Silva"],
+      ["Identidade manifestada", "Walter Maisonnett"],
+      ["Há um tempo para todo propósito debaixo do céu", "Cintia Maria Nobre Lucas Alban"],
+      ["", "Raul Ferreira Netto"],
+      ["Espiritualidade e Rotação de Almas", "Letícia Kuchockowolec Baccin, Katiucia Garcia Vilela e Talita Auler · Mediação: Raul Ferreira Netto"],
+      ["As letras hebraicas e o corpo humano", "Danila Gabriel Martins de Campos"],
+      ["", "Vanuce Torres de Oliveira"],
+      ["", "Lennon Monfort"],
+      ["Decodificação Dental", "Luis Fabián Brotos"],
+      ["Ritual Xamânico", "Aline Rosa"],
     ],
   },
   {
-    date: "07",
-    day: "Sábado",
-    audience: "Aberto ao público",
+    id: "certificados",
+    audience: "Atividades para psicogenealogistas certificados",
     items: [
-      ["08:30", "Raul Ferreira Neto", "Conferência"],
-      [
-        "09:30",
-        "Espiritualidade e Rotação de Almas",
-        "Letícia, Katiúcia e Talita · mediação de Raul",
-      ],
-      ["12:00", "As letras hebraicas e o corpo humano", "Danila"],
-      ["14:30", "Dra. Vanuce", "Conferência"],
-      ["15:30", "Lennon Monfort", "Conferência"],
-      ["17:00", "Decodificação Dental", "Fabian Brotos"],
-      ["21:30", "Ritual Xamânico", "Aline"],
-    ],
-  },
-  {
-    date: "08",
-    day: "Domingo",
-    audience: "Para psicogenealogistas certificados*",
-    items: [
-      ["08:30", "Letícia", "Encontro de domingo"],
-      ["09:30", "Marianna", "Participação online"],
-      ["10:40", "Pietro", "Encontro de domingo"],
+      ["", "Letícia Kuchockowolec Baccin"],
+      ["", "Marianna de Abreu Costa · Participação online"],
+      ["", "Pietro Vinícius Kuchockowolec Baccin"],
     ],
   },
 ];

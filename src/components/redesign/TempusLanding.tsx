@@ -1,7 +1,6 @@
-import { useId, useState, type KeyboardEvent } from "react";
+import { useState } from "react";
 import {
   ArrowRight,
-  CalendarDays,
   MapPin,
   MessageCircle,
   Menu,
@@ -34,45 +33,16 @@ const photo = (path: string) =>
         .pop()!
         .replace(/\.[^.]+$/, ".webp")}`
     : path;
-const featuredNames = [
-  "Letícia",
-  "Luis Fabián",
-  "Marianna",
-  "Raul",
-  "Maria Inês Araújo",
-  "Maria Inês Dressler",
-];
-const featured = featuredNames
-  .map((name) => speakers.find((s) => s.name.includes(name))!)
-  .filter(Boolean);
-const others = speakers.filter((s) => !featured.includes(s));
-const displayNames: Record<string, string> = {
-  "Letícia Kuchockowolec Baccin": "Letícia Baccin",
-  "Dr. Luis Fabián Brotos": "Dr. Fabián Brotos",
-  "Dra. Marianna de Abreu Costa": "Dra. Marianna Costa",
-  "Maria Inês Araújo Garcia Silva": "Inês Origens",
-  "Maria Inês Dressler": "Inês Dressler",
-  "Pietro Vinícius Kuchockowolec Baccin": "Pietro Baccin",
-  "Danila Gabriel Martins de Campos": "Danila Gabriel",
-  "Cintia Maria Nobre Lucas Alban": "Cintia Alban",
-  "Letícia Kuchockowolec Baccin ": "Letícia Baccin",
-};
-const shortRoles: Record<string, string> = {
-  "Letícia Baccin": "Psicogenealogia · Fundadora LIZ",
-  "Dr. Fabián Brotos": "Decodificação Dental · Uruguai",
-  "Dra. Marianna Costa": "Psiquiatria e espiritualidade",
-  "Raul Ferreira Netto": "Cineasta e comunicador",
-  "Inês Origens": "Psicologia e constelação familiar",
-  "Inês Dressler": "Saúde mental nas empresas",
-};
+const orderedSpeakers = [...speakers].sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
 function SpeakerProfile({ speaker }: { speaker: Speaker }) {
-  const name = displayNames[speaker.name] || speaker.name;
+  const name = speaker.name;
   return (
     <article className="t-speaker">
       <div className="t-speaker-portrait">
         <img
           src={photo(speaker.photo)}
+          data-portrait-crop={speaker.photoCrop}
           alt={speaker.name}
           loading="lazy"
           width="640"
@@ -80,14 +50,16 @@ function SpeakerProfile({ speaker }: { speaker: Speaker }) {
         />
         {speaker.modality === "online" && <span className="t-online">Participação online</span>}
       </div>
+      <div className="t-speaker-status">
+        {speaker.specialPresence && <span>Presença especial · Criadora do evento</span>}
+      </div>
       <h4>{name}</h4>
-      <p>{shortRoles[name] || speaker.role}</p>
+      <p>{speaker.role}</p>
       <details className="t-bio">
         <summary aria-label={`Conhecer trajetória de ${name}`}>
           Conhecer trajetória <Plus size={16} aria-hidden="true" />
         </summary>
         <div>
-          {speaker.name !== name && <strong>{speaker.name}</strong>}
           {speaker.bio
             .split("\n")
             .filter(Boolean)
@@ -101,72 +73,25 @@ function SpeakerProfile({ speaker }: { speaker: Speaker }) {
 }
 
 function Program() {
-  const [day, setDay] = useState(0);
-  const id = useId();
-  function keyNav(event: KeyboardEvent<HTMLButtonElement>) {
-    let next = day;
-    if (event.key === "ArrowRight") next = (day + 1) % 3;
-    else if (event.key === "ArrowLeft") next = (day + 2) % 3;
-    else if (event.key === "Home") next = 0;
-    else if (event.key === "End") next = 2;
-    else return;
-    event.preventDefault();
-    setDay(next);
-    document.getElementById(`${id}-tab-${next}`)?.focus();
-  }
   return (
-    <div className="t-agenda">
-      <div className="t-day-tabs" role="tablist" aria-label="Dia da programação">
-        {agenda.map((d, i) => (
-          <button
-            key={d.date}
-            id={`${id}-tab-${i}`}
-            role="tab"
-            aria-selected={i === day}
-            aria-controls={`${id}-panel-${i}`}
-            tabIndex={i === day ? 0 : -1}
-            onClick={() => setDay(i)}
-            onKeyDown={keyNav}
-          >
-            <span>
-              {d.date} <small>nov</small>
-            </span>
-            <span>{d.day}</span>
-          </button>
-        ))}
-      </div>
-      {agenda.map((d, i) => (
-        <div
-          key={d.date}
-          role="tabpanel"
-          id={`${id}-panel-${i}`}
-          aria-labelledby={`${id}-tab-${i}`}
-          hidden={i !== day}
-          tabIndex={0}
-        >
+    <div className="t-agenda t-agenda-without-times">
+      <p className="t-agenda-note">A programação está em atualização. Os dias e horários serão divulgados após a revisão do cronograma.</p>
+      {agenda.map((group) => (
+        <section key={group.id} aria-labelledby={`program-${group.id}`}>
           <div className="t-agenda-meta">
-            <span>{d.audience.replace("*", "")}</span>
-            <span>Horários sujeitos a ajustes</span>
+            <h3 id={`program-${group.id}`}>{group.audience}</h3>
           </div>
-          <h3 className="sr-only">Programação de {d.day}</h3>
-          <ol className="t-sessions">
-            {d.items.map(([time, title, name]) => (
-              <li key={time}>
-                <time>{time}</time>
+          <ul className="t-sessions">
+            {group.items.map(([title, name]) => (
+              <li key={`${title}-${name}`}>
                 <div>
-                  <h4>{title}</h4>
+                  {title && <h4>{title}</h4>}
                   <p>{name}</p>
                 </div>
               </li>
             ))}
-          </ol>
-          {i === 2 && (
-            <p className="t-agenda-note">
-              O domingo é reservado a psicogenealogistas certificados. Confirme sua participação com
-              a equipe.
-            </p>
-          )}
-        </div>
+          </ul>
+        </section>
       ))}
     </div>
   );
@@ -236,7 +161,7 @@ export function TempusLanding() {
               atualmente informada e direciona essas consultas à equipe.
             </li>
             <li>
-              Validar a transcrição da agenda pública de 16/10 e os links finais de checkout.
+              Atualizar o cronograma quando a equipe confirmar os dias e horários e validar os links de checkout.
               Nenhuma compra foi testada.
             </li>
           </ol>
@@ -402,31 +327,20 @@ export function TempusLanding() {
                 </h2>
               </div>
               <p>
-                Veja os horários e os temas da programação pública. Aprofunde-se no que mais
-                conversa com você.
+                Conheça os temas e os palestrantes da programação. Os dias e horários estão em revisão.
               </p>
             </div>
             <Program />
             <div id="convidados" className="t-speakers-block">
               <div className="t-subheading">
-                <h3>Convidados desta edição</h3>
-                <p>Conheça as presenças e suas trajetórias.</p>
+                <h3>Palestrantes desta edição</h3>
+                <p>Conheça os palestrantes e suas trajetórias.</p>
               </div>
               <div className="t-speaker-grid">
-                {featured.map((s) => (
-                  <SpeakerProfile key={s.name} speaker={s} />
+                {orderedSpeakers.map((speaker) => (
+                  <SpeakerProfile key={speaker.name} speaker={speaker} />
                 ))}
               </div>
-              <details className="t-all-speakers">
-                <summary>
-                  Ver todos os {speakers.length} convidados <Plus size={20} aria-hidden="true" />
-                </summary>
-                <div className="t-speaker-grid">
-                  {others.map((s) => (
-                    <SpeakerProfile key={s.name} speaker={s} />
-                  ))}
-                </div>
-              </details>
             </div>
           </div>
         </section>

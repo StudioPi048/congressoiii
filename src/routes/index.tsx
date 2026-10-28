@@ -47,8 +47,8 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Event",
           name: "Tempus — III Congresso de Psicogenealogia",
-          startDate: "2026-11-06T14:30-03:00",
-          endDate: "2026-11-08T13:00-03:00",
+          startDate: "2026-11-06",
+          endDate: "2026-11-08",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           location: {
